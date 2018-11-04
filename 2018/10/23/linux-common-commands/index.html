@@ -79,13 +79,13 @@
 
 
 
-<meta name="description" content="常用系统工作命令 echo 命令 用于在终端输出字符串或变量提取后的值，格式为echo [字符串 | $变量]  date 命令 用于显示及设置系统的时间或日期，格式为date [选项][+指定的格式]  [root@linuxprobe ~]# date &amp;quot;+%Y-%m-%d %H:%M:%S&amp;quot; 2017-08-24 16:29:12   reboot 命令 用于重启系统，">
+<meta name="description" content="常用系统工作命令 echo 命令 用于在终端输出字符串或变量提取后的值，格式为echo [字符串 | $变量]">
 <meta name="keywords" content="Centos">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux常用命令">
 <meta property="og:url" content="http://yoursite.com/2018/10/23/linux-common-commands/index.html">
 <meta property="og:site_name" content="Jerring">
-<meta property="og:description" content="常用系统工作命令 echo 命令 用于在终端输出字符串或变量提取后的值，格式为echo [字符串 | $变量]  date 命令 用于显示及设置系统的时间或日期，格式为date [选项][+指定的格式]  [root@linuxprobe ~]# date &amp;quot;+%Y-%m-%d %H:%M:%S&amp;quot; 2017-08-24 16:29:12   reboot 命令 用于重启系统，">
+<meta property="og:description" content="常用系统工作命令 echo 命令 用于在终端输出字符串或变量提取后的值，格式为echo [字符串 | $变量]">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://mubu.com/document_image/4addeedf-c707-4c8a-bcb3-4827155e9e0f-539813.jpg">
 <meta property="og:image" content="https://mubu.com/document_image/efb730b4-8762-4167-a959-18d8db68c1cd-539813.jpg">
@@ -109,10 +109,10 @@
 <meta property="og:image" content="https://mubu.com/document_image/db1b0b5f-b7c2-43d1-8156-cb8079581854-539813.jpg">
 <meta property="og:image" content="https://mubu.com/document_image/8206cfef-b056-4caf-b77d-f664c42e772e-539813.jpg">
 <meta property="og:image" content="https://mubu.com/document_image/f2dca472-5dd1-421a-9e36-29fc52ad6b41-539813.jpg">
-<meta property="og:updated_time" content="2018-10-24T12:44:04.694Z">
+<meta property="og:updated_time" content="2018-11-04T11:19:04.771Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux常用命令">
-<meta name="twitter:description" content="常用系统工作命令 echo 命令 用于在终端输出字符串或变量提取后的值，格式为echo [字符串 | $变量]  date 命令 用于显示及设置系统的时间或日期，格式为date [选项][+指定的格式]  [root@linuxprobe ~]# date &amp;quot;+%Y-%m-%d %H:%M:%S&amp;quot; 2017-08-24 16:29:12   reboot 命令 用于重启系统，">
+<meta name="twitter:description" content="常用系统工作命令 echo 命令 用于在终端输出字符串或变量提取后的值，格式为echo [字符串 | $变量]">
 <meta name="twitter:image" content="https://mubu.com/document_image/4addeedf-c707-4c8a-bcb3-4827155e9e0f-539813.jpg">
 
 
@@ -365,14 +365,13 @@
       
 
       
-        <a id="more"></a>
-<h1 id="常用系统工作命令"><a href="#常用系统工作命令" class="headerlink" title="常用系统工作命令"></a>常用系统工作命令</h1><ol>
+        <h1 id="常用系统工作命令"><a href="#常用系统工作命令" class="headerlink" title="常用系统工作命令"></a>常用系统工作命令</h1><ol>
 <li><p><strong>echo</strong> 命令 用于在终端输出字符串或变量提取后的值，格式为<strong><code>echo [字符串 | $变量]</code></strong></p>
+<a id="more"></a>
 </li>
 <li><p><strong>date</strong> 命令 用于显示及设置系统的时间或日期，格式为<strong><code>date [选项][+指定的格式]</code></strong></p>
 <p><img src="https://mubu.com/document_image/4addeedf-c707-4c8a-bcb3-4827155e9e0f-539813.jpg" alt="img"></p>
-<p>[root@linuxprobe ~]# <strong><code>date &quot;+%Y-%m-%d %H:%M:%S&quot;</code></strong></p>
-<p>2017-08-24 16:29:12 </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@linuxprobe ~]# date "+%Y-%m-%d %H:%M:%S"</span><br><span class="line">2017-08-24 16:29:12</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong>reboot</strong> 命令 用于重启系统，其格式为 <strong><code>reboot</code></strong></p>
 </li>
@@ -390,18 +389,13 @@
 <p><img src="https://mubu.com/document_image/8c961cad-22b9-4f2d-87e1-b876e127d50c-539813.jpg" alt="img"></p>
 </li>
 <li><p><strong>pidof</strong> 命令 用于查询某个指定服务进程的 PID 值，格式为<strong><code>pidof [参数][服务名称]</code></strong></p>
-<p>[root@linuxprobe ~]# <strong><code>pidof sshd</code></strong></p>
-<p>2156</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@linuxprobe ~]# pidof sshd</span><br><span class="line">2156</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong>kill</strong> 命令 用于终止某个指定 PID 的服务进程，格式为<strong><code>kill [参数][进程 PID]</code></strong></p>
-<p>[root@linuxprobe ~]# <strong><code>kill 2156</code></strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`[root@linuxprobe ~]# kill 2156</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong>killall</strong> 命令 用于终止某个指定名称的服务所对应的全部进程，格式为<strong><code>killall [参数][进程名称]</code></strong></p>
-<p>[root@linuxprobe ~]# <strong><code>pidof httpd</code></strong></p>
-<p>13581 13580 13579 13578 13577 13576</p>
-<p>[root@linuxprobe ~]# <strong><code>killall httpd</code></strong></p>
-<p>[root@linuxprobe ~]# <strong><code>pidof httpd</code></strong></p>
-<p>[root@linuxprobe ~]# </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@linuxprobe ~]# pidof httpd</span><br><span class="line">13581 13580 13579 13578 13577 13576</span><br><span class="line">[root@linuxprobe ~]# killall httpd</span><br><span class="line">[root@linuxprobe ~]# pidof httpd</span><br><span class="line">[root@linuxprobe ~]#</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h1 id="系统状态检测命令"><a href="#系统状态检测命令" class="headerlink" title="系统状态检测命令"></a>系统状态检测命令</h1><ol>
@@ -411,11 +405,9 @@
 </li>
 <li><p><strong>uname</strong> 命令 用于查看系统内核与系统版本等信息，格式为<strong><code>uname [-a]</code></strong></p>
 <p>一般加上-a 参数来完整地查看当前系统的内核名称、主机名、内核发行版本、节点名、系统时间、硬件名称、硬件平台、处理器类型以及操作系统 名称等信息。  </p>
-<p>[root@linuxprobe ~]# <strong><code>uname -a</code></strong></p>
-<p>Linux linuxprobe.com 3.10.0-123.el7.x86_64 #1 SMP Mon May 5 11:16:57 EDT 2017  x86_64 x86_64 x86_64 GNU/Linux  </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@linuxprobe ~]# uname -a</span><br><span class="line">Linux linuxprobe.com 3.10.0-123.el7.x86_64 #1 SMP Mon May 5 11:16:57 EDT 2017  x86_64 x86_64 x86_64 GNU/Linux</span><br></pre></td></tr></table></figure>
 <p>如果要查看当前系统版本的详细信息，则需要查看 redhat-release 文件，其命令以及相应的结果如下：</p>
-<p>[root@linuxprobe ~]# <strong><code>cat /etc/redhat-release</code></strong></p>
-<p>Red Hat Enterprise Linux Server release 7.0 (Maipo)</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@linuxprobe ~]# cat /etc/redhat-release</span><br><span class="line">Red Hat Enterprise Linux Server release 7.0 (Maipo)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong>uptime</strong> 命令 用于查看系统的负载信息，格式为 <strong><code>uptime</code></strong></p>
 <ul>
@@ -424,11 +416,11 @@
 </ul>
 </li>
 <li><p><strong>free</strong> 命令 用于显示当前系统中内存的使用量信息，格式为<strong><code>free [-h]</code></strong></p>
-<p>[root@linuxprobe ~]# <strong><code>free -h</code></strong> </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@linuxprobe ~]# free -h</span><br></pre></td></tr></table></figure>
 <p><img src="https://mubu.com/document_image/2189e9f3-976e-49fb-9846-90224f03f314-539813.jpg" alt="img"></p>
 </li>
 <li><p><strong>who</strong> 命令 用于查看当前登入主机的用户终端信息，格式为<strong><code>who [参数]</code></strong></p>
-<p>[root@linuxprobe ~]# <strong><code>who</code></strong> </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@linuxprobe ~]# who</span><br></pre></td></tr></table></figure>
 <p><img src="https://mubu.com/document_image/6e686141-0064-4896-8685-eed886f4697a-539813.jpg" alt="img"></p>
 </li>
 <li><p><strong>last</strong> 命令 用于查看所有系统的登录记录，格式为<strong><code>last [参数]</code></strong></p>
@@ -454,14 +446,14 @@
 <li><p><strong>more</strong> 命令 用于查看纯文本文件（内容较多的），格式为<strong><code>more [选项]文件</code></strong></p>
 </li>
 <li><p><strong>head</strong> 命令 用于查看纯文本文档的前 N 行，格式为<strong><code>head [选项][文件]</code></strong></p>
-<p>[root@linuxprobe ~]# <strong><code>head -n 20 a.txt</code></strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@linuxprobe ~]# head -n 20 a.txt</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong>tail</strong> 命令 用于查看纯文本文档的后 N 行或持续刷新内容，格式为<strong><code>tail [选项][文件]</code></strong></p>
 <p>tail 命令强悍的功能是可以持续刷新一个文件的内容，当想要实时查看新日志文件时，这特别有用，此时的命令格式为<strong><code>tail -f 文件名</code></strong></p>
 <p><img src="https://mubu.com/document_image/c0c1023d-c082-4762-a01f-3bca6a7737a3-539813.jpg" alt="img"></p>
 </li>
 <li><p><strong>tr</strong> 命令 用于替换文本文件中的字符，格式为<strong><code>tr [原始字符][目标字符]</code></strong></p>
-<p>[root@linuxprobe ~]# <strong><code>cat anaconda-ks.cfg | tr [a-z][A-Z]</code></strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@linuxprobe ~]# cat anaconda-ks.cfg | tr [a-z][A-Z]</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong>wc</strong> 命令 用于统计指定文本的行数、字数、字节数，格式为<strong><code>wc [参数] 文本</code></strong></p>
 <p><img src="https://mubu.com/document_image/e93ce631-fd67-4d4c-ad45-b5479c78409e-539813.jpg" alt="img"></p>
@@ -475,8 +467,7 @@
 <li><p><strong>diff</strong> 命令 用于比较多个文本文件的差异，格式为<strong><code>diff [参数] 文件</code></strong></p>
 <ul>
 <li><p>使用 <strong><code>diff --brief</code></strong> 命令显示比较后的结果，判断文件是否相同</p>
-<p>[root@linuxprobe ~]# <strong><code>diff --brief diff_A.txt diff_B.txt</code></strong></p>
-<p>Files diff_A.txt and diff_B.txt differ </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@linuxprobe ~]# diff --brief diff_A.txt diff_B.txt</span><br><span class="line">Files diff_A.txt and diff_B.txt differ</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>使用 <strong><code>diff -c</code></strong> 命令来描述文件内容具体的不同</p>
 </li>
@@ -505,8 +496,7 @@
 <h1 id="打包压缩与搜索命令"><a href="#打包压缩与搜索命令" class="headerlink" title="打包压缩与搜索命令"></a>打包压缩与搜索命令</h1><ol>
 <li><p><strong>tar</strong> 命令 用于对文件进行打包压缩或解压，格式为<strong><code>tar [选项][文件]</code></strong></p>
 <p><img src="https://mubu.com/document_image/dba3101b-847d-4c21-b6bb-38725df9f8c0-539813.jpg" alt="img"></p>
-<p>[root@linuxprobe ~]# <strong><code>tar -czvf etc.tar.gz /etc</code></strong></p>
-<p>[root@linuxprobe ~]# <strong><code>tar xzvf etc.tar.gz -C /root/etc</code></strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@linuxprobe ~]# tar -czvf etc.tar.gz /etc</span><br><span class="line">[root@linuxprobe ~]# tar xzvf etc.tar.gz -C /root/etc</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong>grep</strong> 命令 用于在文本中执行关键词搜索，并显示匹配的结果，格式为 <strong><code>grep [选项][文件]</code></strong></p>
 <p><img src="https://mubu.com/document_image/66b9ff1e-5d31-4d1e-81a7-dd502fe3bab5-539813.jpg" alt="img"></p>
@@ -514,7 +504,7 @@
 </li>
 <li><p><strong>find</strong> 命令 用于按照指定条件来查找文件，格式为<strong><code>find [查找路径] 寻找条件 操作</code></strong></p>
 <p><img src="https://mubu.com/document_image/8206cfef-b056-4caf-b77d-f664c42e772e-539813.jpg" alt="img"></p>
-<p>[root@linuxprobe ~]# <strong><code>find /etc -name &quot;host*&quot; -print</code></strong> </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@linuxprobe ~]# find /etc -name "host*" -print</span><br></pre></td></tr></table></figure>
 <p><img src="https://mubu.com/document_image/f2dca472-5dd1-421a-9e36-29fc52ad6b41-539813.jpg" alt="img"></p>
 </li>
 </ol>
@@ -549,7 +539,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/22/union-find/" rel="next" title="算法基础之并查集（Union-Find）">
+              <a href="/2018/10/22/algorithms-union-find/" rel="next" title="算法基础之并查集（Union-Find）">
                 <i class="fa fa-chevron-left"></i> 算法基础之并查集（Union-Find）
               </a>
             
@@ -558,6 +548,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/31/leetcode-00033/" rel="prev" title="LeetCode33-搜索旋转排序数组">
+                LeetCode33-搜索旋转排序数组 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -638,7 +632,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -649,7 +643,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -660,7 +654,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
