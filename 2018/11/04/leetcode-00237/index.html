@@ -90,7 +90,7 @@
 <meta property="og:image" content="http://www.wailian.work/images/2018/11/04/237_2.png">
 <meta property="og:image" content="http://www.wailian.work/images/2018/11/04/237_3.png">
 <meta property="og:image" content="http://www.wailian.work/images/2018/11/04/237_4.png">
-<meta property="og:updated_time" content="2018-11-04T11:34:59.073Z">
+<meta property="og:updated_time" content="2018-11-04T12:55:07.657Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode237-删除链表中的节点">
 <meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/delete-node-in-a-linked-list/ 中文链接：https://leetcode-cn.com/problems/delete-node-in-a-linked-list/ 题目详述请编写一个函数，使其可以删除某个链表中给定的（非末尾）节点，你将只被给定要求被删除的节点。 现有一个链表 – head">
@@ -363,15 +363,14 @@
 <li>不要从你的函数中返回任何结果。</li>
 </ul>
 <a id="more"></a>
-<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><ol>
+<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><ul>
 <li>从链表中删除结点的常用方法是修改待删除结点的前一个结点的指针，让它指向待删除结点的后一个结点（如下图所示）。但本题无法获取到待删除结点的前一个结点，不可行。</li>
-</ol>
+</ul>
 <p><img src="http://www.wailian.work/images/2018/11/04/237_1.png" alt=""></p>
-<ol>
-<li><p>因为待删除节点不是链表的尾结点，所以可以将待删除结点的值替换为的它的后一个结点的值，然后删掉它的后一个结点。</p>
+<ul>
+<li>因为待删除节点不是链表的尾结点，所以可以将待删除结点的值替换为的它的后一个结点的值，然后删掉它的后一个结点。</li>
+</ul>
 <p><img src="http://www.wailian.work/images/2018/11/04/237_2.png" alt="237_2.png"><br><img src="http://www.wailian.work/images/2018/11/04/237_3.png" alt="237_3.png"><br><img src="http://www.wailian.work/images/2018/11/04/237_4.png" alt="237_4.png"></p>
-</li>
-</ol>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">deleteNode</span><span class="params">(ListNode node)</span> </span>&#123;</span><br><span class="line">        node.val = node.next.val;</span><br><span class="line">        node.next = node.next.next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
@@ -406,6 +405,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/05/leetcode-00160/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -486,7 +489,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
