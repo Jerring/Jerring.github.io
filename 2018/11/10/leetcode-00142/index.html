@@ -87,7 +87,7 @@
 <meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/linked-list-cycle-ii/ 中文链接：https://leetcode-cn.com/problems/linked-list-cycle-ii/ 题目详述给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。 说明：不允许修改给定的链表。 进阶：你是否可以不用额外空间解决此题？">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://www.wailian.work/images/2018/11/10/646147_1489199577531_5B1EFEB8A03B04A4781BC78AC00B89CE.png">
-<meta property="og:updated_time" content="2018-11-10T11:22:40.291Z">
+<meta property="og:updated_time" content="2018-11-11T02:58:06.335Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode142-环形链表II">
 <meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/linked-list-cycle-ii/ 中文链接：https://leetcode-cn.com/problems/linked-list-cycle-ii/ 题目详述给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。 说明：不允许修改给定的链表。 进阶：你是否可以不用额外空间解决此题？">
@@ -355,17 +355,17 @@
 <li><p>如果存在环，两个指针必然会在环上的某个结点相遇。</p>
 <p><img src="http://www.wailian.work/images/2018/11/10/646147_1489199577531_5B1EFEB8A03B04A4781BC78AC00B89CE.png" alt=""></p>
 </li>
-<li><p>设 a 为起点 A 到环入口点 C（图中黑色部分）的长度，b 为环入口点 C 到相遇点 B（图中蓝色部分）的长度，L 为环的长度，当两个指针相遇的时候，快指针走的路程 s1 = a + m <em> L + b，s2 = a + n </em> L + b。</p>
+<li><p>设 a 为起点 A 到环入口点 C（图中黑色部分）的长度，b 为环入口点 C 到相遇点 B（图中蓝色部分）的长度，L 为环的长度，当两个指针相遇的时候，快指针走的路程 <code>s1 = a + m * L + b</code>，<code>s2 = a + n * L + b</code>。</p>
 </li>
-<li><p>因为快指针的速度的大小是慢指针的两倍，故 s1 = 2 * s2。</p>
+<li><p>因为快指针的速度的大小是慢指针的两倍，故 <code>s1 = 2 * s2</code>。</p>
 </li>
-<li><p>则 a + m <em> L + b = 2 </em> (a + n * L + b)，</p>
+<li><p>则 <code>a + m * L + b = 2 * (a + n * L + b)</code>，</p>
 </li>
-<li><p>m <em> L = 2 </em> n * L + a + b，</p>
+<li><p><code>m * L = 2 * n * L + a + b</code>，</p>
 </li>
-<li><p>a = (m - 2 <em> n)  </em> L - b，</p>
+<li><p><code>a = (m - 2 * n)  * L - b</code>，</p>
 </li>
-<li><p>a = (m - 2 <em> n - 1)  </em> L  + L - b。而 L - b 是相遇点 B 到环入口点 C 的长度。</p>
+<li><p><code>a = (m - 2 * n - 1)  * L  + L - b</code>。而 <code>L - b</code> 是相遇点 B 到环入口点 C 的长度。</p>
 </li>
 <li><p>有了上面的分析可知，在两个指针相遇后，让两个指针分别从 A 和 B 同步走，最后相遇的结点就是环的入口结点。</p>
 </li>
