@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="DP," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/reverse-linked-list/ 中文链接：https://leetcode-cn.com/problems/reverse-linked-list/ 题目详述反转一个单链表。 示例: 12输入: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL输出: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-">
+<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/minimum-path-sum/ 中文链接：https://leetcode-cn.com/problems/minimum-path-sum/ 题目详述给定一个包含非负整数的 m x n 网格，请找出一条从左上角到右下角的路径，使得路径上的数字总和为最小。 说明：每次只能向下或者向右移动一步。 示例: 1234567">
+<meta name="keywords" content="DP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode206-反转链表">
-<meta property="og:url" content="http://yoursite.com/2018/11/06/leetcode-00206/index.html">
+<meta property="og:title" content="LeetCode64-最小路径和">
+<meta property="og:url" content="http://yoursite.com/2018/11/14/leetcode-00064/index.html">
 <meta property="og:site_name" content="Jerring">
-<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/reverse-linked-list/ 中文链接：https://leetcode-cn.com/problems/reverse-linked-list/ 题目详述反转一个单链表。 示例: 12输入: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL输出: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-">
+<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/minimum-path-sum/ 中文链接：https://leetcode-cn.com/problems/minimum-path-sum/ 题目详述给定一个包含非负整数的 m x n 网格，请找出一条从左上角到右下角的路径，使得路径上的数字总和为最小。 说明：每次只能向下或者向右移动一步。 示例: 1234567">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-06T07:18:53.459Z">
+<meta property="og:updated_time" content="2018-11-15T06:41:13.198Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode206-反转链表">
-<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/reverse-linked-list/ 中文链接：https://leetcode-cn.com/problems/reverse-linked-list/ 题目详述反转一个单链表。 示例: 12输入: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL输出: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-">
+<meta name="twitter:title" content="LeetCode64-最小路径和">
+<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/minimum-path-sum/ 中文链接：https://leetcode-cn.com/problems/minimum-path-sum/ 题目详述给定一个包含非负整数的 m x n 网格，请找出一条从左上角到右下角的路径，使得路径上的数字总和为最小。 说明：每次只能向下或者向右移动一步。 示例: 1234567">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/06/leetcode-00206/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/11/14/leetcode-00064/"/>
 
 
 
 
 
-  <title>LeetCode206-反转链表 | Jerring</title>
+  <title>LeetCode64-最小路径和 | Jerring</title>
   
 
 
@@ -252,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/06/leetcode-00206/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/14/leetcode-00064/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jerring">
@@ -269,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">LeetCode206-反转链表</h1>
+          <h1 class="post-title" itemprop="name headline">LeetCode64-最小路径和</h1>
         
 
         <div class="post-meta">
@@ -281,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-06T15:08:50+08:00">
-                2018-11-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-14T13:25:13+08:00">
+                2018-11-14
               </time>
             
 
@@ -341,18 +342,22 @@
       
 
       
-        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/reverse-linked-list/" target="_blank" rel="noopener">https://leetcode.com/problems/reverse-linked-list/</a></p>
-<p>中文链接：<a href="https://leetcode-cn.com/problems/reverse-linked-list/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/reverse-linked-list/</a></p>
-<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>反转一个单链表。</p>
+        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/minimum-path-sum/" target="_blank" rel="noopener">https://leetcode.com/problems/minimum-path-sum/</a></p>
+<p>中文链接：<a href="https://leetcode-cn.com/problems/minimum-path-sum/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/minimum-path-sum/</a></p>
+<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>给定一个包含非负整数的 <em>m</em> x <em>n</em> 网格，请找出一条从左上角到右下角的路径，使得路径上的数字总和为最小。</p>
+<p><strong>说明：</strong>每次只能向下或者向右移动一步。</p>
 <p><strong>示例:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL</span><br><span class="line">输出: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL</span><br></pre></td></tr></table></figure>
-<p><strong>进阶:</strong><br>你可以迭代或递归地反转链表。你能否用两种方法解决这道题？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">[</span><br><span class="line">  [1,3,1],</span><br><span class="line">  [1,5,1],</span><br><span class="line">  [4,2,1]</span><br><span class="line">]</span><br><span class="line">输出: 7</span><br><span class="line">解释: 因为路径 1→3→1→1→1 的总和最小。</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p>解决这种问题免不了对结点的 next 进行操作，最好的方式是先用纸笔画图模拟一下操作过程，再来写代码。</p>
-<p>下面是迭代版本：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00206</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 迭代版本</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">reverseList</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        ListNode cur = head;</span><br><span class="line">        ListNode pre = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">while</span> (cur != <span class="keyword">null</span>) &#123;</span><br><span class="line">            ListNode next = cur.next;</span><br><span class="line">            cur.next = pre;</span><br><span class="line">            pre = cur;</span><br><span class="line">            cur = next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> pre;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>下面是递归版本：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00206</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 递归版本</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">reverseList</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="keyword">null</span> || head.next == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> head;</span><br><span class="line">        &#125;</span><br><span class="line">        ListNode newHead = reverseList(head.next);</span><br><span class="line">        <span class="comment">// 在反转过程中，head 指向下一个结点的指针没有变化，故可以用 head.next获取到反转链表的尾结点</span></span><br><span class="line">        head.next.next = head;</span><br><span class="line">        head.next = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">return</span> newHead;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p>典型的动态规划。</p>
+<ul>
+<li>设 <code>dp[i][j]</code> 为  下标 (0, 0) 到下标 (i, j) 的路径上的数字和。</li>
+<li>状态转移方程为 <code>dp[i][j] = min(dp[i - 1][j], dp[i][j - 1]) + grid[i][j] (i &gt; 0, j &gt; 0)</code>；</li>
+<li>显然，左上角那个元素的路径数字和就是本身数字，第一行是相邻左边的路径数字和加上自身数字，第一列是相邻上边的路径数字和加上自身数字。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00064</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minPathSum</span><span class="params">(<span class="keyword">int</span>[][] grid)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> m = grid.length;</span><br><span class="line">        <span class="keyword">int</span> n = grid[<span class="number">0</span>].length;</span><br><span class="line">        <span class="keyword">int</span>[][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[m][n];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; ++i) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; n; ++j) &#123;</span><br><span class="line">                <span class="keyword">if</span> (i == <span class="number">0</span> &amp;&amp; j == <span class="number">0</span>) &#123;</span><br><span class="line">                    dp[i][j] = grid[i][j];</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (i == <span class="number">0</span>) &#123;</span><br><span class="line">                    dp[i][j] = dp[i][j - <span class="number">1</span>] + grid[i][j];</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (j == <span class="number">0</span>) &#123;</span><br><span class="line">                    dp[i][j] = dp[i - <span class="number">1</span>][j] + grid[i][j];</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    dp[i][j] = Math.min(dp[i - <span class="number">1</span>][j], dp[i][j - <span class="number">1</span>]) + grid[i][j];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[m - <span class="number">1</span>][n - <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>可以单独计算第一行和第一列，避免大量的 if/else 判断。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00064</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minPathSum</span><span class="params">(<span class="keyword">int</span>[][] grid)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> m = grid.length;</span><br><span class="line">        <span class="keyword">int</span> n = grid[<span class="number">0</span>].length;</span><br><span class="line">        <span class="keyword">int</span>[][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[m][n];</span><br><span class="line">        dp[<span class="number">0</span>][<span class="number">0</span>] = grid[<span class="number">0</span>][<span class="number">0</span>];</span><br><span class="line">        <span class="comment">// 第一列</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; m; ++i) &#123;</span><br><span class="line">            dp[i][<span class="number">0</span>] = dp[i - <span class="number">1</span>][<span class="number">0</span>] + grid[i][<span class="number">0</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 第一行</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; ++i) &#123;</span><br><span class="line">            dp[<span class="number">0</span>][i] = dp[<span class="number">0</span>][i - <span class="number">1</span>] + grid[<span class="number">0</span>][i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; m; ++i) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; n; ++j) &#123;</span><br><span class="line">                dp[i][j] = Math.min(dp[i - <span class="number">1</span>][j], dp[i][j - <span class="number">1</span>]) + grid[i][j];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[m - <span class="number">1</span>][n - <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -368,6 +373,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/DP/" rel="tag"># DP</a>
+          
+        </div>
+      
 
       
       
@@ -377,8 +388,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/05/leetcode-00160/" rel="next" title="LeetCode160-相交链表">
-                <i class="fa fa-chevron-left"></i> LeetCode160-相交链表
+              <a href="/2018/11/13/leetcode-00056/" rel="next" title="LeetCode56-合并区间">
+                <i class="fa fa-chevron-left"></i> LeetCode56-合并区间
               </a>
             
           </div>
@@ -386,10 +397,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/07/leetcode-00234/" rel="prev" title="LeetCode234-回文链表">
-                LeetCode234-回文链表 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
