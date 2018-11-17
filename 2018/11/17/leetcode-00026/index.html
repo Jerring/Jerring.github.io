@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Jerring">
 <meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/remove-duplicates-from-sorted-array/ 中文链接：https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/ 题目详述给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-17T14:46:12.978Z">
+<meta property="og:updated_time" content="2018-11-17T15:38:35.272Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode26-删除排序数组中的重复项">
 <meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/remove-duplicates-from-sorted-array/ 中文链接：https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/ 题目详述给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的">
@@ -355,7 +355,7 @@
 <p>你可以想象内部操作如下:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// nums 是以“引用”方式传递的。也就是说，不对实参做任何拷贝</span><br><span class="line">int len = removeDuplicates(nums);</span><br><span class="line"></span><br><span class="line">// 在函数里修改输入数组对于调用者是可见的。</span><br><span class="line">// 根据你的函数返回的长度, 它会打印出数组中该长度范围内的所有元素。</span><br><span class="line">for (int i = 0; i &lt; len; i++) &#123;</span><br><span class="line">    print(nums[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p>运用双指针。</p>
+<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p>数组和链表的很多题目都可以运用双指针解决，本题就可以运用双指针。</p>
 <ul>
 <li>一个指针 i 指向数组中最后一个不重复元素。</li>
 <li>一个指针 j 用来遍历数组，不断前进。</li>
