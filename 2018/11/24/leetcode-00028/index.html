@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/remove-nth-node-from-end-of-list 中文链接：https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/ 题目详述给定一个链表，删除链表的倒数第 n 个节点，并且返回链表的头结点。 示例： 123给定一个链表: 1-&amp;">
+<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/implement-strstr/ 中文链接：https://leetcode-cn.com/problems/implement-strstr/ 题目详述实现 strStr() 函数。 给定一个 haystack 字符串和一个 needle 字符串，在 haystack 字符串中找出 needle 字符串出现的第一个位">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode19-删除链表的倒数第N个节点">
-<meta property="og:url" content="http://yoursite.com/2018/11/10/leetcode-00019/index.html">
+<meta property="og:title" content="LeetCode28-实现strStr()">
+<meta property="og:url" content="http://yoursite.com/2018/11/24/leetcode-00028/index.html">
 <meta property="og:site_name" content="Jerring">
-<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/remove-nth-node-from-end-of-list 中文链接：https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/ 题目详述给定一个链表，删除链表的倒数第 n 个节点，并且返回链表的头结点。 示例： 123给定一个链表: 1-&amp;">
+<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/implement-strstr/ 中文链接：https://leetcode-cn.com/problems/implement-strstr/ 题目详述实现 strStr() 函数。 给定一个 haystack 字符串和一个 needle 字符串，在 haystack 字符串中找出 needle 字符串出现的第一个位">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-10T08:55:29.892Z">
+<meta property="og:updated_time" content="2018-11-25T12:55:39.225Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode19-删除链表的倒数第N个节点">
-<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/remove-nth-node-from-end-of-list 中文链接：https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/ 题目详述给定一个链表，删除链表的倒数第 n 个节点，并且返回链表的头结点。 示例： 123给定一个链表: 1-&amp;">
+<meta name="twitter:title" content="LeetCode28-实现strStr()">
+<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/implement-strstr/ 中文链接：https://leetcode-cn.com/problems/implement-strstr/ 题目详述实现 strStr() 函数。 给定一个 haystack 字符串和一个 needle 字符串，在 haystack 字符串中找出 needle 字符串出现的第一个位">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/10/leetcode-00019/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/11/24/leetcode-00028/"/>
 
 
 
 
 
-  <title>LeetCode19-删除链表的倒数第N个节点 | Jerring</title>
+  <title>LeetCode28-实现strStr() | Jerring</title>
   
 
 
@@ -252,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/10/leetcode-00019/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/24/leetcode-00028/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jerring">
@@ -269,7 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">LeetCode19-删除链表的倒数第N个节点</h1>
+          <h1 class="post-title" itemprop="name headline">LeetCode28-实现strStr()</h1>
         
 
         <div class="post-meta">
@@ -281,8 +281,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-10T16:53:23+08:00">
-                2018-11-10
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-24T20:46:19+08:00">
+                2018-11-24
               </time>
             
 
@@ -341,23 +341,22 @@
       
 
       
-        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list" target="_blank" rel="noopener">https://leetcode.com/problems/remove-nth-node-from-end-of-list</a></p>
-<p>中文链接：<a href="https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/</a></p>
-<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>给定一个链表，删除链表的倒数第 <em>n</em> 个节点，并且返回链表的头结点。</p>
-<p><strong>示例：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">给定一个链表: 1-&gt;2-&gt;3-&gt;4-&gt;5, 和 n = 2.</span><br><span class="line"></span><br><span class="line">当删除了倒数第二个节点后，链表变为 1-&gt;2-&gt;3-&gt;5.</span><br></pre></td></tr></table></figure>
-<p><strong>说明：</strong></p>
-<p>给定的 <em>n</em> 保证是有效的。</p>
-<p><strong>进阶：</strong></p>
-<p>你能尝试使用一趟扫描实现吗？</p>
+        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/implement-strstr/" target="_blank" rel="noopener">https://leetcode.com/problems/implement-strstr/</a></p>
+<p>中文链接：<a href="https://leetcode-cn.com/problems/implement-strstr/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/implement-strstr/</a></p>
+<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>实现 <a href="https://baike.baidu.com/item/strstr/811469" target="_blank" rel="noopener">strStr()</a> 函数。</p>
+<p>给定一个 haystack 字符串和一个 needle 字符串，在 haystack 字符串中找出 needle 字符串出现的第一个位置 (从0开始)。如果不存在，则返回  <strong>-1</strong>。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: haystack = &quot;hello&quot;, needle = &quot;ll&quot;</span><br><span class="line">输出: 2</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: haystack = &quot;aaaaa&quot;, needle = &quot;bba&quot;</span><br><span class="line">输出: -1</span><br></pre></td></tr></table></figure>
+<p><strong>说明:</strong></p>
+<p>当 <code>needle</code> 是空字符串时，我们应当返回什么值呢？这是一个在面试中很好的问题。</p>
+<p>对于本题而言，当 <code>needle</code> 是空字符串时我们应当返回 0 。这与C语言的 <a href="https://baike.baidu.com/item/strstr/811469" target="_blank" rel="noopener">strstr()</a> 以及 Java的 <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#indexOf(java.lang.String" target="_blank" rel="noopener">indexOf()</a>) 定义相符。</p>
 <a id="more"></a>
-<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><ul>
-<li>使用双指针 first 和 second，一个先走，一个后走。</li>
-<li>为了方便删除头结点的操作，可以新建一个哑结点作为辅助，让它临时充当头结点的角色。</li>
-<li>first 可以先走 n 步或 n+1 步，然后让两个指针一起走。</li>
-<li>当 first 为 null 时，如果 first 先走 n 步，此时 second 指向待删除结点；如果 first 先走 n+1 步，此时 second 指向待删除结点的上一个结点。</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00019</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">removeNthFromEnd</span><span class="params">(ListNode head, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        ListNode dummy = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">        dummy.next = head;</span><br><span class="line">        ListNode first = dummy;</span><br><span class="line">        ListNode second = dummy;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n + <span class="number">1</span>; ++i) &#123;</span><br><span class="line">            first = first.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 找到待删除结点的上一个结点</span></span><br><span class="line">        <span class="keyword">while</span> (first != <span class="keyword">null</span>) &#123;</span><br><span class="line">            first = first.next;</span><br><span class="line">            second = second.next;</span><br><span class="line">        &#125;</span><br><span class="line">        second.next = second.next.next;</span><br><span class="line">        <span class="keyword">return</span> dummy.next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p>Java 中 String 的 indexOf 方法实现了类似于 strStr() 查找字符串的功能，可以直接使用。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00028</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">strStr</span><span class="params">(String haystack, String needle)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> haystack.indexOf(needle);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>不过本题是实现这个功能，自然不能调用这个方法，自己写一下就可以了。注意判断当 <code>needle</code> 是空字符串时应当返回 0。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">public class LeetCode_00028 &#123;</span><br><span class="line"></span><br><span class="line">    public int strStr(String haystack, String needle) &#123;</span><br><span class="line">        return haystack.indexOf(needle);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public int strStr(String haystack, String needle) &#123;</span><br><span class="line">        if (needle.length() == 0) &#123;</span><br><span class="line">            return 0;</span><br><span class="line">        &#125;</span><br><span class="line">        int max = haystack.length() - needle.length();</span><br><span class="line">        for (int i = 0; i &lt;= max; ++i) &#123;</span><br><span class="line">            // 找到第一个相等的字符</span><br><span class="line">            if (haystack.charAt(i) == needle.charAt(0)) &#123;</span><br><span class="line">                int j = i + 1;</span><br><span class="line">                for (int k = 1; k &lt; needle.length()</span><br><span class="line">                        &amp;&amp; haystack.charAt(j) == needle.charAt(k); ++k, ++j);</span><br><span class="line">                // 找到整个字符串就返回</span><br><span class="line">                if (j == i + needle.length()) &#123;</span><br><span class="line">                    return i;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return -1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -382,8 +381,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/10/leetcode-00142/" rel="next" title="LeetCode142-环形链表II">
-                <i class="fa fa-chevron-left"></i> LeetCode142-环形链表II
+              <a href="/2018/11/23/leetcode-00349/" rel="next" title="LeetCode349-两个数组的交集">
+                <i class="fa fa-chevron-left"></i> LeetCode349-两个数组的交集
               </a>
             
           </div>
@@ -391,10 +390,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/11/leetcode-00092/" rel="prev" title="LeetCode92-反转链表II">
-                LeetCode92-反转链表II <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
