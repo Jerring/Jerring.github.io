@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Binary Search," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/next-permutation/ 中文链接：https://leetcode-cn.com/problems/next-permutation/ 题目详述实现获取下一个排列的函数，算法需要将给定数字序列重新排列成字典序中下一个更大的排列。 如果不存在下一个更大的排列，则将数字重新排列成最小的排列（即升序排列）。 必须原">
+<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/search-a-2d-matrix/ 中文链接：https://leetcode-cn.com/problems/search-a-2d-matrix/ 题目详述编写一个高效的算法来判断 m x n 矩阵中，是否存在一个目标值。该矩阵具有如下特性：  每行中的整数从左到右按升序排列。 每行的第一个整数大于前一行的最后一">
+<meta name="keywords" content="Binary Search">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode31-下一个排列">
-<meta property="og:url" content="http://yoursite.com/2018/11/19/leetcode-00031/index.html">
+<meta property="og:title" content="LeetCode74-搜索二维矩阵">
+<meta property="og:url" content="http://yoursite.com/2018/11/04/leetcode-00074/index.html">
 <meta property="og:site_name" content="Jerring">
-<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/next-permutation/ 中文链接：https://leetcode-cn.com/problems/next-permutation/ 题目详述实现获取下一个排列的函数，算法需要将给定数字序列重新排列成字典序中下一个更大的排列。 如果不存在下一个更大的排列，则将数字重新排列成最小的排列（即升序排列）。 必须原">
+<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/search-a-2d-matrix/ 中文链接：https://leetcode-cn.com/problems/search-a-2d-matrix/ 题目详述编写一个高效的算法来判断 m x n 矩阵中，是否存在一个目标值。该矩阵具有如下特性：  每行中的整数从左到右按升序排列。 每行的第一个整数大于前一行的最后一">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-19T14:40:17.189Z">
+<meta property="og:updated_time" content="2018-11-26T06:26:23.257Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode31-下一个排列">
-<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/next-permutation/ 中文链接：https://leetcode-cn.com/problems/next-permutation/ 题目详述实现获取下一个排列的函数，算法需要将给定数字序列重新排列成字典序中下一个更大的排列。 如果不存在下一个更大的排列，则将数字重新排列成最小的排列（即升序排列）。 必须原">
+<meta name="twitter:title" content="LeetCode74-搜索二维矩阵">
+<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/search-a-2d-matrix/ 中文链接：https://leetcode-cn.com/problems/search-a-2d-matrix/ 题目详述编写一个高效的算法来判断 m x n 矩阵中，是否存在一个目标值。该矩阵具有如下特性：  每行中的整数从左到右按升序排列。 每行的第一个整数大于前一行的最后一">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/19/leetcode-00031/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/11/04/leetcode-00074/"/>
 
 
 
 
 
-  <title>LeetCode31-下一个排列 | Jerring</title>
+  <title>LeetCode74-搜索二维矩阵 | Jerring</title>
   
 
 
@@ -252,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/19/leetcode-00031/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/04/leetcode-00074/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jerring">
@@ -269,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">LeetCode31-下一个排列</h1>
+          <h1 class="post-title" itemprop="name headline">LeetCode74-搜索二维矩阵</h1>
         
 
         <div class="post-meta">
@@ -281,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-19T22:35:02+08:00">
-                2018-11-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-04T12:52:52+08:00">
+                2018-11-04
               </time>
             
 
@@ -341,22 +342,35 @@
       
 
       
-        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/next-permutation/" target="_blank" rel="noopener">https://leetcode.com/problems/next-permutation/</a></p>
-<p>中文链接：<a href="https://leetcode-cn.com/problems/next-permutation/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/next-permutation/</a></p>
-<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>实现获取下一个排列的函数，算法需要将给定数字序列重新排列成字典序中下一个更大的排列。</p>
-<p>如果不存在下一个更大的排列，则将数字重新排列成最小的排列（即升序排列）。</p>
-<p>必须<strong>原地</strong>修改，只允许使用额外常数空间。</p>
-<p>以下是一些例子，输入位于左侧列，其相应输出位于右侧列。<br><code>1,2,3</code> → <code>1,3,2</code><br><code>3,2,1</code> → <code>1,2,3</code><br><code>1,1,5</code> → <code>1,5,1</code></p>
+        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/search-a-2d-matrix/" target="_blank" rel="noopener">https://leetcode.com/problems/search-a-2d-matrix/</a></p>
+<p>中文链接：<a href="https://leetcode-cn.com/problems/search-a-2d-matrix/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/search-a-2d-matrix/</a></p>
+<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>编写一个高效的算法来判断 <em>m</em> x <em>n</em> 矩阵中，是否存在一个目标值。该矩阵具有如下特性：</p>
+<ul>
+<li>每行中的整数从左到右按升序排列。</li>
+<li>每行的第一个整数大于前一行的最后一个整数。</li>
+</ul>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">matrix = [</span><br><span class="line">  [1,   3,  5,  7],</span><br><span class="line">  [10, 11, 16, 20],</span><br><span class="line">  [23, 30, 34, 50]</span><br><span class="line">]</span><br><span class="line">target = 3</span><br><span class="line">输出: true</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">matrix = [</span><br><span class="line">  [1,   3,  5,  7],</span><br><span class="line">  [10, 11, 16, 20],</span><br><span class="line">  [23, 30, 34, 50]</span><br><span class="line">]</span><br><span class="line">target = 13</span><br><span class="line">输出: false</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p>全排列，找到下一个排列的四个步骤如下：</p>
-<ol>
-<li>从后往前找到第一组位置，满足 nums[i] &lt; nums[i + 1]（若找不到，说明已经是最后一个排列，即数组元素降序排列）。</li>
-<li>从后往前找到第一个位置，满足 nums[i] &lt; nums[j]。</li>
-<li>交换 i、j 两处的值。</li>
-<li>反转从位置 i + 1 开始到末尾的序列。</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00031</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">nextPermutation</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = nums.length;</span><br><span class="line">        <span class="keyword">int</span> i = n - <span class="number">2</span>;</span><br><span class="line">        <span class="comment">// 1.从后往前找到第一组位置，满足 nums[i] &lt; nums[i + 1]</span></span><br><span class="line">        <span class="keyword">while</span> (i &gt;= <span class="number">0</span> &amp;&amp; nums[i] &gt;= nums[i + <span class="number">1</span>]) &#123;</span><br><span class="line">            --i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (i &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">int</span> j = n - <span class="number">1</span>;</span><br><span class="line">            <span class="comment">// 2.从后往前找到第一个位置，满足 nums[i] &lt; nums[j]</span></span><br><span class="line">            <span class="keyword">while</span> (nums[i] &gt;= nums[j]) &#123;</span><br><span class="line">                --j;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 3.交换 i、j 两处的值</span></span><br><span class="line">            swap(nums, i, j);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 4.反转从位置 i + 1 开始到末尾的序列</span></span><br><span class="line">        reverse(nums, i + <span class="number">1</span>, n - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span>[] a, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> t = a[i];</span><br><span class="line">        a[i] = a[j];</span><br><span class="line">        a[j] = t;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span>[] a, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (i &lt; j) &#123;</span><br><span class="line">            swap(a, i++, j--);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><ul>
+<li>根据该矩阵的特性，从整体上看，矩阵的左上方到右下方是增大的。</li>
+<li>可以以矩阵的副对角线为基准进行查找（从左下角到右上角或从右上角到左下角）。</li>
+<li>这里从左下角开始，若矩阵中的元素 <code>matrix[i][j] &lt; target</code>，说明 target 可能存在于该元素所在行的右侧，进行 <code>++j</code> 操作。</li>
+<li>若矩阵中的元素 <code>matrix[i][j] &gt; target</code>，说明 target 可能存在于该元素上方的行中，进行 <code>--i</code> 操作。</li>
+<li>若相等则说明存在矩阵中存在 target 返回 true。</li>
+<li>若整个过程结束仍未找到说明矩阵中不存在 target 返回 false。</li>
+<li>时间复杂度为 O(m + n)。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00074</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">searchMatrix</span><span class="params">(<span class="keyword">int</span>[][] matrix, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i = matrix.length - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> j = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (i &gt;= <span class="number">0</span> &amp;&amp; j &lt; matrix[<span class="number">0</span>].length) &#123;</span><br><span class="line">            <span class="keyword">if</span> (matrix[i][j] &lt; target) &#123;</span><br><span class="line">                ++j;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (matrix[i][j] &gt; target) &#123;</span><br><span class="line">                --i;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>因为二维矩阵每行中的整数从左到右按升序排列，并且每行的第一个整数大于前一行的最后一个整数，可以把矩阵看成是一个由小到大排序的一维数组。</li>
+<li>”数组 + 有序“可以联想到二分查找。</li>
+<li>从一维还原到二维过程中，中间的那个数的下标从一维的 mid 转换为二维的 (mid / n, mid % n)，其中 n 为每一行的元素个数。</li>
+<li>时间复杂度为 O(log(m*n))。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00074</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">searchMatrix</span><span class="params">(<span class="keyword">int</span>[][] matrix, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (matrix.length == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> m = matrix.length;</span><br><span class="line">        <span class="keyword">int</span> n = matrix[<span class="number">0</span>].length;</span><br><span class="line">        <span class="keyword">int</span> lo = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> hi = m * n - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (lo &lt;= hi) &#123;</span><br><span class="line">            <span class="keyword">int</span> mid = lo + (hi - lo) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">int</span> val = matrix[mid / n][mid % n];</span><br><span class="line">            <span class="keyword">if</span> (val &lt; target) &#123;</span><br><span class="line">                lo = mid + <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (val &gt; target) &#123;</span><br><span class="line">                hi = mid - <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -371,6 +385,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Binary-Search/" rel="tag"># Binary Search</a>
+          
+        </div>
+      
 
       
       
@@ -380,8 +400,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/19/leetcode-00027/" rel="next" title="LeetCode27-移除元素">
-                <i class="fa fa-chevron-left"></i> LeetCode27-移除元素
+              <a href="/2018/11/04/leetcode-00034/" rel="next" title="LeetCode34-在排序数组中查找元素的第一个和最后一个位置">
+                <i class="fa fa-chevron-left"></i> LeetCode34-在排序数组中查找元素的第一个和最后一个位置
               </a>
             
           </div>
@@ -390,8 +410,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/11/20/leetcode-00061/" rel="prev" title="LeetCode61-旋转链表">
-                LeetCode61-旋转链表 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/11/04/leetcode-00237/" rel="prev" title="LeetCode237-删除链表中的结点">
+                LeetCode237-删除链表中的结点 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
