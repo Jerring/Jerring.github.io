@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Binary Search," />
+  <meta name="keywords" content="String," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/ 中文链接：https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/ 题目详述假设按照升序排序的数组在预先未知的某个点上进行了旋转。 ( 例如，数组 [0,1,2,">
-<meta name="keywords" content="Binary Search">
+<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/length-of-last-word/ 中文链接：https://leetcode-cn.com/problems/length-of-last-word/ 题目详述给定一个仅包含大小写字母和空格 &amp;#39; &amp;#39; 的字符串，返回其最后一个单词的长度。 如果不存在最后一个单词，请返回 0 。 说明：一个单词是指由">
+<meta name="keywords" content="String">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode153-寻找旋转排序数组中的最小值">
-<meta property="og:url" content="http://yoursite.com/2018/11/02/leetcode-00153/index.html">
+<meta property="og:title" content="LeetCode58-最后一个单词的长度">
+<meta property="og:url" content="http://yoursite.com/2018/12/02/leetcode-00058/index.html">
 <meta property="og:site_name" content="Jerring">
-<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/ 中文链接：https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/ 题目详述假设按照升序排序的数组在预先未知的某个点上进行了旋转。 ( 例如，数组 [0,1,2,">
+<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/length-of-last-word/ 中文链接：https://leetcode-cn.com/problems/length-of-last-word/ 题目详述给定一个仅包含大小写字母和空格 &amp;#39; &amp;#39; 的字符串，返回其最后一个单词的长度。 如果不存在最后一个单词，请返回 0 。 说明：一个单词是指由">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-08T08:13:55.356Z">
+<meta property="og:updated_time" content="2018-12-02T13:42:21.966Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode153-寻找旋转排序数组中的最小值">
-<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/ 中文链接：https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/ 题目详述假设按照升序排序的数组在预先未知的某个点上进行了旋转。 ( 例如，数组 [0,1,2,">
+<meta name="twitter:title" content="LeetCode58-最后一个单词的长度">
+<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/length-of-last-word/ 中文链接：https://leetcode-cn.com/problems/length-of-last-word/ 题目详述给定一个仅包含大小写字母和空格 &amp;#39; &amp;#39; 的字符串，返回其最后一个单词的长度。 如果不存在最后一个单词，请返回 0 。 说明：一个单词是指由">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/02/leetcode-00153/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/12/02/leetcode-00058/"/>
 
 
 
 
 
-  <title>LeetCode153-寻找旋转排序数组中的最小值 | Jerring</title>
+  <title>LeetCode58-最后一个单词的长度 | Jerring</title>
   
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/02/leetcode-00153/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/02/leetcode-00058/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jerring">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">LeetCode153-寻找旋转排序数组中的最小值</h1>
+          <h1 class="post-title" itemprop="name headline">LeetCode58-最后一个单词的长度</h1>
         
 
         <div class="post-meta">
@@ -282,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-02T15:25:40+08:00">
-                2018-11-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-02T21:37:45+08:00">
+                2018-12-02
               </time>
             
 
@@ -342,20 +342,16 @@
       
 
       
-        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/" target="_blank" rel="noopener">https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/</a></p>
-<p>中文链接：<a href="https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/</a></p>
-<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>假设按照升序排序的数组在预先未知的某个点上进行了旋转。</p>
-<p>( 例如，数组 <code>[0,1,2,4,5,6,7]</code> 可能变为 <code>[4,5,6,7,0,1,2]</code> )。</p>
-<p>请找出其中最小的元素。</p>
-<p>你可以假设数组中不存在重复元素。</p>
-<p><strong>示例 1:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: [3,4,5,1,2]</span><br><span class="line">输出: 1</span><br></pre></td></tr></table></figure>
-<p><strong>示例 2:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: [4,5,6,7,0,1,2]</span><br><span class="line">输出: 0</span><br></pre></td></tr></table></figure>
+        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/length-of-last-word/" target="_blank" rel="noopener">https://leetcode.com/problems/length-of-last-word/</a></p>
+<p>中文链接：<a href="https://leetcode-cn.com/problems/length-of-last-word/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/length-of-last-word/</a></p>
+<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>给定一个仅包含大小写字母和空格 <code>&#39; &#39;</code> 的字符串，返回其最后一个单词的长度。</p>
+<p>如果不存在最后一个单词，请返回 0 。</p>
+<p><strong>说明：</strong>一个单词是指由字母组成，但不包含任何空格的字符串。</p>
+<p><strong>示例:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;Hello World&quot;</span><br><span class="line">输出: 5</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p>”数组 + 有序“可以联想到二分查找。升序排序的数组如果没有旋转，最小的元素就是第一个元素。升序排序的数组如果旋转了，拐点处的两个元素（最大的元素和最小的元素）是降序的，其他地方是局部升序的。利用二分查找找到这两个点即可。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00153</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findMin</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (nums.length == <span class="number">1</span>) &#123;     <span class="comment">// 只有一个元素直接返回</span></span><br><span class="line">            <span class="keyword">return</span> nums[<span class="number">0</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> lo = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> hi = nums.length - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (nums[<span class="number">0</span>] &lt; nums[hi]) &#123;   <span class="comment">// 没有旋转，整个序列是升序的</span></span><br><span class="line">            <span class="keyword">return</span> nums[<span class="number">0</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (lo &lt;= hi) &#123;</span><br><span class="line">            <span class="keyword">int</span> mid = lo + (hi - lo) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (nums[mid] &gt; nums[mid + <span class="number">1</span>]) &#123;    <span class="comment">// nums[mid] 是最大值</span></span><br><span class="line">                <span class="keyword">return</span> nums[mid + <span class="number">1</span>];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (nums[mid - <span class="number">1</span>] &gt; nums[mid]) &#123;    <span class="comment">// nums[mid-1] 是最大值</span></span><br><span class="line">                <span class="keyword">return</span> nums[mid];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (nums[mid] &gt; nums[lo]) &#123;         <span class="comment">// lo 和 mid 在同一边</span></span><br><span class="line">                lo = mid + <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;                            <span class="comment">// lo 和 mid 不在同一边</span></span><br><span class="line">                hi = mid - <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p>这题比较简单，先跳过最后的空格，再统计最后一个单词的长度。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00058</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">lengthOfLastWord</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> i = s.length() - <span class="number">1</span>;</span><br><span class="line">        <span class="comment">// 跳过最后的空格</span></span><br><span class="line">        <span class="keyword">for</span> (; i &gt;= <span class="number">0</span> &amp;&amp; s.charAt(i) == <span class="string">' '</span>; --i);</span><br><span class="line">        <span class="comment">// 统计最后一个单词的长度</span></span><br><span class="line">        <span class="keyword">for</span> (; i &gt;= <span class="number">0</span> &amp;&amp; s.charAt(i) != <span class="string">' '</span>; --i) &#123;</span><br><span class="line">            ++res;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -372,7 +368,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Binary-Search/" rel="tag"># Binary Search</a>
+            <a href="/tags/String/" rel="tag"># String</a>
           
         </div>
       
@@ -385,8 +381,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/01/leetcode-00081/" rel="next" title="LeetCode81-搜索旋转排序数组II">
-                <i class="fa fa-chevron-left"></i> LeetCode81-搜索旋转排序数组II
+              <a href="/2018/12/01/leetcode-00557/" rel="next" title="LeetCode557-反转字符串中的单词III">
+                <i class="fa fa-chevron-left"></i> LeetCode557-反转字符串中的单词III
               </a>
             
           </div>
@@ -394,10 +390,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/03/leetcode-00154/" rel="prev" title="LeetCode154-寻找旋转排序数组中的最小值II">
-                LeetCode154-寻找旋转排序数组中的最小值II <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
