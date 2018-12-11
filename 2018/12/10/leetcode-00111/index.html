@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Binary Tree," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/reverse-linked-list/ 中文链接：https://leetcode-cn.com/problems/reverse-linked-list/ 题目详述反转一个单链表。 示例: 12输入: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL输出: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-">
+<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/minimum-depth-of-binary-tree/ 中文链接：https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/ 题目详述给定一个二叉树，找出其最小深度。 最小深度是从根节点到最近叶子节点的最短路径上的节点数量。 说明: 叶子节点是指没有子">
+<meta name="keywords" content="Binary Tree">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode206-反转链表">
-<meta property="og:url" content="http://yoursite.com/2018/11/06/leetcode-00206/index.html">
+<meta property="og:title" content="LeetCode111-二叉树的最小深度">
+<meta property="og:url" content="http://yoursite.com/2018/12/10/leetcode-00111/index.html">
 <meta property="og:site_name" content="Jerring">
-<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/reverse-linked-list/ 中文链接：https://leetcode-cn.com/problems/reverse-linked-list/ 题目详述反转一个单链表。 示例: 12输入: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL输出: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-">
+<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/minimum-depth-of-binary-tree/ 中文链接：https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/ 题目详述给定一个二叉树，找出其最小深度。 最小深度是从根节点到最近叶子节点的最短路径上的节点数量。 说明: 叶子节点是指没有子">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-06T07:18:53.459Z">
+<meta property="og:updated_time" content="2018-12-11T06:59:56.590Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode206-反转链表">
-<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/reverse-linked-list/ 中文链接：https://leetcode-cn.com/problems/reverse-linked-list/ 题目详述反转一个单链表。 示例: 12输入: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL输出: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-">
+<meta name="twitter:title" content="LeetCode111-二叉树的最小深度">
+<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/minimum-depth-of-binary-tree/ 中文链接：https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/ 题目详述给定一个二叉树，找出其最小深度。 最小深度是从根节点到最近叶子节点的最短路径上的节点数量。 说明: 叶子节点是指没有子">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/06/leetcode-00206/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/12/10/leetcode-00111/"/>
 
 
 
 
 
-  <title>LeetCode206-反转链表 | Jerring</title>
+  <title>LeetCode111-二叉树的最小深度 | Jerring</title>
   
 
 
@@ -252,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/06/leetcode-00206/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/10/leetcode-00111/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jerring">
@@ -269,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">LeetCode206-反转链表</h1>
+          <h1 class="post-title" itemprop="name headline">LeetCode111-二叉树的最小深度</h1>
         
 
         <div class="post-meta">
@@ -281,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-06T15:08:50+08:00">
-                2018-11-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-10T14:14:28+08:00">
+                2018-12-10
               </time>
             
 
@@ -341,18 +342,31 @@
       
 
       
-        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/reverse-linked-list/" target="_blank" rel="noopener">https://leetcode.com/problems/reverse-linked-list/</a></p>
-<p>中文链接：<a href="https://leetcode-cn.com/problems/reverse-linked-list/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/reverse-linked-list/</a></p>
-<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>反转一个单链表。</p>
+        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/minimum-depth-of-binary-tree/" target="_blank" rel="noopener">https://leetcode.com/problems/minimum-depth-of-binary-tree/</a></p>
+<p>中文链接：<a href="https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/</a></p>
+<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>给定一个二叉树，找出其最小深度。</p>
+<p>最小深度是从根节点到最近叶子节点的最短路径上的节点数量。</p>
+<p><strong>说明:</strong> 叶子节点是指没有子节点的节点。</p>
 <p><strong>示例:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL</span><br><span class="line">输出: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL</span><br></pre></td></tr></table></figure>
-<p><strong>进阶:</strong><br>你可以迭代或递归地反转链表。你能否用两种方法解决这道题？</p>
+<p>给定二叉树 <code>[3,9,20,null,null,15,7]</code>,</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  3</span><br><span class="line"> / \</span><br><span class="line">9  20</span><br><span class="line">  /  \</span><br><span class="line"> 15   7</span><br></pre></td></tr></table></figure>
+<p>返回它的最小深度  2.</p>
 <a id="more"></a>
-<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p>解决这种问题免不了对结点的 next 进行操作，最好的方式是先用纸笔画图模拟一下操作过程，再来写代码。</p>
-<p>下面是迭代版本：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00206</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 迭代版本</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">reverseList</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        ListNode cur = head;</span><br><span class="line">        ListNode pre = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">while</span> (cur != <span class="keyword">null</span>) &#123;</span><br><span class="line">            ListNode next = cur.next;</span><br><span class="line">            cur.next = pre;</span><br><span class="line">            pre = cur;</span><br><span class="line">            cur = next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> pre;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>下面是递归版本：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00206</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 递归版本</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">reverseList</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="keyword">null</span> || head.next == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> head;</span><br><span class="line">        &#125;</span><br><span class="line">        ListNode newHead = reverseList(head.next);</span><br><span class="line">        <span class="comment">// 在反转过程中，head 指向下一个结点的指针没有变化，故可以用 head.next获取到反转链表的尾结点</span></span><br><span class="line">        head.next.next = head;</span><br><span class="line">        head.next = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">return</span> newHead;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p><a href="https://jerring.github.io/2018/12/07/leetcode-00104/" target="_blank" rel="noopener">LeetCode104-二叉树的最大深度</a> 是求最大深度，本题是求最小深度，思路是一致的。不过，需要注意的是最小深度指的是从根节点到最近叶子节点的最短路径上的节点数量，必须到叶子结点。一个根结点加上一个叶子结点的最小深度是 2，只有根结点的左右孩子均为空最小深度才为 1。问题的症结在于找到叶子节点。</p>
+<ul>
+<li>若根结点为 null，则树的深度为 0。</li>
+<li>若根结点不为 null，左子树为 null 而右子树不为 null，深度为当前深度加上右子树深度；左子树不为 null 而右子树为 null，深度为当前深度加上左子树深度。</li>
+<li>若根结点不为 null，左右子树均为 null，说明这个结点是叶子结点。</li>
+</ul>
+<p>例如：</p>
+<pre><code>    3
+   / \
+null  20
+</code></pre><p> 上面这个二叉树的最小深度为 2。</p>
+<p>递归版：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00111</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minDepth</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> leftDepth = minDepth(root.left);</span><br><span class="line">        <span class="keyword">int</span> rightDepth = minDepth(root.right);</span><br><span class="line">        <span class="comment">// 保障一个根结点加上一个叶子结点的最小深度是 2，只有根结点的左右孩子均为空最小深度才为 1</span></span><br><span class="line">        <span class="keyword">return</span> leftDepth == <span class="number">0</span> || rightDepth == <span class="number">0</span> ? <span class="number">1</span> + leftDepth + rightDepth : <span class="number">1</span> + Math.min(leftDepth, rightDepth);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>迭代版：运用 DFS，当结点深度大于或等于当前最小深度时，可以剪枝，因为这个结点不可能在构成最小深度的路径上。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00111</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minDepth</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        ArrayDeque&lt;Pair&gt; stack = <span class="keyword">new</span> ArrayDeque&lt;&gt;();</span><br><span class="line">        stack.push(<span class="keyword">new</span> Pair(root, <span class="number">1</span>));</span><br><span class="line">        <span class="keyword">int</span> res = Integer.MAX_VALUE;</span><br><span class="line">        <span class="keyword">while</span> (!stack.isEmpty()) &#123;</span><br><span class="line">            Pair p = stack.pop();</span><br><span class="line">            TreeNode node = p.node;</span><br><span class="line">            <span class="keyword">int</span> depth = p.depth;</span><br><span class="line">            <span class="comment">// 找到叶子结点</span></span><br><span class="line">            <span class="keyword">if</span> (node.left == <span class="keyword">null</span> &amp;&amp; node.right == <span class="keyword">null</span>) &#123;</span><br><span class="line">                res = Math.min(res, depth);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (node.left != <span class="keyword">null</span> &amp;&amp; depth + <span class="number">1</span> &lt; res) &#123;     <span class="comment">// 剪枝</span></span><br><span class="line">                stack.push(<span class="keyword">new</span> Pair(node.left, depth + <span class="number">1</span>));</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (node.right != <span class="keyword">null</span> &amp;&amp; depth + <span class="number">1</span> &lt; res) &#123;    <span class="comment">// 剪枝</span></span><br><span class="line">                stack.push(<span class="keyword">new</span> Pair(node.right, depth + <span class="number">1</span>));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Pair</span> </span>&#123;</span><br><span class="line">        TreeNode node;</span><br><span class="line">        <span class="keyword">int</span> depth;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Pair</span><span class="params">(TreeNode node, <span class="keyword">int</span> depth)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.node = node;</span><br><span class="line">            <span class="keyword">this</span>.depth = depth;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -368,6 +382,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Binary-Tree/" rel="tag"># Binary Tree</a>
+          
+        </div>
+      
 
       
       
@@ -377,8 +397,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/05/leetcode-00160/" rel="next" title="LeetCode160-相交链表">
-                <i class="fa fa-chevron-left"></i> LeetCode160-相交链表
+              <a href="/2018/12/09/leetcode-00107/" rel="next" title="LeetCode107-二叉树的层次遍历II">
+                <i class="fa fa-chevron-left"></i> LeetCode107-二叉树的层次遍历II
               </a>
             
           </div>
@@ -386,10 +406,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/07/leetcode-00234/" rel="prev" title="LeetCode234-回文链表">
-                LeetCode234-回文链表 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
