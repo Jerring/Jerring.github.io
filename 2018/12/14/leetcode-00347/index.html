@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/kth-largest-element-in-an-array/ 中文链接：https://leetcode-cn.com/problems/kth-largest-element-in-an-array/ 题目详述在未排序的数组中找到第 k 个最大的元素。请注意，你需要找的是数组排序后的第 k 个最大的元素，而不是第">
+<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/top-k-frequent-elements/ 中文链接：https://leetcode-cn.com/problems/top-k-frequent-elements/ 题目详述给定一个非空的整数数组，返回其中出现频率前 k 高的元素。 示例 1: 12输入: nums = [1,1,1,2,2,3], k = 2">
 <meta name="keywords" content="Sort">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode215-数组中的第K个最大元素">
-<meta property="og:url" content="http://yoursite.com/2018/12/13/leetcode-00215/index.html">
+<meta property="og:title" content="LeetCode347-前K个高频元素">
+<meta property="og:url" content="http://yoursite.com/2018/12/14/leetcode-00347/index.html">
 <meta property="og:site_name" content="Jerring">
-<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/kth-largest-element-in-an-array/ 中文链接：https://leetcode-cn.com/problems/kth-largest-element-in-an-array/ 题目详述在未排序的数组中找到第 k 个最大的元素。请注意，你需要找的是数组排序后的第 k 个最大的元素，而不是第">
+<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/top-k-frequent-elements/ 中文链接：https://leetcode-cn.com/problems/top-k-frequent-elements/ 题目详述给定一个非空的整数数组，返回其中出现频率前 k 高的元素。 示例 1: 12输入: nums = [1,1,1,2,2,3], k = 2">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-13T15:57:29.354Z">
+<meta property="og:updated_time" content="2018-12-25T13:02:11.479Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode215-数组中的第K个最大元素">
-<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/kth-largest-element-in-an-array/ 中文链接：https://leetcode-cn.com/problems/kth-largest-element-in-an-array/ 题目详述在未排序的数组中找到第 k 个最大的元素。请注意，你需要找的是数组排序后的第 k 个最大的元素，而不是第">
+<meta name="twitter:title" content="LeetCode347-前K个高频元素">
+<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/top-k-frequent-elements/ 中文链接：https://leetcode-cn.com/problems/top-k-frequent-elements/ 题目详述给定一个非空的整数数组，返回其中出现频率前 k 高的元素。 示例 1: 12输入: nums = [1,1,1,2,2,3], k = 2">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/13/leetcode-00215/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/12/14/leetcode-00347/"/>
 
 
 
 
 
-  <title>LeetCode215-数组中的第K个最大元素 | Jerring</title>
+  <title>LeetCode347-前K个高频元素 | Jerring</title>
   
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/13/leetcode-00215/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/14/leetcode-00347/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jerring">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">LeetCode215-数组中的第K个最大元素</h1>
+          <h1 class="post-title" itemprop="name headline">LeetCode347-前K个高频元素</h1>
         
 
         <div class="post-meta">
@@ -282,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-13T23:54:39+08:00">
-                2018-12-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-14T20:30:16+08:00">
+                2018-12-14
               </time>
             
 
@@ -342,18 +342,34 @@
       
 
       
-        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/kth-largest-element-in-an-array/" target="_blank" rel="noopener">https://leetcode.com/problems/kth-largest-element-in-an-array/</a></p>
-<p>中文链接：<a href="https://leetcode-cn.com/problems/kth-largest-element-in-an-array/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/kth-largest-element-in-an-array/</a></p>
-<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>在未排序的数组中找到第 <strong>k</strong> 个最大的元素。请注意，你需要找的是数组排序后的第 k 个最大的元素，而不是第 k 个不同的元素。</p>
+        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/top-k-frequent-elements/" target="_blank" rel="noopener">https://leetcode.com/problems/top-k-frequent-elements/</a></p>
+<p>中文链接：<a href="https://leetcode-cn.com/problems/top-k-frequent-elements/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/top-k-frequent-elements/</a></p>
+<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>给定一个非空的整数数组，返回其中出现频率前 <strong>k</strong> 高的元素。</p>
 <p><strong>示例 1:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: [3,2,1,5,6,4] 和 k = 2</span><br><span class="line">输出: 5</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: nums = [1,1,1,2,2,3], k = 2</span><br><span class="line">输出: [1,2]</span><br></pre></td></tr></table></figure>
 <p><strong>示例 2:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: [3,2,3,1,2,4,5,5,6] 和 k = 4</span><br><span class="line">输出: 4</span><br></pre></td></tr></table></figure>
-<p><strong>说明:</strong></p>
-<p>你可以假设 k 总是有效的，且 1 ≤ k ≤ 数组的长度。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: nums = [1], k = 1</span><br><span class="line">输出: [1]</span><br></pre></td></tr></table></figure>
+<p><strong>说明：</strong></p>
+<ul>
+<li>你可以假设给定的 <em>k</em> 总是合理的，且 1 ≤ k ≤ 数组中不相同的元素的个数。</li>
+<li>你的算法的时间复杂度<strong>必须</strong>优于 O(<em>n</em> log <em>n</em>) , <em>n</em> 是数组的大小。</li>
+</ul>
 <a id="more"></a>
-<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p>K-th Element 问题。</p>
+<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p>TopK 问题。</p>
+<p>因为是求出现频率前 <strong>k</strong> 高的元素，而不是求前K大的元素，所以首先要统计每个元素的出现次数，构造一个从数据到出现次数的映射，据此来进行比较。</p>
+<p>方法一：利用桶排序，时间复杂度为 O(n)。</p>
+<ul>
+<li>把元素出现次数作为桶的下标，元素作为桶的数据。</li>
+<li>从后往前遍历桶，就是从频率高到频率低进行遍历，可以得到 TopK。</li>
+</ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00215</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findKthLargest</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 转换为数组从小到大排序后的下标</span></span><br><span class="line">        k = nums.length - k;</span><br><span class="line">        <span class="keyword">return</span> quickSelect(nums, k);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 选择第 k 小的元素（从 0 开始计数），使 a[k] 在数组排序后正确的位置上</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> nums  数组 nums</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> k     第 k 小</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span>      nums[k]</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">quickSelect</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> lo = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> hi = nums.length - <span class="number">1</span>;</span><br><span class="line">        <span class="comment">// 逐步缩小 [lo, hi] 的范围</span></span><br><span class="line">        <span class="keyword">while</span> (lo &lt; hi) &#123;</span><br><span class="line">            <span class="keyword">int</span> i = partition(nums, lo, hi);</span><br><span class="line">            <span class="keyword">if</span> (i &lt; k) &#123;</span><br><span class="line">                lo = i + <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (i &gt; k) &#123;</span><br><span class="line">                hi = i - <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> nums[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 此时 lo = hi = k</span></span><br><span class="line">        <span class="keyword">return</span> nums[lo];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 分割方法，获得切分下标</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> nums     待分割数组</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> lo    待分割数组的开始下标</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> hi    待分割数组的结束下标</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span>      切分下标</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">partition</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> lo, <span class="keyword">int</span> hi)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 将三者的中位数放在数组头部，再来分割，即把三者的中位数作为 pivot</span></span><br><span class="line">        <span class="keyword">int</span> m = median3(nums, lo, lo + (hi - lo) / <span class="number">2</span>, hi);</span><br><span class="line">        swap(nums, lo, m);</span><br><span class="line">        <span class="keyword">int</span> i = lo;</span><br><span class="line">        <span class="keyword">int</span> j = hi + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> v = nums[lo];</span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">            <span class="comment">// 从左往右找到第一个大于 pivot 的位置</span></span><br><span class="line">            <span class="keyword">while</span> (nums[++i] &lt; v &amp;&amp; i &lt; hi) &#123;&#125;</span><br><span class="line">            <span class="comment">// 从右往左找到第一个小于 pivot 的位置</span></span><br><span class="line">            <span class="keyword">while</span> (nums[--j] &gt; v) &#123;&#125;</span><br><span class="line">            <span class="keyword">if</span> (i &gt;= j) &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            swap(nums, i, j);</span><br><span class="line">        &#125;</span><br><span class="line">        swap(nums, lo, j);</span><br><span class="line">        <span class="keyword">return</span> j;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 得到 nums[i], nums[j], nums[k] 的中位数的下标</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> nums  数组</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> i     下标 i</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> j     下标 j</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> k     下标 k</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span>      中位数的下标</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">median3</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> i, <span class="keyword">int</span> j, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> nums[i] &lt; nums[j] ?</span><br><span class="line">                (nums[j] &lt; nums[k] ? j : nums[i] &lt; nums[k] ? k : i) :</span><br><span class="line">                (nums[k] &lt; nums[j] ? j : nums[k] &lt; nums[i] ? k : i);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> tmp = nums[i];</span><br><span class="line">        nums[i] = nums[j];</span><br><span class="line">        nums[j] = tmp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>方法二：利用小根堆，时间复杂度为 O(nlog(k))。</p>
+<ul>
+<li>根据元素出现次数构造小根堆。</li>
+<li>遍历原数组，不断向小根堆添加元素，当小根堆大小超过 k 时，弹出队顶（最小值），即维持小根堆的大小最大为 k。</li>
+<li>遍历结束后，小根堆里的元素为 TopK。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00347</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 时间复杂度 O(nlog(k))</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">topKFrequent</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 构造一个从整数到出现次数的映射</span></span><br><span class="line">        Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> num : nums) &#123;</span><br><span class="line">            map.put(num, map.getOrDefault(num, <span class="number">0</span>) + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 构造一个小根堆，根据出现次数排序</span></span><br><span class="line">        PriorityQueue&lt;Integer&gt; heap = <span class="keyword">new</span> PriorityQueue&lt;&gt;(Comparator.comparingInt(map::get));</span><br><span class="line">        <span class="keyword">for</span> (Integer num : map.keySet()) &#123;</span><br><span class="line">            heap.add(num);</span><br><span class="line">            <span class="keyword">if</span> (heap.size() &gt; k) &#123;</span><br><span class="line">                heap.poll();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 转为 List</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> ArrayList&lt;&gt;(heap);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -384,8 +400,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/12/leetcode-00109/" rel="next" title="LeetCode109-有序链表转换二叉搜索树">
-                <i class="fa fa-chevron-left"></i> LeetCode109-有序链表转换二叉搜索树
+              <a href="/2018/12/13/leetcode-00215/" rel="next" title="LeetCode215-数组中的第K个最大元素">
+                <i class="fa fa-chevron-left"></i> LeetCode215-数组中的第K个最大元素
               </a>
             
           </div>
@@ -393,10 +409,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/12/14/leetcode-00347/" rel="prev" title="LeetCode347-前K个高频元素">
-                LeetCode347-前K个高频元素 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
