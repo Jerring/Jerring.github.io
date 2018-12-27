@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Greedy," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/next-permutation/ 中文链接：https://leetcode-cn.com/problems/next-permutation/ 题目详述实现获取下一个排列的函数，算法需要将给定数字序列重新排列成字典序中下一个更大的排列。 如果不存在下一个更大的排列，则将数字重新排列成最小的排列（即升序排列）。 必须原">
+<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/non-overlapping-intervals/ 中文链接：https://leetcode-cn.com/problems/non-overlapping-intervals/ 题目详述给定一个区间的集合，找到需要移除区间的最小数量，使剩余区间互不重叠。 注意:  可以认为区间的终点总是大于它的起点。 区间 [1,">
+<meta name="keywords" content="Greedy">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode31-下一个排列">
-<meta property="og:url" content="http://yoursite.com/2018/11/19/leetcode-00031/index.html">
+<meta property="og:title" content="LeetCode435-无重叠区间">
+<meta property="og:url" content="http://yoursite.com/2018/12/18/leetcode-00435/index.html">
 <meta property="og:site_name" content="Jerring">
-<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/next-permutation/ 中文链接：https://leetcode-cn.com/problems/next-permutation/ 题目详述实现获取下一个排列的函数，算法需要将给定数字序列重新排列成字典序中下一个更大的排列。 如果不存在下一个更大的排列，则将数字重新排列成最小的排列（即升序排列）。 必须原">
+<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/non-overlapping-intervals/ 中文链接：https://leetcode-cn.com/problems/non-overlapping-intervals/ 题目详述给定一个区间的集合，找到需要移除区间的最小数量，使剩余区间互不重叠。 注意:  可以认为区间的终点总是大于它的起点。 区间 [1,">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-19T14:40:17.189Z">
+<meta property="og:updated_time" content="2018-12-27T02:33:03.676Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode31-下一个排列">
-<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/next-permutation/ 中文链接：https://leetcode-cn.com/problems/next-permutation/ 题目详述实现获取下一个排列的函数，算法需要将给定数字序列重新排列成字典序中下一个更大的排列。 如果不存在下一个更大的排列，则将数字重新排列成最小的排列（即升序排列）。 必须原">
+<meta name="twitter:title" content="LeetCode435-无重叠区间">
+<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/non-overlapping-intervals/ 中文链接：https://leetcode-cn.com/problems/non-overlapping-intervals/ 题目详述给定一个区间的集合，找到需要移除区间的最小数量，使剩余区间互不重叠。 注意:  可以认为区间的终点总是大于它的起点。 区间 [1,">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/19/leetcode-00031/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/12/18/leetcode-00435/"/>
 
 
 
 
 
-  <title>LeetCode31-下一个排列 | Jerring</title>
+  <title>LeetCode435-无重叠区间 | Jerring</title>
   
 
 
@@ -252,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/19/leetcode-00031/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/18/leetcode-00435/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jerring">
@@ -269,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">LeetCode31-下一个排列</h1>
+          <h1 class="post-title" itemprop="name headline">LeetCode435-无重叠区间</h1>
         
 
         <div class="post-meta">
@@ -281,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-19T22:35:02+08:00">
-                2018-11-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-18T10:16:16+08:00">
+                2018-12-18
               </time>
             
 
@@ -341,21 +342,27 @@
       
 
       
-        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/next-permutation/" target="_blank" rel="noopener">https://leetcode.com/problems/next-permutation/</a></p>
-<p>中文链接：<a href="https://leetcode-cn.com/problems/next-permutation/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/next-permutation/</a></p>
-<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>实现获取下一个排列的函数，算法需要将给定数字序列重新排列成字典序中下一个更大的排列。</p>
-<p>如果不存在下一个更大的排列，则将数字重新排列成最小的排列（即升序排列）。</p>
-<p>必须<strong>原地</strong>修改，只允许使用额外常数空间。</p>
-<p>以下是一些例子，输入位于左侧列，其相应输出位于右侧列。<br><code>1,2,3</code> → <code>1,3,2</code><br><code>3,2,1</code> → <code>1,2,3</code><br><code>1,1,5</code> → <code>1,5,1</code></p>
-<a id="more"></a>
-<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p>全排列，找到下一个排列的四个步骤如下：</p>
+        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/non-overlapping-intervals/" target="_blank" rel="noopener">https://leetcode.com/problems/non-overlapping-intervals/</a></p>
+<p>中文链接：<a href="https://leetcode-cn.com/problems/non-overlapping-intervals/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/non-overlapping-intervals/</a></p>
+<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>给定一个区间的集合，找到需要移除区间的最小数量，使剩余区间互不重叠。</p>
+<p><strong>注意:</strong></p>
 <ol>
-<li>从后往前找到第一组位置，满足 nums[i] &lt; nums[i + 1]（若找不到，说明已经是最后一个排列，即数组元素降序排列）。</li>
-<li>从后往前找到第一个位置，满足 nums[i] &lt; nums[j]。</li>
-<li>交换 i、j 两处的值。</li>
-<li>反转从位置 i + 1 开始到末尾的序列。</li>
+<li>可以认为区间的终点总是大于它的起点。</li>
+<li>区间 [1,2] 和 [2,3] 的边界相互“接触”，但没有相互重叠。</li>
 </ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00031</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">nextPermutation</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = nums.length;</span><br><span class="line">        <span class="keyword">int</span> i = n - <span class="number">2</span>;</span><br><span class="line">        <span class="comment">// 1.从后往前找到第一组位置，满足 nums[i] &lt; nums[i + 1]</span></span><br><span class="line">        <span class="keyword">while</span> (i &gt;= <span class="number">0</span> &amp;&amp; nums[i] &gt;= nums[i + <span class="number">1</span>]) &#123;</span><br><span class="line">            --i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (i &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">int</span> j = n - <span class="number">1</span>;</span><br><span class="line">            <span class="comment">// 2.从后往前找到第一个位置，满足 nums[i] &lt; nums[j]</span></span><br><span class="line">            <span class="keyword">while</span> (nums[i] &gt;= nums[j]) &#123;</span><br><span class="line">                --j;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 3.交换 i、j 两处的值</span></span><br><span class="line">            swap(nums, i, j);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 4.反转从位置 i + 1 开始到末尾的序列</span></span><br><span class="line">        reverse(nums, i + <span class="number">1</span>, n - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span>[] a, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> t = a[i];</span><br><span class="line">        a[i] = a[j];</span><br><span class="line">        a[j] = t;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span>[] a, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (i &lt; j) &#123;</span><br><span class="line">            swap(a, i++, j--);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入: [ [1,2], [2,3], [3,4], [1,3] ]</span><br><span class="line"></span><br><span class="line">输出: 1</span><br><span class="line"></span><br><span class="line">解释: 移除 [1,3] 后，剩下的区间没有重叠。</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入: [ [1,2], [1,2], [1,2] ]</span><br><span class="line"></span><br><span class="line">输出: 2</span><br><span class="line"></span><br><span class="line">解释: 你需要移除两个 [1,2] 来使剩下的区间没有重叠。</span><br></pre></td></tr></table></figure>
+<p><strong>示例 3:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入: [ [1,2], [2,3] ]</span><br><span class="line"></span><br><span class="line">输出: 0</span><br><span class="line"></span><br><span class="line">解释: 你不需要移除任何区间，因为它们已经是无重叠的了。</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p>贪心算法。在每次的选择中，区间的结尾最重要，前面区间的结尾越小，留给后面区间的余地就越大。</p>
+<ul>
+<li>首先对数组按照区间的结尾从小到大进行排序。</li>
+<li>然后遍历数组，发现重叠区间结果就递增，最后返回结果即可。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00435</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">eraseOverlapIntervals</span><span class="params">(Interval[] intervals)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 为空或只有一个区间则不存在区间重叠的可能</span></span><br><span class="line">        <span class="keyword">if</span> (intervals == <span class="keyword">null</span> || intervals.length &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 按区间的 end 从小到大排序</span></span><br><span class="line">        Arrays.sort(intervals, Comparator.comparingInt(o -&gt; o.end));</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> pre = intervals[<span class="number">0</span>].end;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; intervals.length; ++i) &#123;</span><br><span class="line">            <span class="keyword">if</span> (intervals[i].start &lt; pre) &#123; <span class="comment">// 区间重叠</span></span><br><span class="line">                ++res;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;                        <span class="comment">// 区间未重叠</span></span><br><span class="line">                pre = intervals[i].end;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -371,6 +378,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Greedy/" rel="tag"># Greedy</a>
+          
+        </div>
+      
 
       
       
@@ -380,8 +393,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/19/leetcode-00027/" rel="next" title="LeetCode27-移除元素">
-                <i class="fa fa-chevron-left"></i> LeetCode27-移除元素
+              <a href="/2018/12/17/leetcode-00455/" rel="next" title="LeetCode455-分发饼干">
+                <i class="fa fa-chevron-left"></i> LeetCode455-分发饼干
               </a>
             
           </div>
@@ -389,10 +402,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/20/leetcode-00061/" rel="prev" title="LeetCode61-旋转链表">
-                LeetCode61-旋转链表 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
