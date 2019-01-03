@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="String," />
+  <meta name="keywords" content="Greedy," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/first-unique-character-in-a-string/ 中文链接：https://leetcode-cn.com/problems/first-unique-character-in-a-string/ 题目详述给定一个字符串，找到它的第一个不重复的字符，并返回它的索引。如果不存在，则返回 -1。 案例:">
-<meta name="keywords" content="String">
+<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/ 中文链接：https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/ 题目详述给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。 设计一个算法来计算你所能获取">
+<meta name="keywords" content="Greedy">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode387-字符串中的第一个唯一字符">
-<meta property="og:url" content="http://yoursite.com/2018/11/29/leetcode-00387/index.html">
+<meta property="og:title" content="LeetCode122-买卖股票的最佳时机II">
+<meta property="og:url" content="http://yoursite.com/2018/12/26/leetcode-00122/index.html">
 <meta property="og:site_name" content="Jerring">
-<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/first-unique-character-in-a-string/ 中文链接：https://leetcode-cn.com/problems/first-unique-character-in-a-string/ 题目详述给定一个字符串，找到它的第一个不重复的字符，并返回它的索引。如果不存在，则返回 -1。 案例:">
+<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/ 中文链接：https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/ 题目详述给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。 设计一个算法来计算你所能获取">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-30T13:33:55.279Z">
+<meta property="og:updated_time" content="2019-01-03T06:45:35.623Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode387-字符串中的第一个唯一字符">
-<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/first-unique-character-in-a-string/ 中文链接：https://leetcode-cn.com/problems/first-unique-character-in-a-string/ 题目详述给定一个字符串，找到它的第一个不重复的字符，并返回它的索引。如果不存在，则返回 -1。 案例:">
+<meta name="twitter:title" content="LeetCode122-买卖股票的最佳时机II">
+<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/ 中文链接：https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/ 题目详述给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。 设计一个算法来计算你所能获取">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/29/leetcode-00387/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/12/26/leetcode-00122/"/>
 
 
 
 
 
-  <title>LeetCode387-字符串中的第一个唯一字符 | Jerring</title>
+  <title>LeetCode122-买卖股票的最佳时机II | Jerring</title>
   
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/29/leetcode-00387/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/26/leetcode-00122/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jerring">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">LeetCode387-字符串中的第一个唯一字符</h1>
+          <h1 class="post-title" itemprop="name headline">LeetCode122-买卖股票的最佳时机II</h1>
         
 
         <div class="post-meta">
@@ -282,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-29T21:07:28+08:00">
-                2018-11-29
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-26T14:29:27+08:00">
+                2018-12-26
               </time>
             
 
@@ -342,30 +342,21 @@
       
 
       
-        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/first-unique-character-in-a-string/" target="_blank" rel="noopener">https://leetcode.com/problems/first-unique-character-in-a-string/</a></p>
-<p>中文链接：<a href="https://leetcode-cn.com/problems/first-unique-character-in-a-string/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/first-unique-character-in-a-string/</a></p>
-<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>给定一个字符串，找到它的第一个不重复的字符，并返回它的索引。如果不存在，则返回 -1。</p>
-<p><strong>案例:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">s = &quot;leetcode&quot;</span><br><span class="line">返回 0.</span><br><span class="line"></span><br><span class="line">s = &quot;loveleetcode&quot;,</span><br><span class="line">返回 2.</span><br></pre></td></tr></table></figure>
-<p><strong>注意事项：</strong>您可以假定该字符串只包含小写字母。</p>
+        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/" target="_blank" rel="noopener">https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/</a></p>
+<p>中文链接：<a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/</a></p>
+<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>给定一个数组，它的第 <em>i</em> 个元素是一支给定股票第 <em>i</em> 天的价格。</p>
+<p>设计一个算法来计算你所能获取的最大利润。你可以尽可能地完成更多的交易（多次买卖一支股票）。</p>
+<p><strong>注意：</strong>你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入: [7,1,5,3,6,4]</span><br><span class="line">输出: 7</span><br><span class="line">解释: 在第 2 天（股票价格 = 1）的时候买入，在第 3 天（股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5-1 = 4 。</span><br><span class="line">     随后，在第 4 天（股票价格 = 3）的时候买入，在第 5 天（股票价格 = 6）的时候卖出, 这笔交易所能获得利润 = 6-3 = 3 。</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入: [1,2,3,4,5]</span><br><span class="line">输出: 4</span><br><span class="line">解释: 在第 1 天（股票价格 = 1）的时候买入，在第 5 天 （股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5-1 = 4 。</span><br><span class="line">     注意你不能在第 1 天和第 2 天接连购买股票，之后再将它们卖出。</span><br><span class="line">     因为这样属于同时参与了多笔交易，你必须在再次购买前出售掉之前的股票。</span><br></pre></td></tr></table></figure>
+<p><strong>示例 3:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: [7,6,4,3,1]</span><br><span class="line">输出: 0</span><br><span class="line">解释: 在这种情况下, 没有交易完成, 所以最大利润为 0。</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><ul>
-<li>第一次遍历，统计出各个字符出现的次数。</li>
-<li>第二次遍历，返回第一次字符个数为 1 的索引即可；若不存在按题目要求返回 -1。</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00387</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">firstUniqChar</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] cnt = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">26</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.length(); ++i) &#123;</span><br><span class="line">            ++cnt[s.charAt(i) - <span class="string">'a'</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.length(); ++i) &#123;</span><br><span class="line">            <span class="keyword">if</span> (cnt[s.charAt(i) - <span class="string">'a'</span>] == <span class="number">1</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>若输入的字符串很长，按照上面的思路可能导致第二次遍历很久才能找到答案。可以换一种思路，把第二次遍历的迭代次数固定在 26 次。</p>
-<ul>
-<li>同样是新建一个数组 index，不过数组不用来统计各个字符出现的次数，而是用来记录各个字符出现的下标。</li>
-<li>初始化数组各个元素为 -1。</li>
-<li>当第一次碰到该字符时，把该字符对应下标记录在索引数组中。</li>
-<li>当再次碰到该字符时，把该字符记录在索引数组中的元素改为 -2。</li>
-<li>当遍历完成后，出现 0 次的字符对应的索引数组元素为 -1。</li>
-<li>出现 1 次的字符对应的索引数组元素是它的下标。</li>
-<li>出现 2 次及以上的字符为对应的索引数组元素为 -2。</li>
-<li>最后统计索引数组中大于或等于 0 的元素的最小值即可，若不存在按题目要求返回 -1。</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00387</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">firstUniqChar</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] index = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">26</span>];</span><br><span class="line">        Arrays.fill(index, -<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.length(); ++i) &#123;</span><br><span class="line">            <span class="keyword">int</span> j = s.charAt(i) - <span class="string">'a'</span>;</span><br><span class="line">            <span class="keyword">if</span> (index[j] == -<span class="number">1</span>) &#123;</span><br><span class="line">                index[j] = i;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (index[j] &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">                index[j] = -<span class="number">2</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> res = Integer.MAX_VALUE;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">26</span>; ++i) &#123;</span><br><span class="line">            <span class="keyword">if</span> (index[i] &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">                res = Math.min(res, index[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res == Integer.MAX_VALUE ? -<span class="number">1</span> : res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p>贪心算法。本题与 <a href="https://jerring.github.io/2018/12/25/leetcode-00121/" target="_blank" rel="noopener">LeetCode121-买卖股票的最佳时机</a> 类似，不过 <a href="https://jerring.github.io/2018/12/25/leetcode-00121/" target="_blank" rel="noopener">LeetCode121-买卖股票的最佳时机</a> 是最能只能进行一次交易，而本题允许多次交易。可以采用与 <a href="https://jerring.github.io/2018/12/25/leetcode-00121/" target="_blank" rel="noopener">LeetCode121-买卖股票的最佳时机</a> 类似的思路解答本题，也可以转换一下思路。对于 [a, b, c, d]，如果有 a &lt;= b &lt;= c &lt;= d ，那么最大收益为 d - a。而 d - a = (d - c) + (c - b) + (b - a) ，因此当访问到一个 prices[i] 且 prices[i] - prices[i-1] &gt; 0，那么就把 prices[i] - prices[i-1] 添加到收益中，从而在局部最优的情况下也保证全局最优。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00122</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxProfit</span><span class="params">(<span class="keyword">int</span>[] prices)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; prices.length; ++i) &#123;</span><br><span class="line">            <span class="keyword">if</span> (prices[i] &gt; prices[i - <span class="number">1</span>]) &#123;</span><br><span class="line">                res += prices[i] - prices[i - <span class="number">1</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -382,7 +373,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/String/" rel="tag"># String</a>
+            <a href="/tags/Greedy/" rel="tag"># Greedy</a>
           
         </div>
       
@@ -395,8 +386,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/28/leetcode-00434/" rel="next" title="LeetCode434-字符串中的单词数">
-                <i class="fa fa-chevron-left"></i> LeetCode434-字符串中的单词数
+              <a href="/2018/12/25/leetcode-00121/" rel="next" title="LeetCode121-买卖股票的最佳时机">
+                <i class="fa fa-chevron-left"></i> LeetCode121-买卖股票的最佳时机
               </a>
             
           </div>
@@ -404,10 +395,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/30/leetcode-00890/" rel="prev" title="LeetCode890-查找和替换模式">
-                LeetCode890-查找和替换模式 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
