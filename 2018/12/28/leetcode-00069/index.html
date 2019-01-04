@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="String," />
+  <meta name="keywords" content="Binary Search," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/length-of-last-word/ 中文链接：https://leetcode-cn.com/problems/length-of-last-word/ 题目详述给定一个仅包含大小写字母和空格 &amp;#39; &amp;#39; 的字符串，返回其最后一个单词的长度。 如果不存在最后一个单词，请返回 0 。 说明：一个单词是指由">
-<meta name="keywords" content="String">
+<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/sqrtx/ 中文链接：https://leetcode-cn.com/problems/sqrtx/ 题目详述实现 int sqrt(int x) 函数。 计算并返回 x 的平方根，其中 x 是非负整数。 由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。 示例 1: 12输入: 4输出: 2 示例 2: 1">
+<meta name="keywords" content="Binary Search">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode58-最后一个单词的长度">
-<meta property="og:url" content="http://yoursite.com/2018/12/02/leetcode-00058/index.html">
+<meta property="og:title" content="LeetCode69-x的平方根">
+<meta property="og:url" content="http://yoursite.com/2018/12/28/leetcode-00069/index.html">
 <meta property="og:site_name" content="Jerring">
-<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/length-of-last-word/ 中文链接：https://leetcode-cn.com/problems/length-of-last-word/ 题目详述给定一个仅包含大小写字母和空格 &amp;#39; &amp;#39; 的字符串，返回其最后一个单词的长度。 如果不存在最后一个单词，请返回 0 。 说明：一个单词是指由">
+<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/sqrtx/ 中文链接：https://leetcode-cn.com/problems/sqrtx/ 题目详述实现 int sqrt(int x) 函数。 计算并返回 x 的平方根，其中 x 是非负整数。 由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。 示例 1: 12输入: 4输出: 2 示例 2: 1">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-02T13:42:21.966Z">
+<meta property="og:updated_time" content="2019-01-04T06:42:39.276Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode58-最后一个单词的长度">
-<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/length-of-last-word/ 中文链接：https://leetcode-cn.com/problems/length-of-last-word/ 题目详述给定一个仅包含大小写字母和空格 &amp;#39; &amp;#39; 的字符串，返回其最后一个单词的长度。 如果不存在最后一个单词，请返回 0 。 说明：一个单词是指由">
+<meta name="twitter:title" content="LeetCode69-x的平方根">
+<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/sqrtx/ 中文链接：https://leetcode-cn.com/problems/sqrtx/ 题目详述实现 int sqrt(int x) 函数。 计算并返回 x 的平方根，其中 x 是非负整数。 由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。 示例 1: 12输入: 4输出: 2 示例 2: 1">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/02/leetcode-00058/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/12/28/leetcode-00069/"/>
 
 
 
 
 
-  <title>LeetCode58-最后一个单词的长度 | Jerring</title>
+  <title>LeetCode69-x的平方根 | Jerring</title>
   
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/02/leetcode-00058/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/28/leetcode-00069/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jerring">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">LeetCode58-最后一个单词的长度</h1>
+          <h1 class="post-title" itemprop="name headline">LeetCode69-x的平方根</h1>
         
 
         <div class="post-meta">
@@ -282,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-02T21:37:45+08:00">
-                2018-12-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-28T14:09:43+08:00">
+                2018-12-28
               </time>
             
 
@@ -342,16 +342,33 @@
       
 
       
-        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/length-of-last-word/" target="_blank" rel="noopener">https://leetcode.com/problems/length-of-last-word/</a></p>
-<p>中文链接：<a href="https://leetcode-cn.com/problems/length-of-last-word/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/length-of-last-word/</a></p>
-<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>给定一个仅包含大小写字母和空格 <code>&#39; &#39;</code> 的字符串，返回其最后一个单词的长度。</p>
-<p>如果不存在最后一个单词，请返回 0 。</p>
-<p><strong>说明：</strong>一个单词是指由字母组成，但不包含任何空格的字符串。</p>
-<p><strong>示例:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;Hello World&quot;</span><br><span class="line">输出: 5</span><br></pre></td></tr></table></figure>
+        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/sqrtx/" target="_blank" rel="noopener">https://leetcode.com/problems/sqrtx/</a></p>
+<p>中文链接：<a href="https://leetcode-cn.com/problems/sqrtx/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/sqrtx/</a></p>
+<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>实现 <code>int sqrt(int x)</code> 函数。</p>
+<p>计算并返回 <em>x</em> 的平方根，其中 <em>x</em> 是非负整数。</p>
+<p>由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: 4</span><br><span class="line">输出: 2</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入: 8</span><br><span class="line">输出: 2</span><br><span class="line">说明: 8 的平方根是 2.82842..., </span><br><span class="line">     由于返回类型是整数，小数部分将被舍去。</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p>这题比较简单，先跳过最后的空格，再统计最后一个单词的长度。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00058</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">lengthOfLastWord</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> i = s.length() - <span class="number">1</span>;</span><br><span class="line">        <span class="comment">// 跳过最后的空格</span></span><br><span class="line">        <span class="keyword">for</span> (; i &gt;= <span class="number">0</span> &amp;&amp; s.charAt(i) == <span class="string">' '</span>; --i);</span><br><span class="line">        <span class="comment">// 统计最后一个单词的长度</span></span><br><span class="line">        <span class="keyword">for</span> (; i &gt;= <span class="number">0</span> &amp;&amp; s.charAt(i) != <span class="string">' '</span>; --i) &#123;</span><br><span class="line">            ++res;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p>一个非负整数 x 的平方根一定在 0~x 之间。可以运用二分查找。由于返回类型是整数，小数部分将被舍去。故最终平方根 r 必满足 <code>r * r &lt;= x</code>，<code>(r + 1) * (r + 1) &gt; x</code>。易知当 <code>x &lt;= 1</code>，它的平方根就是它本身。</p>
+<ul>
+<li>二分的下限为 0。</li>
+<li>二分的上限为 x。</li>
+<li>终止条件为  <code>r * r &lt;= x &amp;&amp; (r + 1) * (r + 1) &gt; x</code>，即 <code>r &lt;= x / r &amp;&amp; (r + 1) &gt; x / (r + 1)</code>，使用除法防止 int 型 溢出。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00069</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">mySqrt</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (x &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> x;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> lo = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> hi = x;</span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">            <span class="keyword">int</span> mid = lo + (hi - lo) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (mid &gt; x / mid) &#123;</span><br><span class="line">                hi = mid - <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (mid + <span class="number">1</span> &gt; x / (mid + <span class="number">1</span>)) &#123;</span><br><span class="line">                    <span class="keyword">return</span> mid;</span><br><span class="line">                &#125;</span><br><span class="line">                lo = mid + <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当然，也可以换一种方式写二分。在循环条件为 lo &lt;= hi 并且循环退出时，hi 总是比 lo 小 1，因此最后的返回值应该为 hi 而不是 lo。对于 8，退出时 hi = 2，lo = 3，。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00069</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">mySqrt</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (x &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> x;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> lo = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> hi = x;</span><br><span class="line">        <span class="keyword">while</span> (lo &lt;= hi) &#123;</span><br><span class="line">            <span class="keyword">int</span> mid = lo + (hi - lo) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">int</span> sqrt = x / mid;</span><br><span class="line">            <span class="keyword">if</span> (mid &lt; sqrt) &#123;</span><br><span class="line">                lo = mid + <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (mid &gt; sqrt) &#123;</span><br><span class="line">                hi = mid - <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> mid;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> hi;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>更好的方式是使用牛顿迭代法。</p>
+<ul>
+<li>构造 f(x) = x * x - a。</li>
+<li>则 x<sub>n+1</sub> = x<sub>n</sub> - f(x) / f’(x)。</li>
+<li>x<sub>n+1</sub> = ( x<sub>n</sub> + a / x<sub>n</sub> ) / 2。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00069</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">mySqrt</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">long</span> r = x;</span><br><span class="line">        <span class="keyword">while</span> (r * r &gt; x) &#123;</span><br><span class="line">            r = (r + x / r) / <span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> (<span class="keyword">int</span>) r;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -368,7 +385,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/String/" rel="tag"># String</a>
+            <a href="/tags/Binary-Search/" rel="tag"># Binary Search</a>
           
         </div>
       
@@ -381,8 +398,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/01/leetcode-00557/" rel="next" title="LeetCode557-反转字符串中的单词III">
-                <i class="fa fa-chevron-left"></i> LeetCode557-反转字符串中的单词III
+              <a href="/2018/12/27/leetcode-00053/" rel="next" title="LeetCode53-最大子序和">
+                <i class="fa fa-chevron-left"></i> LeetCode53-最大子序和
               </a>
             
           </div>
@@ -390,10 +407,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/12/03/leetcode-00383/" rel="prev" title="LeetCode383-赎金信">
-                LeetCode383-赎金信 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
