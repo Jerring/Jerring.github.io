@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="DP," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/4sum/ 中文链接：https://leetcode-cn.com/problems/4sum/ 题目详述给定一个包含 n 个整数的数组 nums 和一个目标值 target，判断 nums 中是否存在四个元素 a， b，c 和 d ，使得 a + b + c + d 的值与 target 相等？找出所有满足条件且不重">
+<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/climbing-stairs/ 中文链接：https://leetcode-cn.com/problems/climbing-stairs/ 题目详述假设你正在爬楼梯。需要 n 阶你才能到达楼顶。 每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？ 注意：给定 n 是一个正整数。 示例 1： 123">
+<meta name="keywords" content="DP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode18-四数之和">
-<meta property="og:url" content="http://yoursite.com/2018/11/19/leetcode-00018/index.html">
+<meta property="og:title" content="LeetCode70-爬楼梯">
+<meta property="og:url" content="http://yoursite.com/2019/01/26/leetcode-00070/index.html">
 <meta property="og:site_name" content="Jerring">
-<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/4sum/ 中文链接：https://leetcode-cn.com/problems/4sum/ 题目详述给定一个包含 n 个整数的数组 nums 和一个目标值 target，判断 nums 中是否存在四个元素 a， b，c 和 d ，使得 a + b + c + d 的值与 target 相等？找出所有满足条件且不重">
+<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/climbing-stairs/ 中文链接：https://leetcode-cn.com/problems/climbing-stairs/ 题目详述假设你正在爬楼梯。需要 n 阶你才能到达楼顶。 每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？ 注意：给定 n 是一个正整数。 示例 1： 123">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-19T02:16:06.093Z">
+<meta property="og:updated_time" content="2019-02-07T03:48:35.073Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode18-四数之和">
-<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/4sum/ 中文链接：https://leetcode-cn.com/problems/4sum/ 题目详述给定一个包含 n 个整数的数组 nums 和一个目标值 target，判断 nums 中是否存在四个元素 a， b，c 和 d ，使得 a + b + c + d 的值与 target 相等？找出所有满足条件且不重">
+<meta name="twitter:title" content="LeetCode70-爬楼梯">
+<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/climbing-stairs/ 中文链接：https://leetcode-cn.com/problems/climbing-stairs/ 题目详述假设你正在爬楼梯。需要 n 阶你才能到达楼顶。 每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？ 注意：给定 n 是一个正整数。 示例 1： 123">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/19/leetcode-00018/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/01/26/leetcode-00070/"/>
 
 
 
 
 
-  <title>LeetCode18-四数之和 | Jerring</title>
+  <title>LeetCode70-爬楼梯 | Jerring</title>
   
 
 
@@ -252,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/19/leetcode-00018/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/26/leetcode-00070/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jerring">
@@ -269,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">LeetCode18-四数之和</h1>
+          <h1 class="post-title" itemprop="name headline">LeetCode70-爬楼梯</h1>
         
 
         <div class="post-meta">
@@ -281,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-19T10:08:32+08:00">
-                2018-11-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-26T11:05:28+08:00">
+                2019-01-26
               </time>
             
 
@@ -341,21 +342,30 @@
       
 
       
-        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/4sum/" target="_blank" rel="noopener">https://leetcode.com/problems/4sum/</a></p>
-<p>中文链接：<a href="https://leetcode-cn.com/problems/4sum/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/4sum/</a></p>
-<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>给定一个包含 <em>n</em> 个整数的数组 <code>nums</code> 和一个目标值 <code>target</code>，判断 <code>nums</code> 中是否存在四个元素 <em>a，</em> <em>b，c</em> 和 <em>d</em> ，使得 <em>a</em> + <em>b</em> + <em>c</em> + <em>d</em> 的值与 <code>target</code> 相等？找出所有满足条件且不重复的四元组。</p>
-<p><strong>注意：</strong></p>
-<p>答案中不可以包含重复的四元组。</p>
-<p><strong>示例：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">给定数组 nums = [1, 0, -1, 0, -2, 2]，和 target = 0。</span><br><span class="line"></span><br><span class="line">满足要求的四元组集合为：</span><br><span class="line">[</span><br><span class="line">  [-1,  0, 0, 1],</span><br><span class="line">  [-2, -1, 1, 2],</span><br><span class="line">  [-2,  0, 0, 2]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/climbing-stairs/" target="_blank" rel="noopener">https://leetcode.com/problems/climbing-stairs/</a></p>
+<p>中文链接：<a href="https://leetcode-cn.com/problems/climbing-stairs/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/climbing-stairs/</a></p>
+<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>假设你正在爬楼梯。需要 <em>n</em> 阶你才能到达楼顶。</p>
+<p>每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？</p>
+<p><strong>注意：</strong>给定 <em>n</em> 是一个正整数。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入： 2</span><br><span class="line">输出： 2</span><br><span class="line">解释： 有两种方法可以爬到楼顶。</span><br><span class="line">1.  1 阶 + 1 阶</span><br><span class="line">2.  2 阶</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入： 3</span><br><span class="line">输出： 3</span><br><span class="line">解释： 有三种方法可以爬到楼顶。</span><br><span class="line">1.  1 阶 + 1 阶 + 1 阶</span><br><span class="line">2.  1 阶 + 2 阶</span><br><span class="line">3.  2 阶 + 1 阶</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p><a href="https://jerring.github.io/2018/11/18/leetcode-00015/" target="_blank" rel="noopener">LeetCode15-三数之和</a> 现在变成了四数之和，同样的思想运用双指针。</p>
+<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p>斐波那契，运用动态规划即可。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00070</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">climbStairs</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (n &lt;= <span class="number">2</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> n;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> a = <span class="number">1</span>, b = <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">3</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">            res = a + b;</span><br><span class="line">            a = b;</span><br><span class="line">            b = res;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>斐波那契数列存在公式，可以运用公式直接计算。</p>
 <ul>
-<li>首先把数组从小到大进行排序。</li>
-<li>遍历过程中固定<strong>两</strong>个元素。</li>
-<li>再运用双指针的思想，一个从左往右扫描，一个从右往左扫描。</li>
+<li>f[0] = 0</li>
+<li>f[1] = 1</li>
+<li>f[2] = 1</li>
+<li>f[3] = 2</li>
+<li>f[n] = f[n - 1] + f[n - 2]</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00018</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; fourSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt; res = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        Arrays.sort(nums);</span><br><span class="line">        <span class="keyword">int</span> n = nums.length;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">            <span class="comment">// 避免重复</span></span><br><span class="line">            <span class="keyword">if</span> (i &gt; <span class="number">0</span> &amp;&amp; nums[i] == nums[i - <span class="number">1</span>]) &#123;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; n; ++j) &#123;</span><br><span class="line">                <span class="comment">// 避免重复</span></span><br><span class="line">                <span class="keyword">if</span> (j &gt; i + <span class="number">1</span> &amp;&amp; nums[j] == nums[j - <span class="number">1</span>]) &#123;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">int</span> l = j + <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">int</span> r = n - <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">while</span> (l &lt; r) &#123;</span><br><span class="line">                    <span class="keyword">int</span> sum = nums[i] + nums[j] + nums[l] + nums[r];</span><br><span class="line">                    <span class="keyword">if</span> (sum &gt; target) &#123;         <span class="comment">// 因为数组有序，说明右侧的数过大，所以下标左移</span></span><br><span class="line">                        --r;</span><br><span class="line">                    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (sum &lt; target) &#123;  <span class="comment">// 因为数组有序，说明左侧的数过小，所以下标右移</span></span><br><span class="line">                        ++l;</span><br><span class="line">                    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                        res.add(Arrays.asList(nums[i], nums[j], nums[l++], nums[r--]));</span><br><span class="line">                        <span class="comment">// 两侧的下标向中间移动，直到不与之前取出的数相同，避免重复</span></span><br><span class="line">                        <span class="keyword">while</span> (l &lt; r &amp;&amp; nums[l] == nums[l - <span class="number">1</span>]) &#123;</span><br><span class="line">                            ++l;</span><br><span class="line">                        &#125;</span><br><span class="line">                        <span class="keyword">while</span> (l &lt; r &amp;&amp; nums[r] == nums[r + <span class="number">1</span>]) &#123;</span><br><span class="line">                            --r;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>对于以上斐波那契数列，公式如下：</p>
+<p>F_{n} = \frac{(\frac{1 + \sqrt{5}}{2})^{n} - (\frac{1 - \sqrt{5}}{2})^{n}}{\sqrt{5}}</p>
+<p>对于本题不存在 f[0]，且 f[1] = 1，f[2] = 2，需要将 n 加 1 才能代入公式计算。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00070</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * f[0] = 0</span></span><br><span class="line"><span class="comment">     * f[1] = 1</span></span><br><span class="line"><span class="comment">     * f[2] = 1</span></span><br><span class="line"><span class="comment">     * f[3] = 2</span></span><br><span class="line"><span class="comment">     * f[n] = f[n - 1] + f[n - 2]</span></span><br><span class="line"><span class="comment">     * Fibonacci 公式：f[n] = 1 / √5 * &#123;(1 + √5) / 2] ^ n - [(1 - √5) / 2] ^ n&#125;</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> n 下标 n</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span>  f[n]</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">climbStairs</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        ++n;    <span class="comment">// 调整以运用公式</span></span><br><span class="line">        <span class="keyword">double</span> sqrt5 = Math.sqrt(<span class="number">5</span>);</span><br><span class="line">        <span class="keyword">return</span> (<span class="keyword">int</span>) ((Math.pow((<span class="number">1</span> + sqrt5) / <span class="number">2</span>, n) - Math.pow((<span class="number">1</span> - sqrt5) / <span class="number">2</span>, n)) / sqrt5);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -371,6 +381,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/DP/" rel="tag"># DP</a>
+          
+        </div>
+      
 
       
       
@@ -380,8 +396,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/18/leetcode-00016/" rel="next" title="LeetCode16-最接近的三数之和">
-                <i class="fa fa-chevron-left"></i> LeetCode16-最接近的三数之和
+              <a href="/2019/01/25/leetcode-00051/" rel="next" title="LeetCode51-N皇后">
+                <i class="fa fa-chevron-left"></i> LeetCode51-N皇后
               </a>
             
           </div>
@@ -389,10 +405,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/19/leetcode-00027/" rel="prev" title="LeetCode27-移除元素">
-                LeetCode27-移除元素 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -728,6 +740,26 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

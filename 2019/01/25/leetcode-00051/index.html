@@ -79,19 +79,19 @@
 
 
 
-<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/n-queens/ 中文链接：https://leetcode-cn.com/problems/n-queens/ 题目详述 n 皇后问题研究的是如何将 n 个皇后放置在 n×n 的棋盘上，并且使皇后彼此之间不能相互攻击。  上图为 8 皇后问题的一种解法。 给定一个整数 n，返回所有不同的 n 皇后问题的解决方案。 每">
+<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/n-queens/ 中文链接：https://leetcode-cn.com/problems/n-queens/ 题目详述n 皇后问题研究的是如何将 n 个皇后放置在 n×n 的棋盘上，并且使皇后彼此之间不能相互攻击。  上图为 8 皇后问题的一种解法。 给定一个整数 n，返回所有不同的 n 皇后问题的解决方案。 每一">
 <meta name="keywords" content="Search">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode51-N皇后">
 <meta property="og:url" content="http://yoursite.com/2019/01/25/leetcode-00051/index.html">
 <meta property="og:site_name" content="Jerring">
-<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/n-queens/ 中文链接：https://leetcode-cn.com/problems/n-queens/ 题目详述 n 皇后问题研究的是如何将 n 个皇后放置在 n×n 的棋盘上，并且使皇后彼此之间不能相互攻击。  上图为 8 皇后问题的一种解法。 给定一个整数 n，返回所有不同的 n 皇后问题的解决方案。 每">
+<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/n-queens/ 中文链接：https://leetcode-cn.com/problems/n-queens/ 题目详述n 皇后问题研究的是如何将 n 个皇后放置在 n×n 的棋盘上，并且使皇后彼此之间不能相互攻击。  上图为 8 皇后问题的一种解法。 给定一个整数 n，返回所有不同的 n 皇后问题的解决方案。 每一">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/8-queens.png">
-<meta property="og:updated_time" content="2019-02-06T14:58:54.436Z">
+<meta property="og:updated_time" content="2019-02-07T03:07:51.412Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode51-N皇后">
-<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/n-queens/ 中文链接：https://leetcode-cn.com/problems/n-queens/ 题目详述 n 皇后问题研究的是如何将 n 个皇后放置在 n×n 的棋盘上，并且使皇后彼此之间不能相互攻击。  上图为 8 皇后问题的一种解法。 给定一个整数 n，返回所有不同的 n 皇后问题的解决方案。 每">
+<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/n-queens/ 中文链接：https://leetcode-cn.com/problems/n-queens/ 题目详述n 皇后问题研究的是如何将 n 个皇后放置在 n×n 的棋盘上，并且使皇后彼此之间不能相互攻击。  上图为 8 皇后问题的一种解法。 给定一个整数 n，返回所有不同的 n 皇后问题的解决方案。 每一">
 <meta name="twitter:image" content="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/8-queens.png">
 
 
@@ -346,16 +346,13 @@
       
         <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/n-queens/" target="_blank" rel="noopener">https://leetcode.com/problems/n-queens/</a></p>
 <p>中文链接：<a href="https://leetcode-cn.com/problems/n-queens/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/n-queens/</a></p>
-<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><ul>
-<li><p><em>n</em> 皇后问题研究的是如何将 <em>n</em> 个皇后放置在 <em>n</em>×<em>n</em> 的棋盘上，并且使皇后彼此之间不能相互攻击。</p>
+<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p><em>n</em> 皇后问题研究的是如何将 <em>n</em> 个皇后放置在 <em>n</em>×<em>n</em> 的棋盘上，并且使皇后彼此之间不能相互攻击。</p>
 <p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/8-queens.png" alt="img"></p>
 <p>上图为 8 皇后问题的一种解法。</p>
 <p>给定一个整数 <em>n</em>，返回所有不同的 <em>n</em> 皇后问题的解决方案。</p>
 <p>每一种解法包含一个明确的 <em>n</em> 皇后问题的棋子放置方案，该方案中 <code>&#39;Q&#39;</code> 和 <code>&#39;.&#39;</code> 分别代表了皇后和空位。</p>
 <p><strong>示例:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">输入: 4</span><br><span class="line">输出: [</span><br><span class="line"> [&quot;.Q..&quot;,  // 解法 1</span><br><span class="line">  &quot;...Q&quot;,</span><br><span class="line">  &quot;Q...&quot;,</span><br><span class="line">  &quot;..Q.&quot;],</span><br><span class="line"></span><br><span class="line"> [&quot;..Q.&quot;,  // 解法 2</span><br><span class="line">  &quot;Q...&quot;,</span><br><span class="line">  &quot;...Q&quot;,</span><br><span class="line">  &quot;.Q..&quot;]</span><br><span class="line">]</span><br><span class="line">解释: 4 皇后问题存在两个不同的解法。</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
 <a id="more"></a>
 <h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p>DFS，回溯。本题与 <a href="https://jerring.github.io/2019/01/24/leetcode-00037/" target="_blank" rel="noopener">LeetCode37-解数独</a> 类似，只不过摆放规则不一样，解题思路是一致的。</p>
 <ul>
@@ -407,6 +404,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/01/26/leetcode-00070/" rel="prev" title="LeetCode70-爬楼梯">
+                LeetCode70-爬楼梯 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -487,7 +488,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">102</span>
+                  <span class="site-state-item-count">103</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -742,6 +743,8 @@
   
 
   
+  
+
 
   
 
