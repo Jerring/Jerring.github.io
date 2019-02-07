@@ -87,10 +87,12 @@
 <meta property="og:site_name" content="Jerring">
 <meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/climbing-stairs/ 中文链接：https://leetcode-cn.com/problems/climbing-stairs/ 题目详述假设你正在爬楼梯。需要 n 阶你才能到达楼顶。 每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？ 注意：给定 n 是一个正整数。 示例 1： 123">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-07T03:48:35.073Z">
+<meta property="og:image" content="https://i.loli.net/2019/02/07/5c5bad5ad5f00.gif">
+<meta property="og:updated_time" content="2019-02-07T04:03:00.216Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode70-爬楼梯">
 <meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/climbing-stairs/ 中文链接：https://leetcode-cn.com/problems/climbing-stairs/ 题目详述假设你正在爬楼梯。需要 n 阶你才能到达楼顶。 每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？ 注意：给定 n 是一个正整数。 示例 1： 123">
+<meta name="twitter:image" content="https://i.loli.net/2019/02/07/5c5bad5ad5f00.gif">
 
 
 
@@ -363,7 +365,7 @@
 <li>f[n] = f[n - 1] + f[n - 2]</li>
 </ul>
 <p>对于以上斐波那契数列，公式如下：</p>
-<p>F_{n} = \frac{(\frac{1 + \sqrt{5}}{2})^{n} - (\frac{1 - \sqrt{5}}{2})^{n}}{\sqrt{5}}</p>
+<p><img src="https://i.loli.net/2019/02/07/5c5bad5ad5f00.gif" alt="斐波那契公式.gif"></p>
 <p>对于本题不存在 f[0]，且 f[1] = 1，f[2] = 2，需要将 n 加 1 才能代入公式计算。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00070</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * f[0] = 0</span></span><br><span class="line"><span class="comment">     * f[1] = 1</span></span><br><span class="line"><span class="comment">     * f[2] = 1</span></span><br><span class="line"><span class="comment">     * f[3] = 2</span></span><br><span class="line"><span class="comment">     * f[n] = f[n - 1] + f[n - 2]</span></span><br><span class="line"><span class="comment">     * Fibonacci 公式：f[n] = 1 / √5 * &#123;(1 + √5) / 2] ^ n - [(1 - √5) / 2] ^ n&#125;</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> n 下标 n</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span>  f[n]</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">climbStairs</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        ++n;    <span class="comment">// 调整以运用公式</span></span><br><span class="line">        <span class="keyword">double</span> sqrt5 = Math.sqrt(<span class="number">5</span>);</span><br><span class="line">        <span class="keyword">return</span> (<span class="keyword">int</span>) ((Math.pow((<span class="number">1</span> + sqrt5) / <span class="number">2</span>, n) - Math.pow((<span class="number">1</span> - sqrt5) / <span class="number">2</span>, n)) / sqrt5);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -740,28 +742,6 @@
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  
-
 
   
 
