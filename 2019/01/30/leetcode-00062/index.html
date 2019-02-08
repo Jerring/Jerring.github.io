@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Search," />
+  <meta name="keywords" content="DP," />
 
 
 
@@ -79,18 +79,21 @@
 
 
 
-<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/subsets-ii/ 中文链接：https://leetcode-cn.com/problems/subsets-ii/ 题目详述给定一个可能包含重复元素的整数数组 nums，返回该数组所有可能的子集（幂集）。 说明：解集不能包含重复的子集。 示例: 12345678910输入: [1,2,2]输出:[  [2],">
-<meta name="keywords" content="Search">
+<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/unique-paths/ 中文链接：https://leetcode-cn.com/problems/unique-paths/ 题目详述一个机器人位于一个 m x n 网格的左上角 （起始点在下图中标记为“Start” ）。 机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为“Finish">
+<meta name="keywords" content="DP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode90-子集II">
-<meta property="og:url" content="http://yoursite.com/2019/01/22/leetcode-00090/index.html">
+<meta property="og:title" content="LeetCode62-不同路径">
+<meta property="og:url" content="http://yoursite.com/2019/01/30/leetcode-00062/index.html">
 <meta property="og:site_name" content="Jerring">
-<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/subsets-ii/ 中文链接：https://leetcode-cn.com/problems/subsets-ii/ 题目详述给定一个可能包含重复元素的整数数组 nums，返回该数组所有可能的子集（幂集）。 说明：解集不能包含重复的子集。 示例: 12345678910输入: [1,2,2]输出:[  [2],">
+<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/unique-paths/ 中文链接：https://leetcode-cn.com/problems/unique-paths/ 题目详述一个机器人位于一个 m x n 网格的左上角 （起始点在下图中标记为“Start” ）。 机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为“Finish">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-04T13:00:49.590Z">
+<meta property="og:image" content="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/22/robot_maze.png">
+<meta property="og:image" content="https://i.loli.net/2019/02/08/5c5d405491c17.gif">
+<meta property="og:updated_time" content="2019-02-08T08:46:27.918Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode90-子集II">
-<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/subsets-ii/ 中文链接：https://leetcode-cn.com/problems/subsets-ii/ 题目详述给定一个可能包含重复元素的整数数组 nums，返回该数组所有可能的子集（幂集）。 说明：解集不能包含重复的子集。 示例: 12345678910输入: [1,2,2]输出:[  [2],">
+<meta name="twitter:title" content="LeetCode62-不同路径">
+<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/unique-paths/ 中文链接：https://leetcode-cn.com/problems/unique-paths/ 题目详述一个机器人位于一个 m x n 网格的左上角 （起始点在下图中标记为“Start” ）。 机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为“Finish">
+<meta name="twitter:image" content="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/22/robot_maze.png">
 
 
 
@@ -120,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/01/22/leetcode-00090/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/01/30/leetcode-00062/"/>
 
 
 
 
 
-  <title>LeetCode90-子集II | Jerring</title>
+  <title>LeetCode62-不同路径 | Jerring</title>
   
 
 
@@ -253,7 +256,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/22/leetcode-00090/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/30/leetcode-00062/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jerring">
@@ -270,7 +273,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">LeetCode90-子集II</h1>
+          <h1 class="post-title" itemprop="name headline">LeetCode62-不同路径</h1>
         
 
         <div class="post-meta">
@@ -282,8 +285,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-22T21:26:34+08:00">
-                2019-01-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-30T16:45:27+08:00">
+                2019-01-30
               </time>
             
 
@@ -342,34 +345,29 @@
       
 
       
-        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/subsets-ii/" target="_blank" rel="noopener">https://leetcode.com/problems/subsets-ii/</a></p>
-<p>中文链接：<a href="https://leetcode-cn.com/problems/subsets-ii/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/subsets-ii/</a></p>
-<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>给定一个可能包含重复元素的整数数组 <strong><em>nums</em></strong>，返回该数组所有可能的子集（幂集）。</p>
-<p><strong>说明：</strong>解集不能包含重复的子集。</p>
-<p><strong>示例:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">输入: [1,2,2]</span><br><span class="line">输出:</span><br><span class="line">[</span><br><span class="line">  [2],</span><br><span class="line">  [1],</span><br><span class="line">  [1,2,2],</span><br><span class="line">  [2,2],</span><br><span class="line">  [1,2],</span><br><span class="line">  []</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/unique-paths/" target="_blank" rel="noopener">https://leetcode.com/problems/unique-paths/</a></p>
+<p>中文链接：<a href="https://leetcode-cn.com/problems/unique-paths/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/unique-paths/</a></p>
+<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>一个机器人位于一个 <em>m x n</em> 网格的左上角 （起始点在下图中标记为“Start” ）。</p>
+<p>机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为“Finish”）。</p>
+<p>问总共有多少条不同的路径？</p>
+<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/22/robot_maze.png" alt="img"></p>
+<p>例如，上图是一个7 x 3 的网格。有多少可能的路径？</p>
+<p><strong>说明：</strong> <em>m</em> 和 <em>n</em> 的值均不超过 100。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">输入: m = 3, n = 2</span><br><span class="line">输出: 3</span><br><span class="line">解释:</span><br><span class="line">从左上角开始，总共有 3 条路径可以到达右下角。</span><br><span class="line">1. 向右 -&gt; 向右 -&gt; 向下</span><br><span class="line">2. 向右 -&gt; 向下 -&gt; 向右</span><br><span class="line">3. 向下 -&gt; 向右 -&gt; 向右</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: m = 7, n = 3</span><br><span class="line">输出: 28</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p>DFS，回溯。在 <a href="https://jerring.github.io/2019/01/21/leetcode-00078/" target="_blank" rel="noopener">LeetCode78-子集</a> 的基础上改为了数组中可能存在重复的元素，思路是一致的，不过需要跳过重复的元素。</p>
+<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p>动态规划。</p>
 <ul>
-<li>首先对数组进行排序。</li>
-<li>将当前集合加入到结果集中。</li>
-<li>枚举每一个可能的元素，如果重复则跳过。</li>
-<li>进入下一层将当前元素加入临时集合中。</li>
-<li>递归进入下一层，传入的是当前位置的下一个位置。</li>
-<li>恢复原状。</li>
+<li>设 <code>dp[i][j]</code> 为走到位置 (i, j) 处的路径总数。</li>
+<li>则 <code>dp[i][j] = dp[i][j - 1] + dp[i - 1][j]</code>。</li>
+<li>因为 <code>dp[i][j]</code> 只与 <code>dp[i][j - 1]</code> 和 <code>dp[i - 1][j]</code> 有关，可以利用滚动数组来压缩空间。</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00090</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; subsetsWithDup(<span class="keyword">int</span>[] nums) &#123;</span><br><span class="line">        <span class="comment">// 先排序</span></span><br><span class="line">        Arrays.sort(nums);</span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt; res = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        dfs(<span class="number">0</span>, nums, res, <span class="keyword">new</span> ArrayList&lt;&gt;());</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> s, <span class="keyword">int</span>[] nums, List&lt;List&lt;Integer&gt;&gt; res, ArrayList&lt;Integer&gt; list)</span> </span>&#123;</span><br><span class="line">        res.add(<span class="keyword">new</span> ArrayList&lt;&gt;(list));</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = s; i &lt; nums.length; ++i) &#123;</span><br><span class="line">            <span class="comment">// 去重</span></span><br><span class="line">            <span class="keyword">if</span> (i &gt; s &amp;&amp; nums[i] == nums[i - <span class="number">1</span>]) &#123;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            list.add(nums[i]);</span><br><span class="line">            dfs(i + <span class="number">1</span>, nums, res, list);</span><br><span class="line">            list.remove(list.size() - <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>同样，还可以从空集开始，通过逐步添加元素的方法来得到所有的子集。</p>
-<ul>
-<li><p>首先对数组进行排序。</p>
-</li>
-<li><p>往结果集中添加一个空集。</p>
-</li>
-<li>遍历数组 nums，如果重复则从上次新添加的位置开始添加元素，这样可以跳过重复元素。</li>
-<li>遍历原来所有的子集，把原来子集拷贝一份，再把当前元素添加入这个子集，得到新的子集。</li>
-<li>两重循环完成后，就得到了结果。</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00090</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; subsetsWithDup(<span class="keyword">int</span>[] nums) &#123;</span><br><span class="line">        <span class="comment">// 先排序</span></span><br><span class="line">        Arrays.sort(nums);</span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt; res = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="comment">// 添加一个空集</span></span><br><span class="line">        res.add(<span class="keyword">new</span> ArrayList&lt;&gt;());</span><br><span class="line">        <span class="keyword">int</span> size = <span class="number">0</span>;</span><br><span class="line">        <span class="comment">// 枚举每一个元素</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; ++i) &#123;</span><br><span class="line">            <span class="comment">// 跳过重复的部分，从上一次新添加的位置开始添加当前元素</span></span><br><span class="line">            <span class="keyword">int</span> s = (i &gt; <span class="number">0</span> &amp;&amp; nums[i] == nums[i - <span class="number">1</span>]) ? size : <span class="number">0</span>;</span><br><span class="line">            size = res.size();</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = s; j &lt; size; ++j) &#123;</span><br><span class="line">                <span class="comment">// 拷贝一份</span></span><br><span class="line">                List&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;(res.get(j));</span><br><span class="line">                list.add(nums[i]);</span><br><span class="line">                res.add(list);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00062</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">uniquePaths</span><span class="params">(<span class="keyword">int</span> m, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line">        Arrays.fill(dp, <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; m; ++i) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; n; ++j) &#123;</span><br><span class="line">                dp[j] += dp[j - <span class="number">1</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[n - <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>实际上，这是一个组合问题，答案为 C(m + n - 2, m - 1) 或 C(m + n - 2, n - 1)。可用如下递推公式进行计算。</p>
+<p><img src="https://i.loli.net/2019/02/08/5c5d405491c17.gif" alt="组合递推公式.gif"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00062</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">uniquePaths</span><span class="params">(<span class="keyword">int</span> m, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> k = Math.min(m, n) - <span class="number">1</span>;</span><br><span class="line">        n = m + n - <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">long</span> res = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= k; ++i) &#123;</span><br><span class="line">            res = res * (n - i + <span class="number">1</span>) / i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> (<span class="keyword">int</span>) res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -387,7 +385,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Search/" rel="tag"># Search</a>
+            <a href="/tags/DP/" rel="tag"># DP</a>
           
         </div>
       
@@ -400,8 +398,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/21/leetcode-00078/" rel="next" title="LeetCode78-子集">
-                <i class="fa fa-chevron-left"></i> LeetCode78-子集
+              <a href="/2019/01/29/leetcode-00337/" rel="next" title="LeetCode337-打家劫舍III">
+                <i class="fa fa-chevron-left"></i> LeetCode337-打家劫舍III
               </a>
             
           </div>
@@ -409,10 +407,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/23/leetcode-00131/" rel="prev" title="LeetCode131-分割字符串">
-                LeetCode131-分割字符串 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
