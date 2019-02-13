@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="DP," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/rotate-list/ 中文链接：https://leetcode-cn.com/problems/rotate-list/ 题目详述给定一个链表，旋转链表，将链表每个节点向右移动 k 个位置，其中 k 是非负数。 示例 1: 12345输入: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, k">
+<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/longest-increasing-subsequence/ 中文链接：https://leetcode-cn.com/problems/longest-increasing-subsequence/ 题目详述给定一个无序的整数数组，找到其中最长上升子序列的长度。 示例: 123输入: [10,9,2,5,3,7,10">
+<meta name="keywords" content="DP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode61-旋转链表">
-<meta property="og:url" content="http://yoursite.com/2018/11/20/leetcode-00061/index.html">
+<meta property="og:title" content="LeetCode300-最长上升子序列">
+<meta property="og:url" content="http://yoursite.com/2019/02/10/leetcode-00300/index.html">
 <meta property="og:site_name" content="Jerring">
-<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/rotate-list/ 中文链接：https://leetcode-cn.com/problems/rotate-list/ 题目详述给定一个链表，旋转链表，将链表每个节点向右移动 k 个位置，其中 k 是非负数。 示例 1: 12345输入: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, k">
+<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/longest-increasing-subsequence/ 中文链接：https://leetcode-cn.com/problems/longest-increasing-subsequence/ 题目详述给定一个无序的整数数组，找到其中最长上升子序列的长度。 示例: 123输入: [10,9,2,5,3,7,10">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-20T07:29:38.629Z">
+<meta property="og:updated_time" content="2019-02-13T07:49:00.049Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode61-旋转链表">
-<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/rotate-list/ 中文链接：https://leetcode-cn.com/problems/rotate-list/ 题目详述给定一个链表，旋转链表，将链表每个节点向右移动 k 个位置，其中 k 是非负数。 示例 1: 12345输入: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, k">
+<meta name="twitter:title" content="LeetCode300-最长上升子序列">
+<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/longest-increasing-subsequence/ 中文链接：https://leetcode-cn.com/problems/longest-increasing-subsequence/ 题目详述给定一个无序的整数数组，找到其中最长上升子序列的长度。 示例: 123输入: [10,9,2,5,3,7,10">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/20/leetcode-00061/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/02/10/leetcode-00300/"/>
 
 
 
 
 
-  <title>LeetCode61-旋转链表 | Jerring</title>
+  <title>LeetCode300-最长上升子序列 | Jerring</title>
   
 
 
@@ -252,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/20/leetcode-00061/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/10/leetcode-00300/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jerring">
@@ -269,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">LeetCode61-旋转链表</h1>
+          <h1 class="post-title" itemprop="name headline">LeetCode300-最长上升子序列</h1>
         
 
         <div class="post-meta">
@@ -281,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-20T15:29:04+08:00">
-                2018-11-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-10T15:07:41+08:00">
+                2019-02-10
               </time>
             
 
@@ -341,21 +342,35 @@
       
 
       
-        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/rotate-list/" target="_blank" rel="noopener">https://leetcode.com/problems/rotate-list/</a></p>
-<p>中文链接：<a href="https://leetcode-cn.com/problems/rotate-list/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/rotate-list/</a></p>
-<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>给定一个链表，旋转链表，将链表每个节点向右移动 <em>k</em> 个位置，其中 <em>k</em> 是非负数。</p>
-<p><strong>示例 1:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL, k = 2</span><br><span class="line">输出: 4-&gt;5-&gt;1-&gt;2-&gt;3-&gt;NULL</span><br><span class="line">解释:</span><br><span class="line">向右旋转 1 步: 5-&gt;1-&gt;2-&gt;3-&gt;4-&gt;NULL</span><br><span class="line">向右旋转 2 步: 4-&gt;5-&gt;1-&gt;2-&gt;3-&gt;NULL</span><br></pre></td></tr></table></figure>
-<p><strong>示例 2:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">输入: 0-&gt;1-&gt;2-&gt;NULL, k = 4</span><br><span class="line">输出: 2-&gt;0-&gt;1-&gt;NULL</span><br><span class="line">解释:</span><br><span class="line">向右旋转 1 步: 2-&gt;0-&gt;1-&gt;NULL</span><br><span class="line">向右旋转 2 步: 1-&gt;2-&gt;0-&gt;NULL</span><br><span class="line">向右旋转 3 步: 0-&gt;1-&gt;2-&gt;NULL</span><br><span class="line">向右旋转 4 步: 2-&gt;0-&gt;1-&gt;NULL</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p>在解决链表问题前可以先画图模拟一下。本题实际上是 k 对链表长度取模后，把链表的最后 k 个结点按顺序搬到链表的头部形成一个新的链表后返回新链表的头结点。有几个小技巧如下：</p>
+        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/longest-increasing-subsequence/" target="_blank" rel="noopener">https://leetcode.com/problems/longest-increasing-subsequence/</a></p>
+<p>中文链接：<a href="https://leetcode-cn.com/problems/longest-increasing-subsequence/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/longest-increasing-subsequence/</a></p>
+<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>给定一个无序的整数数组，找到其中最长上升子序列的长度。</p>
+<p><strong>示例:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: [10,9,2,5,3,7,101,18]</span><br><span class="line">输出: 4 </span><br><span class="line">解释: 最长的上升子序列是 [2,3,7,101]，它的长度是 4。</span><br></pre></td></tr></table></figure>
+<p><strong>说明:</strong></p>
 <ul>
-<li>链表为空或链表长度为 1 或 k == 0，都可以直接返回。</li>
-<li>k 对链表长度取模可以避免重复遍历。同样，取模后 k == 0 可以直接返回。</li>
-<li>得到尾结点后，可以先把尾结点链接到头结点。之后置新链表的尾结点的 next 为 null 即可。</li>
+<li>可能会有多种最长上升子序列的组合，你只需要输出对应的长度即可。</li>
+<li>你算法的时间复杂度应该为 O(<em>n2</em>) 。</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00061</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">rotateRight</span><span class="params">(ListNode head, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 如果链表为空或链表长度为 1 或 k == 0，直接返回</span></span><br><span class="line">        <span class="keyword">if</span> (head == <span class="keyword">null</span> || head.next == <span class="keyword">null</span> || k == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> head;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 计算链表长度</span></span><br><span class="line">        ListNode cur = head;</span><br><span class="line">        <span class="keyword">int</span> len = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (cur.next != <span class="keyword">null</span>) &#123;</span><br><span class="line">            ++len;</span><br><span class="line">            cur = cur.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 取模可以避免重复遍历</span></span><br><span class="line">        k %= len;</span><br><span class="line">        <span class="comment">// 如果 k 是链表长度的整数倍，那么移动后的结果与原始链表相同</span></span><br><span class="line">        <span class="keyword">if</span> (k == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> head;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 将尾结点链接到头结点，再移动 cur 让它指向结果链表的尾结点</span></span><br><span class="line">        cur.next = head;</span><br><span class="line">        <span class="keyword">int</span> loop = len - k;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= loop; ++i) &#123;</span><br><span class="line">            cur = cur.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// cur.next 为新的头结点</span></span><br><span class="line">        head = cur.next;</span><br><span class="line">        <span class="comment">// 置 cur.next 为 null</span></span><br><span class="line">        cur.next = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>进阶:</strong> 你能将算法的时间复杂度降低到 O(<em>n</em> log <em>n</em>) 吗?</p>
+<a id="more"></a>
+<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p>动态规划。</p>
+<ul>
+<li>dp[i] 表示以 nums[i] 结尾最长递增子序列的长度。</li>
+<li>则 dp[i] = max{ dp[j] + 1 | j &lt; i, nums[j] &lt; nums[i]}。</li>
+<li>最终的最长递增子序列的长度是 dp 数组中的最大值。</li>
+<li>时间复杂度为 O(<em>n2</em>) 。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00300</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">lengthOfLIS</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> n = nums.length;</span><br><span class="line">        <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">            dp[i] = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; i; ++j) &#123;</span><br><span class="line">                <span class="keyword">if</span> (nums[i] &gt; nums[j]) &#123;</span><br><span class="line">                    dp[i] = Math.max(dp[i], dp[j] + <span class="number">1</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> res = dp[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> d : dp) &#123;</span><br><span class="line">            res = Math.max(res, d);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>可以运用二分查找将时间复杂度从 O(<em>n2</em>)  降为 O(<em>n</em> log <em>n</em>) 。</p>
+<ul>
+<li>dp[i] 表示长度为 i + 1 的最长递增子序列的最后一个元素。</li>
+<li>对于数组 nums 的一个元素 x，</li>
+<li>如果它大于 dp 数组所有的值，那么把它添加到 dp 后面，表示最长递增子序列长度加 1；</li>
+<li>如果 dp[i - 1] &lt; x &lt;= dp[i]，那么更新 dp[i] = x。</li>
+<li>最终的最长递增子序列的长度就是 dp 数组的实际长度。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00300</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">lengthOfLIS</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[nums.length];</span><br><span class="line">        <span class="keyword">int</span> len = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> num : nums) &#123;</span><br><span class="line">            <span class="comment">// 找到第一个大于等于 num 的位置</span></span><br><span class="line">            <span class="keyword">int</span> i = Arrays.binarySearch(dp, <span class="number">0</span>, len, num);</span><br><span class="line">            <span class="keyword">if</span> (i &lt; <span class="number">0</span>) &#123;</span><br><span class="line">                i = -(i + <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            dp[i] = num;</span><br><span class="line">            <span class="keyword">if</span> (i == len) &#123;</span><br><span class="line">                ++len;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> len;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -371,6 +386,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/DP/" rel="tag"># DP</a>
+          
+        </div>
+      
 
       
       
@@ -380,8 +401,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/19/leetcode-00031/" rel="next" title="LeetCode31-下一个排列">
-                <i class="fa fa-chevron-left"></i> LeetCode31-下一个排列
+              <a href="/2019/02/09/leetcode-00091/" rel="next" title="LeetCode91-解码方法">
+                <i class="fa fa-chevron-left"></i> LeetCode91-解码方法
               </a>
             
           </div>
@@ -389,10 +410,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/21/leetcode-00125/" rel="prev" title="LeetCode125-验证回文串">
-                LeetCode125-验证回文串 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
