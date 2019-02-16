@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Search," />
+  <meta name="keywords" content="DP," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/number-of-islands/ 中文链接：https://leetcode-cn.com/problems/number-of-islands/ 题目详述给定一个由 &amp;#39;1&amp;#39;（陆地）和 &amp;#39;0&amp;#39;（水）组成的的二维网格，计算岛屿的数量。一个岛被水包围，并且它是通过水平方向或垂直方向上相邻的">
-<meta name="keywords" content="Search">
+<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/partition-equal-subset-sum/ 中文链接：https://leetcode-cn.com/problems/partition-equal-subset-sum/ 题目详述给定一个只包含正整数的非空数组。是否可以将这个数组分割成两个子集，使得两个子集的元素和相等。 注意:  每个数组中的元素不会超">
+<meta name="keywords" content="DP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode200-岛屿的个数">
-<meta property="og:url" content="http://yoursite.com/2019/01/07/leetcode-00200/index.html">
+<meta property="og:title" content="LeetCode416-分割等和子集">
+<meta property="og:url" content="http://yoursite.com/2019/02/13/leetcode-00416/index.html">
 <meta property="og:site_name" content="Jerring">
-<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/number-of-islands/ 中文链接：https://leetcode-cn.com/problems/number-of-islands/ 题目详述给定一个由 &amp;#39;1&amp;#39;（陆地）和 &amp;#39;0&amp;#39;（水）组成的的二维网格，计算岛屿的数量。一个岛被水包围，并且它是通过水平方向或垂直方向上相邻的">
+<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/partition-equal-subset-sum/ 中文链接：https://leetcode-cn.com/problems/partition-equal-subset-sum/ 题目详述给定一个只包含正整数的非空数组。是否可以将这个数组分割成两个子集，使得两个子集的元素和相等。 注意:  每个数组中的元素不会超">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-14T15:31:20.980Z">
+<meta property="og:updated_time" content="2019-02-16T11:24:04.094Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode200-岛屿的个数">
-<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/number-of-islands/ 中文链接：https://leetcode-cn.com/problems/number-of-islands/ 题目详述给定一个由 &amp;#39;1&amp;#39;（陆地）和 &amp;#39;0&amp;#39;（水）组成的的二维网格，计算岛屿的数量。一个岛被水包围，并且它是通过水平方向或垂直方向上相邻的">
+<meta name="twitter:title" content="LeetCode416-分割等和子集">
+<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/partition-equal-subset-sum/ 中文链接：https://leetcode-cn.com/problems/partition-equal-subset-sum/ 题目详述给定一个只包含正整数的非空数组。是否可以将这个数组分割成两个子集，使得两个子集的元素和相等。 注意:  每个数组中的元素不会超">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/01/07/leetcode-00200/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/02/13/leetcode-00416/"/>
 
 
 
 
 
-  <title>LeetCode200-岛屿的个数 | Jerring</title>
+  <title>LeetCode416-分割等和子集 | Jerring</title>
   
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/07/leetcode-00200/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/13/leetcode-00416/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jerring">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">LeetCode200-岛屿的个数</h1>
+          <h1 class="post-title" itemprop="name headline">LeetCode416-分割等和子集</h1>
         
 
         <div class="post-meta">
@@ -282,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-07T20:30:50+08:00">
-                2019-01-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-13T19:23:51+08:00">
+                2019-02-13
               </time>
             
 
@@ -342,21 +342,23 @@
       
 
       
-        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/number-of-islands/" target="_blank" rel="noopener">https://leetcode.com/problems/number-of-islands/</a></p>
-<p>中文链接：<a href="https://leetcode-cn.com/problems/number-of-islands/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/number-of-islands/</a></p>
-<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>给定一个由 <code>&#39;1&#39;</code>（陆地）和 <code>&#39;0&#39;</code>（水）组成的的二维网格，计算岛屿的数量。一个岛被水包围，并且它是通过水平方向或垂直方向上相邻的陆地连接而成的。你可以假设网格的四个边均被水包围。</p>
+        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/partition-equal-subset-sum/" target="_blank" rel="noopener">https://leetcode.com/problems/partition-equal-subset-sum/</a></p>
+<p>中文链接：<a href="https://leetcode-cn.com/problems/partition-equal-subset-sum/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/partition-equal-subset-sum/</a></p>
+<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>给定一个<strong>只包含正整数</strong>的<strong>非空</strong>数组。是否可以将这个数组分割成两个子集，使得两个子集的元素和相等。</p>
+<p><strong>注意:</strong></p>
+<ol>
+<li>每个数组中的元素不会超过 100</li>
+<li>数组的大小不会超过 200</li>
+</ol>
 <p><strong>示例 1:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">11110</span><br><span class="line">11010</span><br><span class="line">11000</span><br><span class="line">00000</span><br><span class="line"></span><br><span class="line">输出: 1</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入: [1, 5, 11, 5]</span><br><span class="line"></span><br><span class="line">输出: true</span><br><span class="line"></span><br><span class="line">解释: 数组可以分割成 [1, 5, 5] 和 [11].</span><br></pre></td></tr></table></figure>
 <p><strong>示例 2:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">11000</span><br><span class="line">11000</span><br><span class="line">00100</span><br><span class="line">00011</span><br><span class="line"></span><br><span class="line">输出: 3</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入: [1, 2, 3, 5]</span><br><span class="line"></span><br><span class="line">输出: false</span><br><span class="line"></span><br><span class="line">解释: 数组不能分割成两个元素和相等的子集.</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p>DFS。</p>
-<ul>
-<li>找到 <code>grid[i][j] == &#39;1&#39;</code> 的地方，则找到一个连通块。</li>
-<li>从这个位置尝试往上下左右四个方向搜索，遍历整个连通块，令 <code>grid[i][j] = &#39;0&#39;</code> 。</li>
-<li>用一个变量来记录连通块的个数。</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00200</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numIslands</span><span class="params">(<span class="keyword">char</span>[][] grid)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; grid.length; ++i) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; grid[<span class="number">0</span>].length; ++j) &#123;</span><br><span class="line">                <span class="keyword">if</span> (grid[i][j] == <span class="string">'1'</span>) &#123;</span><br><span class="line">                    ++res;</span><br><span class="line">                    dfs(grid, i, j);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">char</span>[][] grid, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">        grid[i][j] = <span class="string">'0'</span>;</span><br><span class="line">        <span class="keyword">if</span> (i - <span class="number">1</span> &gt;= <span class="number">0</span> &amp;&amp; grid[i - <span class="number">1</span>][j] == <span class="string">'1'</span>)</span><br><span class="line">            dfs(grid, i - <span class="number">1</span>, j);</span><br><span class="line">        <span class="keyword">if</span> (i + <span class="number">1</span> &lt;grid.length &amp;&amp; grid[i + <span class="number">1</span>][j] == <span class="string">'1'</span>)</span><br><span class="line">            dfs(grid, i + <span class="number">1</span>, j);</span><br><span class="line">        <span class="keyword">if</span> (j - <span class="number">1</span> &gt;= <span class="number">0</span> &amp;&amp; grid[i][j - <span class="number">1</span>] == <span class="string">'1'</span>)</span><br><span class="line">            dfs(grid, i, j - <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">if</span> (j + <span class="number">1</span> &lt; grid[<span class="number">0</span>].length &amp;&amp; grid[i][j + <span class="number">1</span>] == <span class="string">'1'</span>)</span><br><span class="line">            dfs(grid, i, j + <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p>方法一：动态规划。可以看成一个背包大小为 sum/2 的 0-1 背包问题。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00416</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">canPartition</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> num : nums) &#123;</span><br><span class="line">            sum += num;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 和为奇数显然不可能</span></span><br><span class="line">        <span class="keyword">if</span> ((sum &amp; <span class="number">1</span>) == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        sum /= <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">boolean</span>[] dp = <span class="keyword">new</span> <span class="keyword">boolean</span>[sum + <span class="number">1</span>];</span><br><span class="line">        dp[<span class="number">0</span>] = <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> num : nums) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = sum; i &gt;= num; --i) &#123;</span><br><span class="line">                dp[i] = dp[i] || dp[i - num];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (dp[sum]) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>方法二：DFS + 剪枝。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00416</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">canPartition</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> num : nums) &#123;</span><br><span class="line">            sum += num;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> ((sum &amp; <span class="number">1</span>) == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> helper(nums, nums.length - <span class="number">1</span>, sum / <span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">helper</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> i, <span class="keyword">int</span> sum)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (sum == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 加上 sum &lt; nums[i] 这个限制条件剪枝，否则容易超时</span></span><br><span class="line">        <span class="keyword">if</span> (sum &lt; <span class="number">0</span> || i &lt; <span class="number">0</span> || sum &lt; nums[i]) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> helper(nums, i - <span class="number">1</span>, sum - nums[i]) || helper(nums, i - <span class="number">1</span>, sum);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -374,7 +376,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Search/" rel="tag"># Search</a>
+            <a href="/tags/DP/" rel="tag"># DP</a>
           
         </div>
       
@@ -387,8 +389,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/06/leetcode-00695/" rel="next" title="LeetCode695-岛屿的最大面积">
-                <i class="fa fa-chevron-left"></i> LeetCode695-岛屿的最大面积
+              <a href="/2019/02/13/01背包/" rel="next" title="01背包">
+                <i class="fa fa-chevron-left"></i> 01背包
               </a>
             
           </div>
@@ -396,10 +398,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/08/leetcode-00547/" rel="prev" title="LeetCode200-岛屿的个数">
-                LeetCode200-岛屿的个数 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
