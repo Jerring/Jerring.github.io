@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="DP," />
 
 
 
@@ -79,19 +79,21 @@
 
 
 
-<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/container-with-most-water/ 中文链接：https://leetcode-cn.com/problems/container-with-most-water/ 题目详述给定 n 个非负整数 a1，a2，…，an，每个数代表坐标中的一个点 (i, ai) 。在坐标内画 n 条垂直线，垂直线 i 的两">
+<meta name="description" content="有一个容量为 N 的背包，要用这个背包装下物品的价值最大，这些物品有两个属性：体积 w 和价值 v。 定义一个二维数组 dp 存储最大价值，其中 dp[i][j] 表示前 i 件物品体积不超过 j 的情况下能达到的最大价值。设第 i 件物品体积为 w，价值为 v，根据第 i 件物品是否添加到背包中，可以分两种情况讨论：  第 i 件物品没添加到背包，总体积不超过 j 的前 i 件物品的最大价值就是">
+<meta name="keywords" content="DP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode11-盛最多水的容器">
-<meta property="og:url" content="http://yoursite.com/2018/11/25/leetcode-00011/index.html">
+<meta property="og:title" content="01背包">
+<meta property="og:url" content="http://yoursite.com/2019/02/13/01背包/index.html">
 <meta property="og:site_name" content="Jerring">
-<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/container-with-most-water/ 中文链接：https://leetcode-cn.com/problems/container-with-most-water/ 题目详述给定 n 个非负整数 a1，a2，…，an，每个数代表坐标中的一个点 (i, ai) 。在坐标内画 n 条垂直线，垂直线 i 的两">
+<meta property="og:description" content="有一个容量为 N 的背包，要用这个背包装下物品的价值最大，这些物品有两个属性：体积 w 和价值 v。 定义一个二维数组 dp 存储最大价值，其中 dp[i][j] 表示前 i 件物品体积不超过 j 的情况下能达到的最大价值。设第 i 件物品体积为 w，价值为 v，根据第 i 件物品是否添加到背包中，可以分两种情况讨论：  第 i 件物品没添加到背包，总体积不超过 j 的前 i 件物品的最大价值就是">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://aliyun-lc-upload.oss-cn-hangzhou.aliyuncs.com/aliyun-lc-upload/uploads/2018/07/25/question_11.jpg">
-<meta property="og:updated_time" content="2018-11-25T13:32:19.972Z">
+<meta property="og:image" content="https://camo.githubusercontent.com/00df29727a33906f588337c972831c35988a152b/68747470733a2f2f6c617465782e636f6465636f67732e636f6d2f6769662e6c617465783f64705b695d5b6a5d3d6d61782864705b692d315d5b6a5d2c64705b692d315d5b6a2d775d2b7629">
+<meta property="og:image" content="https://camo.githubusercontent.com/854f645dd2443eeaabf715e590cdebc928944626/68747470733a2f2f6c617465782e636f6465636f67732e636f6d2f6769662e6c617465783f64705b6a5d3d6d61782864705b6a5d2c64705b6a2d775d2b7629">
+<meta property="og:updated_time" content="2019-02-16T11:13:38.698Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode11-盛最多水的容器">
-<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/container-with-most-water/ 中文链接：https://leetcode-cn.com/problems/container-with-most-water/ 题目详述给定 n 个非负整数 a1，a2，…，an，每个数代表坐标中的一个点 (i, ai) 。在坐标内画 n 条垂直线，垂直线 i 的两">
-<meta name="twitter:image" content="https://aliyun-lc-upload.oss-cn-hangzhou.aliyuncs.com/aliyun-lc-upload/uploads/2018/07/25/question_11.jpg">
+<meta name="twitter:title" content="01背包">
+<meta name="twitter:description" content="有一个容量为 N 的背包，要用这个背包装下物品的价值最大，这些物品有两个属性：体积 w 和价值 v。 定义一个二维数组 dp 存储最大价值，其中 dp[i][j] 表示前 i 件物品体积不超过 j 的情况下能达到的最大价值。设第 i 件物品体积为 w，价值为 v，根据第 i 件物品是否添加到背包中，可以分两种情况讨论：  第 i 件物品没添加到背包，总体积不超过 j 的前 i 件物品的最大价值就是">
+<meta name="twitter:image" content="https://camo.githubusercontent.com/00df29727a33906f588337c972831c35988a152b/68747470733a2f2f6c617465782e636f6465636f67732e636f6d2f6769662e6c617465783f64705b695d5b6a5d3d6d61782864705b692d315d5b6a5d2c64705b692d315d5b6a2d775d2b7629">
 
 
 
@@ -121,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/25/leetcode-00011/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/02/13/01背包/"/>
 
 
 
 
 
-  <title>LeetCode11-盛最多水的容器 | Jerring</title>
+  <title>01背包 | Jerring</title>
   
 
 
@@ -254,7 +256,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/25/leetcode-00011/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/13/01背包/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jerring">
@@ -271,7 +273,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">LeetCode11-盛最多水的容器</h1>
+          <h1 class="post-title" itemprop="name headline">01背包</h1>
         
 
         <div class="post-meta">
@@ -283,8 +285,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-25T21:16:31+08:00">
-                2018-11-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-13T19:13:24+08:00">
+                2019-02-13
               </time>
             
 
@@ -306,8 +308,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
-                    <span itemprop="name">LeetCode</span>
+                  <a href="/categories/Data-Structures-and-Algorithms/" itemprop="url" rel="index">
+                    <span itemprop="name">Data Structures and Algorithms</span>
                   </a>
                 </span>
 
@@ -343,26 +345,19 @@
       
 
       
-        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/container-with-most-water/" target="_blank" rel="noopener">https://leetcode.com/problems/container-with-most-water/</a></p>
-<p>中文链接：<a href="https://leetcode-cn.com/problems/container-with-most-water/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/container-with-most-water/</a></p>
-<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>给定 <em>n</em> 个非负整数 <em>a</em>1，<em>a</em>2，…，<em>a</em>n，每个数代表坐标中的一个点 (<em>i</em>, <em>ai</em>) 。在坐标内画 <em>n</em> 条垂直线，垂直线 <em>i</em> 的两个端点分别为 (<em>i</em>, <em>ai</em>) 和 (<em>i</em>, 0)。找出其中的两条线，使得它们与 <em>x</em> 轴共同构成的容器可以容纳最多的水。</p>
-<p><strong>说明：</strong>你不能倾斜容器，且 <em>n</em> 的值至少为 2。</p>
-<p><img src="https://aliyun-lc-upload.oss-cn-hangzhou.aliyuncs.com/aliyun-lc-upload/uploads/2018/07/25/question_11.jpg" alt="img"></p>
-<p>图中垂直线代表输入数组 [1,8,6,2,5,4,8,3,7]。在此情况下，容器能够容纳水（表示为蓝色部分）的最大值为 49。</p>
-<p><strong>示例:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: [1,8,6,2,5,4,8,3,7]</span><br><span class="line">输出: 49</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p>题目转化一下，实际上就是垂直的两条线段将会与坐标轴构成一个矩形区域，较短线段的长度将会作为矩形区域的宽度，两线间距将会作为矩形区域的长度，最大化该矩形区域的面积。</p>
-<p>方法一：直接枚举每对可能出现的线段组合并找出这些情况之下的最大面积。时间复杂度为 O(n^2)。</p>
-<p>方法二：运用双指针，时间复杂度为 O(n)。</p>
+        <p>有一个容量为 N 的背包，要用这个背包装下物品的价值最大，这些物品有两个属性：体积 w 和价值 v。</p>
+<p>定义一个二维数组 dp 存储最大价值，其中 <code>dp[i][j]</code> 表示前 i 件物品体积不超过 j 的情况下能达到的最大价值。设第 i 件物品体积为 w，价值为 v，根据第 i 件物品是否添加到背包中，可以分两种情况讨论：</p>
 <ul>
-<li>思路：两线段之间形成的区域总是会受到其中较短那条长度的限制。并且，两线段距离越远，得到的面积就越大。</li>
-<li>使用双指针，一个放在开头，一个置于末尾。</li>
-<li>在遍历过程中，计算指针所指向的两条线段形成的区域面积并更新最大面积。</li>
-<li>将指向较短线段的指针向较长线段那端移动。</li>
-<li>若两条线段长度相等，则任意移动二者之一即可。</li>
+<li>第 i 件物品没添加到背包，总体积不超过 j 的前 i 件物品的最大价值就是总体积不超过 j 的前 i-1 件物品的最大价值，<code>dp[i][j] = dp[i-1][j]</code>。</li>
+<li>第 i 件物品添加到背包中，<code>dp[i][j] = dp[i-1][j-w] + v</code>。</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00011</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxArea</span><span class="params">(<span class="keyword">int</span>[] height)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> j = height.length - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (i &lt; j) &#123;</span><br><span class="line">            <span class="keyword">int</span> area = (j - i) * Math.min(height[i], height[j]);</span><br><span class="line">            res = Math.max(res, area);</span><br><span class="line">            <span class="keyword">if</span> (height[i] &lt; height[j]) &#123;</span><br><span class="line">                ++i;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                --j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>第 i 件物品可添加也可以不添加，取决于哪种情况下最大价值更大。因此，0-1 背包的状态转移方程为：</p>
+<p><a href="https://camo.githubusercontent.com/00df29727a33906f588337c972831c35988a152b/68747470733a2f2f6c617465782e636f6465636f67732e636f6d2f6769662e6c617465783f64705b695d5b6a5d3d6d61782864705b692d315d5b6a5d2c64705b692d315d5b6a2d775d2b7629" target="_blank" rel="noopener"><img src="https://camo.githubusercontent.com/00df29727a33906f588337c972831c35988a152b/68747470733a2f2f6c617465782e636f6465636f67732e636f6d2f6769662e6c617465783f64705b695d5b6a5d3d6d61782864705b692d315d5b6a5d2c64705b692d315d5b6a2d775d2b7629" alt="img"></a></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">knapsack</span><span class="params">(<span class="keyword">int</span> W, <span class="keyword">int</span> N, <span class="keyword">int</span>[] weights, <span class="keyword">int</span>[] values)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span>[][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>][W + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> w = weights[i - <span class="number">1</span>], v = values[i - <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= W; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (j &gt;= w) &#123;</span><br><span class="line">                dp[i][j] = Math.max(dp[i - <span class="number">1</span>][j], dp[i - <span class="number">1</span>][j - w] + v);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                dp[i][j] = dp[i - <span class="number">1</span>][j];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[N][W];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在程序实现时可以对 0-1 背包做优化。观察状态转移方程可以知道，前 i 件物品的状态仅与前 i-1 件物品的状态有关，因此可以将 dp 定义为一维数组，其中 dp[j] 既可以表示 <code>dp[i-1][j]</code> 也可以表示 <code>dp[i][j]</code>。此时，</p>
+<p><a href="https://camo.githubusercontent.com/854f645dd2443eeaabf715e590cdebc928944626/68747470733a2f2f6c617465782e636f6465636f67732e636f6d2f6769662e6c617465783f64705b6a5d3d6d61782864705b6a5d2c64705b6a2d775d2b7629" target="_blank" rel="noopener"><img src="https://camo.githubusercontent.com/854f645dd2443eeaabf715e590cdebc928944626/68747470733a2f2f6c617465782e636f6465636f67732e636f6d2f6769662e6c617465783f64705b6a5d3d6d61782864705b6a5d2c64705b6a2d775d2b7629" alt="img"></a></p>
+<p>因为 dp[j-w] 表示 <code>dp[i-1][j-w]</code>，因此不能先求 <code>dp[i][j-w]</code>，以防将 <code>dp[i-1][j-w]</code> 覆盖。也就是说要先计算 <code>dp[i][j]</code> 再计算 <code>dp[i][j-w]</code>，在程序实现时需要按倒序来循环求解。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">knapsack</span><span class="params">(<span class="keyword">int</span> W, <span class="keyword">int</span> N, <span class="keyword">int</span>[] weights, <span class="keyword">int</span>[] values)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[W + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> w = weights[i - <span class="number">1</span>], v = values[i - <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = W; j &gt;= <span class="number">1</span>; j--) &#123;</span><br><span class="line">            <span class="keyword">if</span> (j &gt;= w) &#123;</span><br><span class="line">                dp[j] = Math.max(dp[j], dp[j - w] + v);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[W];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -378,6 +373,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/DP/" rel="tag"># DP</a>
+          
+        </div>
+      
 
       
       
@@ -387,8 +388,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/24/leetcode-00028/" rel="next" title="LeetCode28-实现strStr()">
-                <i class="fa fa-chevron-left"></i> LeetCode28-实现strStr()
+              <a href="/2019/02/13/最长公共子序列/" rel="next" title="最长公共子序列">
+                <i class="fa fa-chevron-left"></i> 最长公共子序列
               </a>
             
           </div>
@@ -396,10 +397,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/26/leetcode-00151/" rel="prev" title="LeetCode151-翻转字符串里的单词">
-                LeetCode151-翻转字符串里的单词 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -451,17 +448,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -525,22 +513,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目链接"><span class="nav-number">1.</span> <span class="nav-text">题目链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#题目详述"><span class="nav-number">2.</span> <span class="nav-text">题目详述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#题目详解"><span class="nav-number">3.</span> <span class="nav-text">题目详解</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
