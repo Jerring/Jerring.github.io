@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Greedy," />
+  <meta name="keywords" content="Math," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/maximum-length-of-pair-chain/ 中文链接：https://leetcode-cn.com/problems/maximum-length-of-pair-chain/ 题目详述给出 n 个数对。 在每一个数对中，第一个数字总是比第二个数字小。 现在，我们定义一种跟随关系，当且仅当 b &amp;lt;">
-<meta name="keywords" content="Greedy">
+<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/palindrome-number/ 中文链接：https://leetcode-cn.com/problems/palindrome-number/ 题目详述判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。 示例 1: 12输入: 121输出: true 示例 2: 123输入:">
+<meta name="keywords" content="Math">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode646-最长数对链">
-<meta property="og:url" content="http://yoursite.com/2019/02/11/leetcode-00646/index.html">
+<meta property="og:title" content="LeetCode9-回文数">
+<meta property="og:url" content="http://yoursite.com/2019/04/03/leetcode-00009/index.html">
 <meta property="og:site_name" content="Jerring">
-<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/maximum-length-of-pair-chain/ 中文链接：https://leetcode-cn.com/problems/maximum-length-of-pair-chain/ 题目详述给出 n 个数对。 在每一个数对中，第一个数字总是比第二个数字小。 现在，我们定义一种跟随关系，当且仅当 b &amp;lt;">
+<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/palindrome-number/ 中文链接：https://leetcode-cn.com/problems/palindrome-number/ 题目详述判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。 示例 1: 12输入: 121输出: true 示例 2: 123输入:">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-15T04:14:31.590Z">
+<meta property="og:updated_time" content="2019-04-03T06:38:33.756Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode646-最长数对链">
-<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/maximum-length-of-pair-chain/ 中文链接：https://leetcode-cn.com/problems/maximum-length-of-pair-chain/ 题目详述给出 n 个数对。 在每一个数对中，第一个数字总是比第二个数字小。 现在，我们定义一种跟随关系，当且仅当 b &amp;lt;">
+<meta name="twitter:title" content="LeetCode9-回文数">
+<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/palindrome-number/ 中文链接：https://leetcode-cn.com/problems/palindrome-number/ 题目详述判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。 示例 1: 12输入: 121输出: true 示例 2: 123输入:">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/02/11/leetcode-00646/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/04/03/leetcode-00009/"/>
 
 
 
 
 
-  <title>LeetCode646-最长数对链 | Jerring</title>
+  <title>LeetCode9-回文数 | Jerring</title>
   
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/11/leetcode-00646/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/03/leetcode-00009/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jerring">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">LeetCode646-最长数对链</h1>
+          <h1 class="post-title" itemprop="name headline">LeetCode9-回文数</h1>
         
 
         <div class="post-meta">
@@ -282,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-11T12:03:14+08:00">
-                2019-02-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-03T14:24:58+08:00">
+                2019-04-03
               </time>
             
 
@@ -342,25 +342,30 @@
       
 
       
-        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/maximum-length-of-pair-chain/" target="_blank" rel="noopener">https://leetcode.com/problems/maximum-length-of-pair-chain/</a></p>
-<p>中文链接：<a href="https://leetcode-cn.com/problems/maximum-length-of-pair-chain/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/maximum-length-of-pair-chain/</a></p>
-<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>给出 <code>n</code> 个数对。 在每一个数对中，第一个数字总是比第二个数字小。</p>
-<p>现在，我们定义一种跟随关系，当且仅当 <code>b &lt; c</code> 时，数对<code>(c, d)</code> 才可以跟在 <code>(a, b)</code> 后面。我们用这种形式来构造一个数对链。</p>
-<p>给定一个对数集合，找出能够形成的最长数对链的长度。你不需要用到所有的数对，你可以以任何顺序选择其中的一些数对来构造。</p>
-<p><strong>示例 :</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: [[1,2], [2,3], [3,4]]</span><br><span class="line">输出: 2</span><br><span class="line">解释: 最长的数对链是 [1,2] -&gt; [3,4]</span><br></pre></td></tr></table></figure>
-<p><strong>注意：</strong></p>
-<ol>
-<li>给出数对的个数在 [1, 1000] 范围内。</li>
-</ol>
+        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/palindrome-number/" target="_blank" rel="noopener">https://leetcode.com/problems/palindrome-number/</a></p>
+<p>中文链接：<a href="https://leetcode-cn.com/problems/palindrome-number/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/palindrome-number/</a></p>
+<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: 121</span><br><span class="line">输出: true</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: -121</span><br><span class="line">输出: false</span><br><span class="line">解释: 从左向右读, 为 -121 。 从右向左读, 为 121- 。因此它不是一个回文数。</span><br></pre></td></tr></table></figure>
+<p><strong>示例 3:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: 10</span><br><span class="line">输出: false</span><br><span class="line">解释: 从右向左读, 为 01 。因此它不是一个回文数。</span><br></pre></td></tr></table></figure>
+<p><strong>进阶:</strong></p>
+<p>你能不将整数转为字符串来解决这个问题吗？</p>
 <a id="more"></a>
-<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p>贪心。</p>
-<ul>
-<li>按照第二个数从小到大排序，第二个数越小对以后的限制越小。</li>
-<li>用一个变量 pre 记录上一个数对的第二个数。</li>
-<li>如果当前变量的第一个数大于 pre 时，说明能连起来，结果递增并更新 pre。</li>
+<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><ul>
+<li>反转这个数的后半部分，然后与它的前半部分判断是否相等。相等为回文数，不等则不是。</li>
+<li><code>x &lt; 0</code> 时，存在一个 <code>-</code> 号，不能与数字字符匹配，负数不是回文数。</li>
+<li>如果末尾最后一位为 <code>0</code>，要满足回文数的条件是第一位也为 <code>0</code>，只有 <code>0</code> 符合条件。</li>
+<li>反转后半部分的数字后与前半部分判断。<ul>
+<li>数位长度为偶数时，判断 <code>x == r</code>（如数1221，x = 12, r = 12）。</li>
+<li>数位长度为奇数时，判断 <code>x == r / 10</code>（如数12321，x = 12, r = 123）。</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00646</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findLongestChain</span><span class="params">(<span class="keyword">int</span>[][] pairs)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (pairs == <span class="keyword">null</span> || pairs.length == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        Arrays.sort(pairs, Comparator.comparingInt(o -&gt; o[<span class="number">1</span>]));</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> pre = pairs[<span class="number">0</span>][<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span>[] pair : pairs) &#123;</span><br><span class="line">            <span class="keyword">if</span> (pair[<span class="number">0</span>] &gt; pre) &#123;</span><br><span class="line">                ++res;</span><br><span class="line">                pre = pair[<span class="number">1</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>综合起来就是判断 <code>x == r || x == r / 10</code>。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00009</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (x &lt; <span class="number">0</span> || (x % <span class="number">10</span> == <span class="number">0</span> &amp;&amp; x != <span class="number">0</span>)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> r = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (r &lt; x) &#123;</span><br><span class="line">            r = <span class="number">10</span> * r + x % <span class="number">10</span>;</span><br><span class="line">            x /= <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> x == r || x == r / <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -378,7 +383,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Greedy/" rel="tag"># Greedy</a>
+            <a href="/tags/Math/" rel="tag"># Math</a>
           
         </div>
       
@@ -391,8 +396,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/10/leetcode-00300/" rel="next" title="LeetCode300-最长上升子序列">
-                <i class="fa fa-chevron-left"></i> LeetCode300-最长上升子序列
+              <a href="/2019/04/03/leetcode-00238/" rel="next" title="LeetCode238-除自身以外数组的乘积">
+                <i class="fa fa-chevron-left"></i> LeetCode238-除自身以外数组的乘积
               </a>
             
           </div>
@@ -400,10 +405,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/02/12/leetcode-00376/" rel="prev" title="LeetCode376-摆动序列">
-                LeetCode376-摆动序列 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
