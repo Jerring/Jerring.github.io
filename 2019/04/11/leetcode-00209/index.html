@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Jerring">
 <meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/minimum-size-subarray-sum/ 中文链接：https://leetcode-cn.com/problems/minimum-size-subarray-sum/ 题目详述给定一个含有 n 个正整数的数组和一个正整数 s ，找出该数组中满足其和 ≥ s 的长度最小的连续子数组。如果不存在符合条件的连续">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-12T05:37:37.517Z">
+<meta property="og:updated_time" content="2019-04-12T05:41:44.308Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode209-长度最小的子数组">
 <meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/minimum-size-subarray-sum/ 中文链接：https://leetcode-cn.com/problems/minimum-size-subarray-sum/ 题目详述给定一个含有 n 个正整数的数组和一个正整数 s ，找出该数组中满足其和 ≥ s 的长度最小的连续子数组。如果不存在符合条件的连续">
@@ -353,7 +353,8 @@
 <h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><ul>
 <li>运用双指针 <code>l</code> 和 <code>r</code>。</li>
 <li><code>l</code> 指向连续子数组的左边界，<code>r</code> 指向连续子数组的右边界的下一个位置，即 <code>[l, r)</code> 为可能的连续子数组。</li>
-<li>每次移动 <code>r</code> 直至满足条件，然后更新最结果，使 <code>l</code> 右移，重复这个过程。</li>
+<li>每次移动 <code>r</code> 直至满足条件，然后更新最结果，使 <code>l</code> 右移，直至区间 <code>[l, r)</code> 不再满足条件。</li>
+<li>重复这个过程，继续移动直至结束。</li>
 <li>时间复杂度为 O(n)。</li>
 <li>空间复杂度为 O(1)。</li>
 </ul>
