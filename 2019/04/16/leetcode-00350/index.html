@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="DP," />
+  <meta name="keywords" content="Two Pointers," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/coin-change/ 中文链接：https://leetcode-cn.com/problems/coin-change/ 题目详述给定不同面额的硬币 coins 和一个总金额 amount。编写一个函数来计算可以凑成总金额所需的最少的硬币个数。如果没有任何一种硬币组合能组成总金额，返回 -1。 示例 1: 123输">
-<meta name="keywords" content="DP">
+<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/intersection-of-two-arrays-ii/ 中文链接：https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/ 题目详述给定两个数组，编写一个函数来计算它们的交集。 示例 1: 12输入: nums1 = [1,2,2,1], num">
+<meta name="keywords" content="Two Pointers">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode322-零钱兑换">
-<meta property="og:url" content="http://yoursite.com/2019/02/17/leetcode-00322/index.html">
+<meta property="og:title" content="LeetCode350-两个数组的交集II">
+<meta property="og:url" content="http://yoursite.com/2019/04/16/leetcode-00350/index.html">
 <meta property="og:site_name" content="Jerring">
-<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/coin-change/ 中文链接：https://leetcode-cn.com/problems/coin-change/ 题目详述给定不同面额的硬币 coins 和一个总金额 amount。编写一个函数来计算可以凑成总金额所需的最少的硬币个数。如果没有任何一种硬币组合能组成总金额，返回 -1。 示例 1: 123输">
+<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/intersection-of-two-arrays-ii/ 中文链接：https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/ 题目详述给定两个数组，编写一个函数来计算它们的交集。 示例 1: 12输入: nums1 = [1,2,2,1], num">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-22T06:34:19.718Z">
+<meta property="og:updated_time" content="2019-04-14T08:11:51.687Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode322-零钱兑换">
-<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/coin-change/ 中文链接：https://leetcode-cn.com/problems/coin-change/ 题目详述给定不同面额的硬币 coins 和一个总金额 amount。编写一个函数来计算可以凑成总金额所需的最少的硬币个数。如果没有任何一种硬币组合能组成总金额，返回 -1。 示例 1: 123输">
+<meta name="twitter:title" content="LeetCode350-两个数组的交集II">
+<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/intersection-of-two-arrays-ii/ 中文链接：https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/ 题目详述给定两个数组，编写一个函数来计算它们的交集。 示例 1: 12输入: nums1 = [1,2,2,1], num">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/02/17/leetcode-00322/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/04/16/leetcode-00350/"/>
 
 
 
 
 
-  <title>LeetCode322-零钱兑换 | Jerring</title>
+  <title>LeetCode350-两个数组的交集II | Jerring</title>
   
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/17/leetcode-00322/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/16/leetcode-00350/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jerring">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">LeetCode322-零钱兑换</h1>
+          <h1 class="post-title" itemprop="name headline">LeetCode350-两个数组的交集II</h1>
         
 
         <div class="post-meta">
@@ -282,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-17T14:24:53+08:00">
-                2019-02-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-16T15:41:10+08:00">
+                2019-04-16
               </time>
             
 
@@ -342,23 +342,59 @@
       
 
       
-        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/coin-change/" target="_blank" rel="noopener">https://leetcode.com/problems/coin-change/</a></p>
-<p>中文链接：<a href="https://leetcode-cn.com/problems/coin-change/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/coin-change/</a></p>
-<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>给定不同面额的硬币 coins 和一个总金额 amount。编写一个函数来计算可以凑成总金额所需的最少的硬币个数。如果没有任何一种硬币组合能组成总金额，返回 <code>-1</code>。</p>
+        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/intersection-of-two-arrays-ii/" target="_blank" rel="noopener">https://leetcode.com/problems/intersection-of-two-arrays-ii/</a></p>
+<p>中文链接：<a href="https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/</a></p>
+<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>给定两个数组，编写一个函数来计算它们的交集。</p>
 <p><strong>示例 1:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: coins = [1, 2, 5], amount = 11</span><br><span class="line">输出: 3 </span><br><span class="line">解释: 11 = 5 + 5 + 1</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: nums1 = [1,2,2,1], nums2 = [2,2]</span><br><span class="line">输出: [2,2]</span><br></pre></td></tr></table></figure>
 <p><strong>示例 2:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: coins = [2], amount = 3</span><br><span class="line">输出: -1</span><br></pre></td></tr></table></figure>
-<p><strong>说明</strong>:<br>你可以认为每种硬币的数量是无限的。</p>
-<a id="more"></a>
-<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p>完全背包问题。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: nums1 = [4,9,5], nums2 = [9,4,9,8,4]</span><br><span class="line">输出: [4,9]</span><br></pre></td></tr></table></figure>
+<p><strong>说明：</strong></p>
 <ul>
-<li>相当于由 n 种物品，每种物品的体积是硬币面值，价值是 1，求恰好装满背包最少需要多少价值的物品。</li>
-<li>dp[i] 表示凑成金额 i  最少需要多少个硬币。</li>
-<li>外层循环枚举金额 i ，内层循环枚举硬币 coin，则 <code>dp[i] = min{dp[i], dp[i - coin] + 1}</code>。</li>
-<li>注意 dp 数组正确的初始化。</li>
+<li>输出结果中每个元素出现的次数，应与元素在两个数组中出现的次数一致。</li>
+<li>我们可以不考虑输出结果的顺序。</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00322</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">coinChange</span><span class="params">(<span class="keyword">int</span>[] coins, <span class="keyword">int</span> amount)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[amount + <span class="number">1</span>];</span><br><span class="line">        <span class="comment">// 初始化 dp</span></span><br><span class="line">        Arrays.fill(dp, amount + <span class="number">1</span>);</span><br><span class="line">        dp[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= amount; ++i) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> coin : coins) &#123;</span><br><span class="line">                <span class="keyword">if</span> (i &gt;= coin) &#123;</span><br><span class="line">                    dp[i] = Math.min(dp[i], dp[i - coin] + <span class="number">1</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[amount] != amount + <span class="number">1</span> ? dp[amount] : -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>进阶:</strong></p>
+<ul>
+<li>如果给定的数组已经排好序呢？你将如何优化你的算法？</li>
+<li>如果 <em>nums1</em> 的大小比 <em>nums2</em> 小很多，哪种方法更优？</li>
+<li>如果 <em>nums2</em> 的元素存储在磁盘上，磁盘内存是有限的，并且你不能一次加载所有的元素到内存中，你该怎么办？</li>
+</ul>
+<a id="more"></a>
+<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p><a href="https://jerring.github.io/2018/11/23/leetcode-00349/" target="_blank" rel="noopener">LeetCode349-两个数组的交集</a> 和本题都是取两个数组的交集，解题思路是一致的，区别在于前者结果中没有重复元素，后者结果中可以有重复元素。</p>
+<p>方法一：运用 HashMap。</p>
+<ul>
+<li>遍历 nums1， 统计每个元素出现的次数。</li>
+<li>遍历 nums2，判断当前元素是否在 map 中出现过且次数大于 0。若满足要求则添加当前元素到结果集中，并将统计次数减一。</li>
+<li>时间复杂度为 O(n + m)，n、m 为数组 nums1、nums2 的长度。</li>
+<li>空间复杂度为 O(n)。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00350</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] intersect(<span class="keyword">int</span>[] nums1, <span class="keyword">int</span>[] nums2) &#123;</span><br><span class="line">        Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> num : nums1) &#123;</span><br><span class="line">            map.put(num, map.getOrDefault(num, <span class="number">0</span>) + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        List&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> num : nums2) &#123;</span><br><span class="line">            <span class="keyword">int</span> val = map.getOrDefault(num, <span class="number">0</span>);</span><br><span class="line">            <span class="keyword">if</span> (val &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                list.add(num);</span><br><span class="line">                map.put(num, val - <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span>[] res = <span class="keyword">new</span> <span class="keyword">int</span>[list.size()];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> num : list) &#123;</span><br><span class="line">            res[i++] = num;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>方法二：运用双指针。</p>
+<ul>
+<li>先对两个数组进行排序，再运用双指针进行扫描。</li>
+<li>时间复杂度为 O(nlongn) + O(mlogm) + O(n + m)。</li>
+<li>空间复杂度为 O(1)。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00350</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] intersect(<span class="keyword">int</span>[] nums1, <span class="keyword">int</span>[] nums2) &#123;</span><br><span class="line">        List&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        Arrays.sort(nums1);</span><br><span class="line">        Arrays.sort(nums2);</span><br><span class="line">        <span class="keyword">int</span> n1 = nums1.length;</span><br><span class="line">        <span class="keyword">int</span> n2 = nums2.length;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> j = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (i &lt; n1 &amp;&amp; j &lt; n2) &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums1[i] &lt; nums2[j]) &#123;</span><br><span class="line">                ++i;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (nums1[i] &gt; nums2[j]) &#123;</span><br><span class="line">                ++j;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                list.add(nums1[i]);</span><br><span class="line">                ++i;</span><br><span class="line">                ++j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        i = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span>[] res = <span class="keyword">new</span> <span class="keyword">int</span>[list.size()];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> num : list) &#123;</span><br><span class="line">            res[i++] = num;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>进阶：</p>
+<ol>
+<li>如果给定的数组已经排好序呢？你将如何优化你的算法？<ul>
+<li>运用双指针，时间复杂度为 O(n + m)。</li>
+<li>运用二分查找，时间复杂度为 O(nlogm)。</li>
+</ul>
+</li>
+<li>如果 <em>nums1</em> 的大小比 <em>nums2</em> 小很多，哪种方法更优？<ul>
+<li>将 nums1 存入哈希表，遍历 nums2，时间复杂度为 O(n + m)。</li>
+<li>遍历 nums1，对 nums2 进行二分查找，时间复杂度为 O(nlogm)。</li>
+</ul>
+</li>
+<li>如果 <em>nums2</em> 的元素存储在磁盘上，磁盘内存是有限的，并且你不能一次加载所有的元素到内存中，你该怎么办？<ul>
+<li>如果 nums1 可以存入内存，可以将 nums1 存入哈希表，分块读入 nums2。</li>
+<li>如果 nums1 也不能存入内存，可以对 nums1 和 nums2 进行外部排序，分块读入内存，运用双指针进行查找。</li>
+</ul>
+</li>
+</ol>
 
       
     </div>
@@ -376,7 +412,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/DP/" rel="tag"># DP</a>
+            <a href="/tags/Two-Pointers/" rel="tag"># Two Pointers</a>
           
         </div>
       
@@ -389,8 +425,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/16/leetcode-00474/" rel="next" title="LeetCode474-一和零">
-                <i class="fa fa-chevron-left"></i> LeetCode474-一和零
+              <a href="/2019/04/15/leetcode-00030/" rel="next" title="LeetCode30-串联所有单词的字串">
+                <i class="fa fa-chevron-left"></i> LeetCode30-串联所有单词的字串
               </a>
             
           </div>
@@ -398,10 +434,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/02/18/leetcode-00377/" rel="prev" title="LeetCode377-组合总和IV">
-                LeetCode377-组合总和IV <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
