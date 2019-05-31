@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Sort," />
+  <meta name="keywords" content="Binary Tree," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/sort-colors/ 中文链接：https://leetcode-cn.com/problems/sort-colors/ 题目详述给定一个包含红色、白色和蓝色，一共 n 个元素的数组，原地对它们进行排序，使得相同颜色的元素相邻，并按照红色、白色、蓝色顺序排列。 此题中，我们使用整数 0、 1 和 2 分别表示红色、">
-<meta name="keywords" content="Sort">
+<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/count-complete-tree-nodes/ 中文链接：https://leetcode-cn.com/problems/count-complete-tree-nodes/ 题目详述给出一个完全二叉树，求出该树的节点个数。 说明： 完全二叉树的定义如下：在完全二叉树中，除了最底层节点可能没填满外，其余每层节点数">
+<meta name="keywords" content="Binary Tree">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode75-颜色分类">
-<meta property="og:url" content="http://yoursite.com/2018/12/16/leetcode-00075/index.html">
+<meta property="og:title" content="LeetCode173-二叉搜索树迭代器">
+<meta property="og:url" content="http://yoursite.com/2019/05/31/leetcode-00222/index.html">
 <meta property="og:site_name" content="Jerring">
-<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/sort-colors/ 中文链接：https://leetcode-cn.com/problems/sort-colors/ 题目详述给定一个包含红色、白色和蓝色，一共 n 个元素的数组，原地对它们进行排序，使得相同颜色的元素相邻，并按照红色、白色、蓝色顺序排列。 此题中，我们使用整数 0、 1 和 2 分别表示红色、">
+<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/count-complete-tree-nodes/ 中文链接：https://leetcode-cn.com/problems/count-complete-tree-nodes/ 题目详述给出一个完全二叉树，求出该树的节点个数。 说明： 完全二叉树的定义如下：在完全二叉树中，除了最底层节点可能没填满外，其余每层节点数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-26T13:25:51.326Z">
+<meta property="og:updated_time" content="2019-05-31T07:09:09.168Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode75-颜色分类">
-<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/sort-colors/ 中文链接：https://leetcode-cn.com/problems/sort-colors/ 题目详述给定一个包含红色、白色和蓝色，一共 n 个元素的数组，原地对它们进行排序，使得相同颜色的元素相邻，并按照红色、白色、蓝色顺序排列。 此题中，我们使用整数 0、 1 和 2 分别表示红色、">
+<meta name="twitter:title" content="LeetCode173-二叉搜索树迭代器">
+<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/count-complete-tree-nodes/ 中文链接：https://leetcode-cn.com/problems/count-complete-tree-nodes/ 题目详述给出一个完全二叉树，求出该树的节点个数。 说明： 完全二叉树的定义如下：在完全二叉树中，除了最底层节点可能没填满外，其余每层节点数">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/16/leetcode-00075/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/05/31/leetcode-00222/"/>
 
 
 
 
 
-  <title>LeetCode75-颜色分类 | Jerring</title>
+  <title>LeetCode173-二叉搜索树迭代器 | Jerring</title>
   
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/16/leetcode-00075/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/31/leetcode-00222/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jerring">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">LeetCode75-颜色分类</h1>
+          <h1 class="post-title" itemprop="name headline">LeetCode173-二叉搜索树迭代器</h1>
         
 
         <div class="post-meta">
@@ -282,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-16T21:12:48+08:00">
-                2018-12-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-31T14:54:24+08:00">
+                2019-05-31
               </time>
             
 
@@ -342,27 +342,21 @@
       
 
       
-        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/sort-colors/" target="_blank" rel="noopener">https://leetcode.com/problems/sort-colors/</a></p>
-<p>中文链接：<a href="https://leetcode-cn.com/problems/sort-colors/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/sort-colors/</a></p>
-<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>给定一个包含红色、白色和蓝色，一共 <em>n</em> 个元素的数组，<strong>原地</strong>对它们进行排序，使得相同颜色的元素相邻，并按照红色、白色、蓝色顺序排列。</p>
-<p>此题中，我们使用整数 0、 1 和 2 分别表示红色、白色和蓝色。</p>
-<p><strong>注意:</strong><br>不能使用代码库中的排序函数来解决这道题。</p>
+        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/count-complete-tree-nodes/" target="_blank" rel="noopener">https://leetcode.com/problems/count-complete-tree-nodes/</a></p>
+<p>中文链接：<a href="https://leetcode-cn.com/problems/count-complete-tree-nodes/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/count-complete-tree-nodes/</a></p>
+<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>给出一个<strong>完全二叉树</strong>，求出该树的节点个数。</p>
+<p><strong>说明：</strong></p>
+<p><a href="https://baike.baidu.com/item/完全二叉树/7773232?fr=aladdin" target="_blank" rel="noopener">完全二叉树</a>的定义如下：在完全二叉树中，除了最底层节点可能没填满外，其余每层节点数都达到最大值，并且最下面一层的节点都集中在该层最左边的若干位置。若最底层为第 h 层，则该层包含 1~ 2h 个节点。</p>
 <p><strong>示例:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: [2,0,2,1,1,0]</span><br><span class="line">输出: [0,0,1,1,2,2]</span><br></pre></td></tr></table></figure>
-<p><strong>进阶：</strong></p>
-<ul>
-<li>一个直观的解决方案是使用计数排序的两趟扫描算法。<br>首先，迭代计算出0、1 和 2 元素的个数，然后按照0、1、2的排序，重写当前数组。</li>
-<li>你能想出一个仅使用常数空间的一趟扫描算法吗？</li>
-</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">输入: </span><br><span class="line">    1</span><br><span class="line">   / \</span><br><span class="line">  2   3</span><br><span class="line"> / \  /</span><br><span class="line">4  5 6</span><br><span class="line"></span><br><span class="line">输出: 6</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p>运用三路快排的思想可以完美地解决这个问题。主要是维护两个指针，运用一个指针进行遍历。</p>
+<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p>求一棵树的结点个数的通用代码如下（时间复杂度为 <code>O(n)</code>）：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00222</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">countNodes</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> root == <span class="keyword">null</span> ? <span class="number">0</span> : <span class="number">1</span> + countNodes(root.left) + countNodes(root.right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>本题的枢轴可以看作是 1。</li>
-<li>数组左边存放小于枢轴的元素。</li>
-<li>数组右边存放大于枢轴的元素。</li>
-<li>数组中间存放等于枢轴的元素。</li>
+<li>由于题目限定给定的数为完全二叉树，可能存在左子树为满二叉树的情况，这一部分可以直接根据深度计算出结点个数，不满足的地方仍旧需要遍历。</li>
+<li>相当于二分查找最后一层最后一个结点的位置，查找的复杂度为 <code>O(logn)</code>，最多查找 <code>O(logn)</code> 次，所以时间复杂度为 <code>O(logn * logn)</code>。</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00075</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 维护一个指针 l 使得 nums[0, l) 中的元素都小于 1</span></span><br><span class="line"><span class="comment">     * 维护一个指针 r 使得 nums[r, nums.length) 中的元素都大于 1</span></span><br><span class="line"><span class="comment">     * 运用一个指针 i 进行遍历，nums[i, r) 是待调整的区间，其他区间已调整</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> nums</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sortColors</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> l = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> r = nums.length;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (i &lt; r) &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[i] &lt; <span class="number">1</span>)        swap(nums, i++, l++);</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (nums[i] &gt; <span class="number">1</span>)   swap(nums, i, --r);</span><br><span class="line">            <span class="keyword">else</span>                    ++i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> tmp = nums[i];</span><br><span class="line">        nums[i] = nums[j];</span><br><span class="line">        nums[j] = tmp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00222</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">countNodes</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> leftDepth = <span class="number">0</span>, rightDepth = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (TreeNode node = root; node != <span class="keyword">null</span>; node = node.left) &#123;</span><br><span class="line">            ++leftDepth;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (TreeNode node = root; node != <span class="keyword">null</span>; node = node.right) &#123;</span><br><span class="line">            ++rightDepth;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (leftDepth == rightDepth) &#123;</span><br><span class="line">            <span class="keyword">return</span> (<span class="number">1</span> &lt;&lt; leftDepth) - <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span> + countNodes(root.left) + countNodes(root.right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -380,7 +374,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Sort/" rel="tag"># Sort</a>
+            <a href="/tags/Binary-Tree/" rel="tag"># Binary Tree</a>
           
         </div>
       
@@ -393,8 +387,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/15/leetcode-00451/" rel="next" title="LeetCode451-根据字符出现频率排序">
-                <i class="fa fa-chevron-left"></i> LeetCode451-根据字符出现频率排序
+              <a href="/2019/05/31/leetcode-00173/" rel="next" title="LeetCode173-二叉搜索树迭代器">
+                <i class="fa fa-chevron-left"></i> LeetCode173-二叉搜索树迭代器
               </a>
             
           </div>
@@ -402,10 +396,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/12/17/leetcode-00455/" rel="prev" title="LeetCode455-分发饼干">
-                LeetCode455-分发饼干 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
