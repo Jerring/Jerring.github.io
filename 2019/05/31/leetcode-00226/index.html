@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="String," />
+  <meta name="keywords" content="Binary Tree," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/reverse-words-in-a-string/ 中文链接：https://leetcode-cn.com/problems/reverse-words-in-a-string/ 题目详述给定一个字符串，逐个翻转字符串中的每个单词。 示例:   12输入: &amp;quot;the sky is blue&amp;quot;,输出">
-<meta name="keywords" content="String">
+<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/invert-binary-tree/ 中文链接：https://leetcode-cn.com/problems/invert-binary-tree/ 题目详述翻转一棵二叉树。 示例： 输入： 12345     4   /   \  2     7 / \   / \1   3 6   9 输出： 12345">
+<meta name="keywords" content="Binary Tree">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode151-翻转字符串里的单词">
-<meta property="og:url" content="http://yoursite.com/2018/11/26/leetcode-00151/index.html">
+<meta property="og:title" content="LeetCode226-翻转二叉树">
+<meta property="og:url" content="http://yoursite.com/2019/05/31/leetcode-00226/index.html">
 <meta property="og:site_name" content="Jerring">
-<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/reverse-words-in-a-string/ 中文链接：https://leetcode-cn.com/problems/reverse-words-in-a-string/ 题目详述给定一个字符串，逐个翻转字符串中的每个单词。 示例:   12输入: &amp;quot;the sky is blue&amp;quot;,输出">
+<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/invert-binary-tree/ 中文链接：https://leetcode-cn.com/problems/invert-binary-tree/ 题目详述翻转一棵二叉树。 示例： 输入： 12345     4   /   \  2     7 / \   / \1   3 6   9 输出： 12345">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-27T07:22:08.860Z">
+<meta property="og:updated_time" content="2019-05-31T08:16:28.350Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode151-翻转字符串里的单词">
-<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/reverse-words-in-a-string/ 中文链接：https://leetcode-cn.com/problems/reverse-words-in-a-string/ 题目详述给定一个字符串，逐个翻转字符串中的每个单词。 示例:   12输入: &amp;quot;the sky is blue&amp;quot;,输出">
+<meta name="twitter:title" content="LeetCode226-翻转二叉树">
+<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/invert-binary-tree/ 中文链接：https://leetcode-cn.com/problems/invert-binary-tree/ 题目详述翻转一棵二叉树。 示例： 输入： 12345     4   /   \  2     7 / \   / \1   3 6   9 输出： 12345">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/26/leetcode-00151/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/05/31/leetcode-00226/"/>
 
 
 
 
 
-  <title>LeetCode151-翻转字符串里的单词 | Jerring</title>
+  <title>LeetCode226-翻转二叉树 | Jerring</title>
   
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/26/leetcode-00151/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/31/leetcode-00226/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jerring">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">LeetCode151-翻转字符串里的单词</h1>
+          <h1 class="post-title" itemprop="name headline">LeetCode226-翻转二叉树</h1>
         
 
         <div class="post-meta">
@@ -282,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-26T14:41:56+08:00">
-                2018-11-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-31T16:10:57+08:00">
+                2019-05-31
               </time>
             
 
@@ -342,33 +342,24 @@
       
 
       
-        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/reverse-words-in-a-string/" target="_blank" rel="noopener">https://leetcode.com/problems/reverse-words-in-a-string/</a></p>
-<p>中文链接：<a href="https://leetcode-cn.com/problems/reverse-words-in-a-string/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/reverse-words-in-a-string/</a></p>
-<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>给定一个字符串，逐个翻转字符串中的每个单词。</p>
-<p><strong>示例:</strong>  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;the sky is blue&quot;,</span><br><span class="line">输出: &quot;blue is sky the&quot;.</span><br></pre></td></tr></table></figure>
-<p><strong>说明:</strong></p>
-<ul>
-<li>无空格字符构成一个单词。</li>
-<li>输入字符串可以在前面或者后面包含多余的空格，但是反转后的字符不能包括。</li>
-<li>如果两个单词间有多余的空格，将反转后单词间的空格减少到只含一个。</li>
-</ul>
-<p><strong>进阶:</strong> 请选用C语言的用户尝试使用 <em>O</em>(1) 空间复杂度的原地解法。</p>
+        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/invert-binary-tree/" target="_blank" rel="noopener">https://leetcode.com/problems/invert-binary-tree/</a></p>
+<p>中文链接：<a href="https://leetcode-cn.com/problems/invert-binary-tree/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/invert-binary-tree/</a></p>
+<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>翻转一棵二叉树。</p>
+<p><strong>示例：</strong></p>
+<p>输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">     4</span><br><span class="line">   /   \</span><br><span class="line">  2     7</span><br><span class="line"> / \   / \</span><br><span class="line">1   3 6   9</span><br></pre></td></tr></table></figure>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">     4</span><br><span class="line">   /   \</span><br><span class="line">  7     2</span><br><span class="line"> / \   / \</span><br><span class="line">9   6 3   1</span><br></pre></td></tr></table></figure>
+<p><strong>备注:</strong><br>这个问题是受到 <a href="https://twitter.com/mxcl" target="_blank" rel="noopener">Max Howell </a>的 <a href="https://twitter.com/mxcl/status/608682016205344768" target="_blank" rel="noopener">原问题</a> 启发的 ：</p>
+<blockquote>
+<p>谷歌：我们90％的工程师使用您编写的软件(Homebrew)，但是您却无法在面试时在白板上写出翻转二叉树这道题，这太糟糕了。</p>
+</blockquote>
 <a id="more"></a>
-<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p>这题的难点在于可能连续存在多个空格，着重点在于处理空格。如果不存在多余的空格，可以采取“整体反转 + 局部反转”的方式来完成单词的反转。</p>
-<p>方法一：</p>
-<ul>
-<li>每次调用 replaceAll 方法将连续两个空格转换成一个空格，最终字符串中不存在连续两个空格。</li>
-<li>然后调用 split 方法进行分割。</li>
-<li>最后从后往前拼成一个字符串。</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00151</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">reverseWords</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (s.contains(<span class="string">"  "</span>)) &#123;</span><br><span class="line">            s = s.replaceAll(<span class="string">"  "</span>, <span class="string">" "</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        String[] strings = s.trim().split(<span class="string">" "</span>);</span><br><span class="line">        StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        <span class="keyword">boolean</span> first = <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = strings.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; --i) &#123;</span><br><span class="line">            <span class="keyword">if</span> (first) &#123;</span><br><span class="line">                sb.append(strings[i]);</span><br><span class="line">                first = <span class="keyword">false</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                sb.append(<span class="string">' '</span>).append(strings[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>方法二：</p>
-<ul>
-<li>从后往前遍历字符串，自己分割出一个个单词。</li>
-<li>把单词拼接成字符串，注意处理最后的空格。</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00151</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">reverseWords</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        <span class="keyword">char</span>[] chars = s.toCharArray();</span><br><span class="line">        <span class="keyword">int</span> i = chars.length - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (i &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">while</span> (i &gt;= <span class="number">0</span> &amp;&amp; chars[i] == <span class="string">' '</span>) &#123;</span><br><span class="line">                --i;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (i &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">int</span> j = i;</span><br><span class="line">                <span class="keyword">while</span> (i &gt;= <span class="number">0</span> &amp;&amp; chars[i] != <span class="string">' '</span>) &#123;</span><br><span class="line">                    --i;</span><br><span class="line">                &#125;</span><br><span class="line">                sb.append(chars, i + <span class="number">1</span>, j - i).append(<span class="string">' '</span>);</span><br><span class="line">                --i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (sb.length() &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            sb.setLength(sb.length() - <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p>方法一：DFS。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00226</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">invertTree</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root != <span class="keyword">null</span>) &#123;</span><br><span class="line">            TreeNode left = root.left;</span><br><span class="line">            TreeNode right = root.right;</span><br><span class="line">            root.left = invertTree(right);</span><br><span class="line">            root.right = invertTree(left);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>方法二：BFS。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00226</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">invertTree</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        Queue&lt;TreeNode&gt; queue = <span class="keyword">new</span> ArrayDeque&lt;&gt;();</span><br><span class="line">        queue.offer(root);</span><br><span class="line">        <span class="keyword">while</span> (!queue.isEmpty()) &#123;</span><br><span class="line">            TreeNode node = queue.poll();</span><br><span class="line">            TreeNode tmp = node.left;</span><br><span class="line">            node.left = node.right;</span><br><span class="line">            node.right = tmp;</span><br><span class="line">            <span class="keyword">if</span> (node.left != <span class="keyword">null</span>) &#123;</span><br><span class="line">                queue.offer(node.left);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (node.right != <span class="keyword">null</span>) &#123;</span><br><span class="line">                queue.offer(node.right);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -385,7 +376,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/String/" rel="tag"># String</a>
+            <a href="/tags/Binary-Tree/" rel="tag"># Binary Tree</a>
           
         </div>
       
@@ -398,8 +389,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/25/leetcode-00011/" rel="next" title="LeetCode11-盛最多水的容器">
-                <i class="fa fa-chevron-left"></i> LeetCode11-盛最多水的容器
+              <a href="/2019/05/31/leetcode-00222/" rel="next" title="LeetCode173-二叉搜索树迭代器">
+                <i class="fa fa-chevron-left"></i> LeetCode173-二叉搜索树迭代器
               </a>
             
           </div>
@@ -407,10 +398,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/27/leetcode-00443/" rel="prev" title="LeetCode443-压缩字符串">
-                LeetCode443-压缩字符串 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
