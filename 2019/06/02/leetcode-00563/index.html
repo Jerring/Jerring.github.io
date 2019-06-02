@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Search," />
+  <meta name="keywords" content="Binary Tree," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/palindrome-partitioning/ 中文链接：https://leetcode-cn.com/problems/palindrome-partitioning/ 题目详述给定一个字符串 s，将 s 分割成一些子串，使每个子串都是回文串。 返回 s 所有可能的分割方案。 示例: 123456输入: &amp;quot">
-<meta name="keywords" content="Search">
+<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/binary-tree-tilt/ 中文链接：https://leetcode-cn.com/problems/binary-tree-tilt/ 题目详述给定一个二叉树，计算整个树的坡度。 一个树的节点的坡度定义即为，该节点左子树的结点之和和右子树结点之和的差的绝对值。空结点的的坡度是0。 整个树的坡度就是其所有节点的">
+<meta name="keywords" content="Binary Tree">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode131-分割字符串">
-<meta property="og:url" content="http://yoursite.com/2019/01/23/leetcode-00131/index.html">
+<meta property="og:title" content="LeetCode563-二叉树的坡度">
+<meta property="og:url" content="http://yoursite.com/2019/06/02/leetcode-00563/index.html">
 <meta property="og:site_name" content="Jerring">
-<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/palindrome-partitioning/ 中文链接：https://leetcode-cn.com/problems/palindrome-partitioning/ 题目详述给定一个字符串 s，将 s 分割成一些子串，使每个子串都是回文串。 返回 s 所有可能的分割方案。 示例: 123456输入: &amp;quot">
+<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/binary-tree-tilt/ 中文链接：https://leetcode-cn.com/problems/binary-tree-tilt/ 题目详述给定一个二叉树，计算整个树的坡度。 一个树的节点的坡度定义即为，该节点左子树的结点之和和右子树结点之和的差的绝对值。空结点的的坡度是0。 整个树的坡度就是其所有节点的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-04T13:18:25.358Z">
+<meta property="og:updated_time" content="2019-06-02T11:32:03.502Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode131-分割字符串">
-<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/palindrome-partitioning/ 中文链接：https://leetcode-cn.com/problems/palindrome-partitioning/ 题目详述给定一个字符串 s，将 s 分割成一些子串，使每个子串都是回文串。 返回 s 所有可能的分割方案。 示例: 123456输入: &amp;quot">
+<meta name="twitter:title" content="LeetCode563-二叉树的坡度">
+<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/binary-tree-tilt/ 中文链接：https://leetcode-cn.com/problems/binary-tree-tilt/ 题目详述给定一个二叉树，计算整个树的坡度。 一个树的节点的坡度定义即为，该节点左子树的结点之和和右子树结点之和的差的绝对值。空结点的的坡度是0。 整个树的坡度就是其所有节点的">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/01/23/leetcode-00131/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/06/02/leetcode-00563/"/>
 
 
 
 
 
-  <title>LeetCode131-分割字符串 | Jerring</title>
+  <title>LeetCode563-二叉树的坡度 | Jerring</title>
   
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/23/leetcode-00131/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/02/leetcode-00563/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jerring">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">LeetCode131-分割字符串</h1>
+          <h1 class="post-title" itemprop="name headline">LeetCode563-二叉树的坡度</h1>
         
 
         <div class="post-meta">
@@ -282,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-23T21:26:34+08:00">
-                2019-01-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-02T19:16:56+08:00">
+                2019-06-02
               </time>
             
 
@@ -342,21 +342,25 @@
       
 
       
-        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/palindrome-partitioning/" target="_blank" rel="noopener">https://leetcode.com/problems/palindrome-partitioning/</a></p>
-<p>中文链接：<a href="https://leetcode-cn.com/problems/palindrome-partitioning/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/palindrome-partitioning/</a></p>
-<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>给定一个字符串 <em>s</em>，将 <em>s</em> 分割成一些子串，使每个子串都是回文串。</p>
-<p>返回 <em>s</em> 所有可能的分割方案。</p>
+        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/binary-tree-tilt/" target="_blank" rel="noopener">https://leetcode.com/problems/binary-tree-tilt/</a></p>
+<p>中文链接：<a href="https://leetcode-cn.com/problems/binary-tree-tilt/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/binary-tree-tilt/</a></p>
+<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>给定一个二叉树，计算<strong>整个树</strong>的坡度。</p>
+<p>一个树的<strong>节点的坡度</strong>定义即为，该节点左子树的结点之和和右子树结点之和的<strong>差的绝对值</strong>。空结点的的坡度是0。</p>
+<p><strong>整个树</strong>的坡度就是其所有节点的坡度之和。</p>
 <p><strong>示例:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;aab&quot;</span><br><span class="line">输出:</span><br><span class="line">[</span><br><span class="line">  [&quot;aa&quot;,&quot;b&quot;],</span><br><span class="line">  [&quot;a&quot;,&quot;a&quot;,&quot;b&quot;]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">输入: </span><br><span class="line">         1</span><br><span class="line">       /   \</span><br><span class="line">      2     3</span><br><span class="line">输出: 1</span><br><span class="line">解释: </span><br><span class="line">结点的坡度 2 : 0</span><br><span class="line">结点的坡度 3 : 0</span><br><span class="line">结点的坡度 1 : |2-3| = 1</span><br><span class="line">树的坡度 : 0 + 0 + 1 = 1</span><br></pre></td></tr></table></figure>
+<p><strong>注意:</strong></p>
+<ol>
+<li>任何子树的结点的和不会超过32位整数的范围。</li>
+<li>坡度的值不会超过32位整数的范围。</li>
+</ol>
 <a id="more"></a>
-<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p>DFS，回溯。</p>
+<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p><a href="https://jerring.github.io/2019/06/02/leetcode-00543/" target="_blank" rel="noopener">LeetCode543-二叉树的直径</a> 是计算二叉树的直径，本题是计算二叉树的坡度，可能还有其他自定义的属性。事实上，它们的解题思路是一致的，都是定义一个方法辅助计算，然后可以比较容易得到可能的结果，并不断更新。值得注意的是，此类问题往往方法返回值不是我们想要的结果，但这个值可以非常方便地得到结果。对于此类问题，找到恰当的计算方式，就可以很容易解答。</p>
 <ul>
-<li>首先截取字符串的前一部分。</li>
-<li>如果这一部分是回文串则递归进入下一层，否则重新截取。</li>
-<li>进入下一层前加入临时集合，退出时进行恢复。</li>
-<li>递归的终止条件是最终传入的字符串长度为 0。</li>
+<li>定义一个计算子树中所有结点和的方法。</li>
+<li>对于一个结点来说，计算它的左子树和右子树的结点和，它们的差的绝对值就是当前结点的坡度，用这个值更新结果。</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00131</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;String&gt;&gt; partition(String s) &#123;</span><br><span class="line">        List&lt;List&lt;String&gt;&gt; res = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        dfs(s, res, list);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(String s, List&lt;List&lt;String&gt;&gt; res, List&lt;String&gt; list)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (s.length() == <span class="number">0</span>) &#123;</span><br><span class="line">            res.add(<span class="keyword">new</span> ArrayList&lt;&gt;(list));</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= s.length(); ++i) &#123;</span><br><span class="line">            String sub = s.substring(<span class="number">0</span>, i);</span><br><span class="line">            <span class="keyword">if</span> (isPalindrome(sub)) &#123;</span><br><span class="line">                list.add(sub);</span><br><span class="line">                dfs(s.substring(i), res, list);</span><br><span class="line">                list.remove(list.size() - <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> j = s.length() - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (i &lt; j) &#123;</span><br><span class="line">            <span class="keyword">if</span> (s.charAt(i++) != s.charAt(j--)) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00563</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findTilt</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] res = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">1</span>];</span><br><span class="line">        dfs(root, res);</span><br><span class="line">        <span class="keyword">return</span> res[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">dfs</span><span class="params">(TreeNode root, <span class="keyword">int</span>[] res)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> left = dfs(root.left, res);</span><br><span class="line">        <span class="keyword">int</span> right = dfs(root.right, res);</span><br><span class="line">        res[<span class="number">0</span>] += Math.abs(left - right);</span><br><span class="line">        <span class="keyword">return</span> root.val + left + right;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -374,7 +378,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Search/" rel="tag"># Search</a>
+            <a href="/tags/Binary-Tree/" rel="tag"># Binary Tree</a>
           
         </div>
       
@@ -387,8 +391,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/22/leetcode-00090/" rel="next" title="LeetCode90-子集II">
-                <i class="fa fa-chevron-left"></i> LeetCode90-子集II
+              <a href="/2019/06/02/leetcode-00543/" rel="next" title="LeetCode543-二叉树的直径">
+                <i class="fa fa-chevron-left"></i> LeetCode543-二叉树的直径
               </a>
             
           </div>
@@ -396,10 +400,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/24/leetcode-00037/" rel="prev" title="LeetCode37-解数独">
-                LeetCode37-解数独 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
