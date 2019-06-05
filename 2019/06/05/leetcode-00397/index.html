@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Two Pointers," />
+  <meta name="keywords" content="Bit Manipulation," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/long-pressed-name/ 中文链接：https://leetcode-cn.com/problems/long-pressed-name/ 题目详述你的朋友正在使用键盘输入他的名字 name。偶尔，在键入字符 c 时，按键可能会被长按，而字符可能被输入 1 次或多次。 你将会检查键盘输入的字符 typed。如">
-<meta name="keywords" content="Two Pointers">
+<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/integer-replacement/ 中文链接：https://leetcode-cn.com/problems/integer-replacement/ 题目详述给定一个正整数 n，你可以做如下操作：  如果 n 是偶数，则用 n / 2替换 n。  如果 n 是奇数，则可以用 n + 1或n - 1替换 n。 n">
+<meta name="keywords" content="Bit Manipulation">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode925-长按键入">
-<meta property="og:url" content="http://yoursite.com/2019/05/07/leetcode-00925/index.html">
+<meta property="og:title" content="LeetCode397-整数替换">
+<meta property="og:url" content="http://yoursite.com/2019/06/05/leetcode-00397/index.html">
 <meta property="og:site_name" content="Jerring">
-<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/long-pressed-name/ 中文链接：https://leetcode-cn.com/problems/long-pressed-name/ 题目详述你的朋友正在使用键盘输入他的名字 name。偶尔，在键入字符 c 时，按键可能会被长按，而字符可能被输入 1 次或多次。 你将会检查键盘输入的字符 typed。如">
+<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/integer-replacement/ 中文链接：https://leetcode-cn.com/problems/integer-replacement/ 题目详述给定一个正整数 n，你可以做如下操作：  如果 n 是偶数，则用 n / 2替换 n。  如果 n 是奇数，则可以用 n + 1或n - 1替换 n。 n">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-16T11:20:19.362Z">
+<meta property="og:updated_time" content="2019-06-05T12:02:09.087Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode925-长按键入">
-<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/long-pressed-name/ 中文链接：https://leetcode-cn.com/problems/long-pressed-name/ 题目详述你的朋友正在使用键盘输入他的名字 name。偶尔，在键入字符 c 时，按键可能会被长按，而字符可能被输入 1 次或多次。 你将会检查键盘输入的字符 typed。如">
+<meta name="twitter:title" content="LeetCode397-整数替换">
+<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/integer-replacement/ 中文链接：https://leetcode-cn.com/problems/integer-replacement/ 题目详述给定一个正整数 n，你可以做如下操作：  如果 n 是偶数，则用 n / 2替换 n。  如果 n 是奇数，则可以用 n + 1或n - 1替换 n。 n">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/05/07/leetcode-00925/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/06/05/leetcode-00397/"/>
 
 
 
 
 
-  <title>LeetCode925-长按键入 | Jerring</title>
+  <title>LeetCode397-整数替换 | Jerring</title>
   
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/07/leetcode-00925/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/05/leetcode-00397/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jerring">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">LeetCode925-长按键入</h1>
+          <h1 class="post-title" itemprop="name headline">LeetCode397-整数替换</h1>
         
 
         <div class="post-meta">
@@ -282,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-07T19:01:06+08:00">
-                2019-05-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-05T19:38:08+08:00">
+                2019-06-05
               </time>
             
 
@@ -342,36 +342,27 @@
       
 
       
-        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/long-pressed-name/" target="_blank" rel="noopener">https://leetcode.com/problems/long-pressed-name/</a></p>
-<p>中文链接：<a href="https://leetcode-cn.com/problems/long-pressed-name/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/long-pressed-name/</a></p>
-<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>你的朋友正在使用键盘输入他的名字 <code>name</code>。偶尔，在键入字符 <code>c</code> 时，按键可能会被<em>长按</em>，而字符可能被输入 1 次或多次。</p>
-<p>你将会检查键盘输入的字符 <code>typed</code>。如果它对应的可能是你的朋友的名字（其中一些字符可能被长按），那么就返回 <code>True</code>。</p>
-<p><strong>示例 1：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：name = &quot;alex&quot;, typed = &quot;aaleex&quot;</span><br><span class="line">输出：true</span><br><span class="line">解释：&apos;alex&apos; 中的 &apos;a&apos; 和 &apos;e&apos; 被长按。</span><br></pre></td></tr></table></figure>
-<p><strong>示例 2：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：name = &quot;saeed&quot;, typed = &quot;ssaaedd&quot;</span><br><span class="line">输出：false</span><br><span class="line">解释：&apos;e&apos; 一定需要被键入两次，但在 typed 的输出中不是这样。</span><br></pre></td></tr></table></figure>
-<p><strong>示例 3：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：name = &quot;leelee&quot;, typed = &quot;lleeelee&quot;</span><br><span class="line">输出：true</span><br></pre></td></tr></table></figure>
-<p><strong>示例 4：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：name = &quot;laiden&quot;, typed = &quot;laiden&quot;</span><br><span class="line">输出：true</span><br><span class="line">解释：长按名字中的字符并不是必要的。</span><br></pre></td></tr></table></figure>
-<p><strong>提示：</strong></p>
+        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/integer-replacement/" target="_blank" rel="noopener">https://leetcode.com/problems/integer-replacement/</a></p>
+<p>中文链接：<a href="https://leetcode-cn.com/problems/integer-replacement/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/integer-replacement/</a></p>
+<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>给定一个正整数 <em>n</em>，你可以做如下操作：</p>
 <ol>
-<li><code>name.length &lt;= 1000</code></li>
-<li><code>typed.length &lt;= 1000</code></li>
-<li><code>name</code> 和 <code>typed</code> 的字符都是小写字母。</li>
+<li><p>如果 <em>n</em> 是偶数，则用 <code>n / 2</code>替换 <em>n</em>。</p>
+</li>
+<li><p>如果 <em>n</em> 是奇数，则可以用 <code>n + 1</code>或<code>n - 1</code>替换 <em>n</em>。</p>
+<p><em>n</em> 变为 1 所需的最小替换次数是多少？</p>
+</li>
 </ol>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">8</span><br><span class="line"></span><br><span class="line">输出:</span><br><span class="line">3</span><br><span class="line"></span><br><span class="line">解释:</span><br><span class="line">8 -&gt; 4 -&gt; 2 -&gt; 1</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">7</span><br><span class="line"></span><br><span class="line">输出:</span><br><span class="line">4</span><br><span class="line"></span><br><span class="line">解释:</span><br><span class="line">7 -&gt; 8 -&gt; 4 -&gt; 2 -&gt; 1</span><br><span class="line">或</span><br><span class="line">7 -&gt; 6 -&gt; 3 -&gt; 2 -&gt; 1</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><ul>
-<li>运用双指针。一个指针 <code>i</code> 指向 <code>name</code> 数组，一个指针 <code>j</code> 指向 <code>typed</code> 数组。</li>
-<li>当 <code>name[i] == typed[j]</code> 时，指针 <code>i</code> 和 <code>j</code> 均右移。</li>
-<li>当 <code>name[i] != typed[j]</code> 时，<ul>
-<li>若 <code>j &gt; 0 &amp;&amp; typed[j] == typed[j - 1]</code>，可能是长按，存在匹配的可能，<code>j</code> 右移。</li>
-<li>若 <code>j == 0 || typed[j] != typed[j - 1]</code>，不可能匹配，返回 <code>false</code>。</li>
+<li>奇数的计算方法已经固定了。</li>
+<li>偶数有两种计算方法。通过观察模拟发现，当 n 的 最后的两个二进制位为 <code>0b11</code> 时，采用加一操作更好，否则采用减一操作更好。但是有一个例外，当 n 恰好等于 <code>0b11</code> 时，采取减一操作更好。</li>
+<li>注意 <code>n == Integer.MAX_VALUE</code> 的情况，应该采用无符号移位 <code>&gt;&gt;&gt;</code> 操作。</li>
 </ul>
-</li>
-<li>最后还需判断是否存在多余不同的字符。</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00925</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isLongPressedName</span><span class="params">(String name, String typed)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (name.length() &gt; typed.length()) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">char</span>[] cn = name.toCharArray();</span><br><span class="line">        <span class="keyword">char</span>[] ct = typed.toCharArray();</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>, j = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (i &lt; cn.length &amp;&amp; j &lt; ct.length) &#123;</span><br><span class="line">            <span class="keyword">if</span> (cn[i] == ct[j]) &#123;</span><br><span class="line">                ++i;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (j == <span class="number">0</span> || ct[j] != ct[j - <span class="number">1</span>]) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            ++j;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (i != cn.length) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 判断是否存在多余不同的字符</span></span><br><span class="line">        <span class="keyword">if</span> (j &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">for</span> (; j &lt; ct.length; ++j) &#123;</span><br><span class="line">                <span class="keyword">if</span> (ct[j] != ct[j - <span class="number">1</span>]) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00397</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">integerReplacement</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (n != <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> ((n &amp; <span class="number">1</span>) == <span class="number">0</span>) &#123;</span><br><span class="line">                n &gt;&gt;&gt;= <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (n != <span class="number">3</span> &amp;&amp; (n &amp; <span class="number">3</span>) == <span class="number">3</span>) &#123;</span><br><span class="line">                ++n;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                --n;</span><br><span class="line">            &#125;</span><br><span class="line">            ++res;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -389,7 +380,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Two-Pointers/" rel="tag"># Two Pointers</a>
+            <a href="/tags/Bit-Manipulation/" rel="tag"># Bit Manipulation</a>
           
         </div>
       
@@ -402,8 +393,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/06/leetcode-00690/" rel="next" title="LeetCode690-员工的重要性">
-                <i class="fa fa-chevron-left"></i> LeetCode690-员工的重要性
+              <a href="/2019/06/05/leetcode-00393/" rel="next" title="LeetCode393-UTF-8编码验证">
+                <i class="fa fa-chevron-left"></i> LeetCode393-UTF-8编码验证
               </a>
             
           </div>
@@ -411,10 +402,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/08/leetcode-00389/" rel="prev" title="LeetCode389-找不同">
-                LeetCode389-找不同 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
