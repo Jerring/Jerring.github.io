@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Jerring">
 <meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/majority-element/ 中文链接：https://leetcode-cn.com/problems/majority-element/ 题目详述给定一个大小为 n 的数组，找到其中的众数。众数是指在数组中出现次数大于 ⌊ n/2 ⌋ 的元素。 你可以假设数组是非空的，并且给定的数组总是存在众数。 示例 1:">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-09T05:37:40.665Z">
+<meta property="og:updated_time" content="2019-06-06T02:59:31.531Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode169-求众数">
 <meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/majority-element/ 中文链接：https://leetcode-cn.com/problems/majority-element/ 题目详述给定一个大小为 n 的数组，找到其中的众数。众数是指在数组中出现次数大于 ⌊ n/2 ⌋ 的元素。 你可以假设数组是非空的，并且给定的数组总是存在众数。 示例 1:">
@@ -365,7 +365,7 @@
 <li>用 candidate 表示候选元素，cnt 表示票数。</li>
 <li>若票数为 0，则选取当前元素为新的候选元素。</li>
 <li>若当前元素等于候选元素，则票数加一；否则减一。</li>
-<li>遍历结束后的候选元素就是众数（出现次数超过一半的元素）。</li>
+<li>遍历结束后的候选元素就是众数（由于题目保证给定的数组总是存在众数，所以不需要额外判断，否则需要判断是否存在众数）。</li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00169</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 摩尔投票算法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">majorityElement</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> candidate = nums[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">int</span> cnt = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> num : nums) &#123;</span><br><span class="line">            <span class="keyword">if</span> (cnt == <span class="number">0</span>) &#123;</span><br><span class="line">                candidate = num;</span><br><span class="line">            &#125;</span><br><span class="line">            cnt += (num == candidate) ? <span class="number">1</span> : -<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> candidate;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -491,7 +491,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">263</span>
+                  <span class="site-state-item-count">264</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
