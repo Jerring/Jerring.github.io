@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Jerring">
 <meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/add-to-array-form-of-integer/ 中文链接：https://leetcode-cn.com/problems/add-to-array-form-of-integer/ 题目详述对于非负整数 X 而言，X 的数组形式是每位数字按从左到右的顺序形成的数组。例如，如果 X = 1231，那么其数组形">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-14T13:30:29.668Z">
+<meta property="og:updated_time" content="2019-06-14T13:44:49.586Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode989-数组形式的整数加法">
 <meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/add-to-array-form-of-integer/ 中文链接：https://leetcode-cn.com/problems/add-to-array-form-of-integer/ 题目详述对于非负整数 X 而言，X 的数组形式是每位数字按从左到右的顺序形成的数组。例如，如果 X = 1231，那么其数组形">
@@ -358,7 +358,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1 &lt;= A.length &lt;= 10000</span><br><span class="line">0 &lt;= A[i] &lt;= 9</span><br><span class="line">0 &lt;= K &lt;= 10000</span><br><span class="line">如果 A.length &gt; 1，那么 A[0] != 0</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p>模拟竖式加法，<a href="https://jerring.github.io/2019/06/14/leetcode-00067/" target="_blank" rel="noopener">LeetCode67-二进制求和</a> 等题目都是类似的解法。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00989</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">addToArrayForm</span><span class="params">(<span class="keyword">int</span>[] A, <span class="keyword">int</span> K)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = A.length - <span class="number">1</span>; i &gt;= <span class="number">0</span> &amp;&amp; K != <span class="number">0</span>; --i) &#123;</span><br><span class="line">            K += A[i];</span><br><span class="line">            A[i] = K % <span class="number">10</span>;</span><br><span class="line">            K /= <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        List&lt;Integer&gt; res = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">while</span> (K != <span class="number">0</span>) &#123;</span><br><span class="line">            res.add(K % <span class="number">10</span>);</span><br><span class="line">            K /= <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        Collections.reverse(res);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> a : A) &#123;</span><br><span class="line">            res.add(a);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00989</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">addToArrayForm</span><span class="params">(<span class="keyword">int</span>[] A, <span class="keyword">int</span> K)</span> </span>&#123;</span><br><span class="line">        List&lt;Integer&gt; res = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = A.length - <span class="number">1</span>; i &gt;= <span class="number">0</span> || K != <span class="number">0</span>; --i) &#123;</span><br><span class="line">            K += i &gt;= <span class="number">0</span> ? A[i] : <span class="number">0</span>;</span><br><span class="line">            res.add(K % <span class="number">10</span>);</span><br><span class="line">            K /= <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        Collections.reverse(res);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -398,6 +398,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/14/leetcode-00415/" rel="prev" title="LeetCode415-字符串相加">
+                LeetCode415-字符串相加 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -478,7 +482,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">280</span>
+                  <span class="site-state-item-count">281</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
