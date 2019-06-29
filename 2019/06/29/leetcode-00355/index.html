@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hash Table," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="题目链接英文链接：https://leetcode.com/problems/design-twitter/ 中文链接：https://leetcode-cn.com/problems/design-twitter/ 题目详述设计一个简化版的推特(Twitter)，可以让用户实现发送推文，关注/取消关注其他用户，能够看见关注人（包括自己）的最近十条推文。你的设计需要支持以下的几个功能：  post">
+<meta name="keywords" content="Hash Table">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode355-设计推特">
+<meta property="og:url" content="http://yoursite.com/2019/06/29/leetcode-00355/index.html">
+<meta property="og:site_name" content="Jerring">
+<meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/design-twitter/ 中文链接：https://leetcode-cn.com/problems/design-twitter/ 题目详述设计一个简化版的推特(Twitter)，可以让用户实现发送推文，关注/取消关注其他用户，能够看见关注人（包括自己）的最近十条推文。你的设计需要支持以下的几个功能：  post">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-06-29T03:21:51.324Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="LeetCode355-设计推特">
+<meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/design-twitter/ 中文链接：https://leetcode-cn.com/problems/design-twitter/ 题目详述设计一个简化版的推特(Twitter)，可以让用户实现发送推文，关注/取消关注其他用户，能够看见关注人（包括自己）的最近十条推文。你的设计需要支持以下的几个功能：  post">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/06/29/leetcode-00355/"/>
+
+
+
+
+
+  <title>LeetCode355-设计推特 | Jerring</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jerring</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/29/leetcode-00355/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jerring">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jerring">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">LeetCode355-设计推特</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-29T11:06:39+08:00">
+                2019-06-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/design-twitter/" target="_blank" rel="noopener">https://leetcode.com/problems/design-twitter/</a></p>
+<p>中文链接：<a href="https://leetcode-cn.com/problems/design-twitter/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/design-twitter/</a></p>
+<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>设计一个简化版的推特(Twitter)，可以让用户实现发送推文，关注/取消关注其他用户，能够看见关注人（包括自己）的最近十条推文。你的设计需要支持以下的几个功能：</p>
+<ol>
+<li>postTweet(userId, tweetId): 创建一条新的推文</li>
+<li>getNewsFeed(userId): 检索最近的十条推文。每个推文都必须是由此用户关注的人或者是用户自己发出的。推文必须按照时间顺序由最近的开始排序。</li>
+<li>follow(followerId, followeeId): 关注一个用户</li>
+<li>unfollow(followerId, followeeId): 取消关注一个用户</li>
+</ol>
+<p>示例:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">Twitter twitter = new Twitter();</span><br><span class="line"></span><br><span class="line">// 用户1发送了一条新推文 (用户id = 1, 推文id = 5).</span><br><span class="line">twitter.postTweet(1, 5);</span><br><span class="line"></span><br><span class="line">// 用户1的获取推文应当返回一个列表，其中包含一个id为5的推文.</span><br><span class="line">twitter.getNewsFeed(1);</span><br><span class="line"></span><br><span class="line">// 用户1关注了用户2.</span><br><span class="line">twitter.follow(1, 2);</span><br><span class="line"></span><br><span class="line">// 用户2发送了一个新推文 (推文id = 6).</span><br><span class="line">twitter.postTweet(2, 6);</span><br><span class="line"></span><br><span class="line">// 用户1的获取推文应当返回一个列表，其中包含两个推文，id分别为 -&gt; [6, 5].</span><br><span class="line">// 推文id6应当在推文id5之前，因为它是在5之后发送的.</span><br><span class="line">twitter.getNewsFeed(1);</span><br><span class="line"></span><br><span class="line">// 用户1取消关注了用户2.</span><br><span class="line">twitter.unfollow(1, 2);</span><br><span class="line"></span><br><span class="line">// 用户1的获取推文应当返回一个列表，其中包含一个id为5的推文.</span><br><span class="line">// 因为用户1已经不再关注用户2.</span><br><span class="line">twitter.getNewsFeed(1);</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><ul>
+<li>首先构建一个类 <code>Data</code>，包含 <code>id</code>、<code>tweetId</code> 两个字段，<code>id</code> 越大，推文越新。</li>
+<li>用 <code>Map&lt;Integer, List&lt;Data&gt;&gt; posts</code> 表示从一个用户映射到他发布的推文列表。</li>
+<li>用 <code>Map&lt;Integer, Set&lt;Integer&gt;&gt; follows</code> 表示从一个用户映射到他的关注列表。</li>
+</ul>
+<p>对于以下操作：</p>
+<ol>
+<li><code>postTweet(userId, tweetId)</code>，首先用 <code>posts</code> 找到这个用户发布的推特列表，然后将 <code>tweetId</code> 插入该列表中。</li>
+<li><code>getNewsFeed(userId)</code>，首先用 <code>follows</code> 找到这个用户所有的关注，然后将他们发布的所有微博存入一个优先队列（可以采用大顶堆，也可以采用小顶堆，采用小顶堆取出时要逆序），最后取出最近的十条推文。</li>
+<li><code>follow(followerId, followeeId)</code>，首先用 <code>follows</code> 找到 <code>followerId</code> 的关注列表，然后将 <code>followeeId</code> 插入该列表。</li>
+<li><code>unfollow(followerId, followeeId)</code>，首先用 <code>follows</code> 找到 <code>followerId</code> 的关注列表，然后将 <code>followeeId</code> 从该列表中删除。</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00355</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Twitter</span> </span>&#123;</span><br><span class="line">        <span class="class"><span class="keyword">class</span> <span class="title">Data</span> </span>&#123;</span><br><span class="line">            <span class="keyword">int</span> id, tweetId;</span><br><span class="line"></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="title">Data</span><span class="params">(<span class="keyword">int</span> id, <span class="keyword">int</span> tweetId)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">this</span>.id = id;</span><br><span class="line">                <span class="keyword">this</span>.tweetId = tweetId;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">private</span> Map&lt;Integer, List&lt;Data&gt;&gt; posts;</span><br><span class="line">        <span class="keyword">private</span> Map&lt;Integer, Set&lt;Integer&gt;&gt; follows;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/** Initialize your data structure here. */</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Twitter</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            posts = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">            follows = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">            id = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/** Compose a new tweet. */</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">postTweet</span><span class="params">(<span class="keyword">int</span> userId, <span class="keyword">int</span> tweetId)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (!posts.containsKey(userId)) &#123;</span><br><span class="line">                posts.put(userId, <span class="keyword">new</span> ArrayList&lt;&gt;());</span><br><span class="line">            &#125;</span><br><span class="line">            posts.get(userId).add(<span class="keyword">new</span> Data(id++, tweetId));</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/** Retrieve the 10 most recent tweet ids in the user's news feed. Each item in the news feed must be posted by users who the user followed or by the user herself. Tweets must be ordered from most recent to least recent. */</span></span><br><span class="line"><span class="comment">//        public List&lt;Integer&gt; getNewsFeed(int userId) &#123;</span></span><br><span class="line"><span class="comment">//            List&lt;Data&gt; list = new ArrayList&lt;&gt;();</span></span><br><span class="line"><span class="comment">//            List&lt;Data&gt; ps = posts.get(userId);</span></span><br><span class="line"><span class="comment">//            if (ps != null) &#123;</span></span><br><span class="line"><span class="comment">//                for (Data data : ps) &#123;</span></span><br><span class="line"><span class="comment">//                    list.add(data);</span></span><br><span class="line"><span class="comment">//                &#125;</span></span><br><span class="line"><span class="comment">//            &#125;</span></span><br><span class="line"><span class="comment">//            Set&lt;Integer&gt; fs = follows.get(userId);</span></span><br><span class="line"><span class="comment">//            if (fs != null) &#123;</span></span><br><span class="line"><span class="comment">//                for (int f : fs) &#123;</span></span><br><span class="line"><span class="comment">//                    ps = posts.get(f);</span></span><br><span class="line"><span class="comment">//                    if (ps != null) &#123;</span></span><br><span class="line"><span class="comment">//                        for (Data data : ps) &#123;</span></span><br><span class="line"><span class="comment">//                            list.add(data);</span></span><br><span class="line"><span class="comment">//                        &#125;</span></span><br><span class="line"><span class="comment">//                    &#125;</span></span><br><span class="line"><span class="comment">//                &#125;</span></span><br><span class="line"><span class="comment">//            &#125;</span></span><br><span class="line"><span class="comment">//            list.sort(new Comparator&lt;Data&gt;() &#123;</span></span><br><span class="line"><span class="comment">//                @Override</span></span><br><span class="line"><span class="comment">//                public int compare(Data o1, Data o2) &#123;</span></span><br><span class="line"><span class="comment">//                    return Integer.compare(o2.id, o1.id);</span></span><br><span class="line"><span class="comment">//                &#125;</span></span><br><span class="line"><span class="comment">//            &#125;);</span></span><br><span class="line"><span class="comment">//            List&lt;Integer&gt; res = new ArrayList&lt;&gt;();</span></span><br><span class="line"><span class="comment">//            for (int i = 0; i &lt; 10 &amp;&amp; i &lt; list.size(); ++i) &#123;</span></span><br><span class="line"><span class="comment">//                res.add(list.get(i).tweetId);</span></span><br><span class="line"><span class="comment">//            &#125;</span></span><br><span class="line"><span class="comment">//            return res;</span></span><br><span class="line"><span class="comment">//        &#125;</span></span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">getNewsFeed</span><span class="params">(<span class="keyword">int</span> userId)</span> </span>&#123;</span><br><span class="line">            PriorityQueue&lt;Data&gt; queue = <span class="keyword">new</span> PriorityQueue&lt;&gt;(<span class="number">10</span>, <span class="keyword">new</span> Comparator&lt;Data&gt;() &#123;</span><br><span class="line">                <span class="meta">@Override</span></span><br><span class="line">                <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Data o1, Data o2)</span> </span>&#123;</span><br><span class="line">                    <span class="keyword">return</span> Integer.compare(o2.id, o1.id);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">            List&lt;Data&gt; ps = posts.get(userId);</span><br><span class="line">            <span class="keyword">if</span> (ps != <span class="keyword">null</span>) &#123;</span><br><span class="line">                <span class="keyword">for</span> (Data data : ps) &#123;</span><br><span class="line">                    queue.offer(data);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            Set&lt;Integer&gt; fs = follows.get(userId);</span><br><span class="line">            <span class="keyword">if</span> (fs != <span class="keyword">null</span>) &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> f : fs) &#123;</span><br><span class="line">                    ps = posts.get(f);</span><br><span class="line">                    <span class="keyword">if</span> (ps != <span class="keyword">null</span>) &#123;</span><br><span class="line">                        <span class="keyword">for</span> (Data data : ps) &#123;</span><br><span class="line">                            queue.offer(data);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            List&lt;Integer&gt; res = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span> &amp;&amp; !queue.isEmpty(); ++i) &#123;</span><br><span class="line">                res.add(queue.poll().tweetId);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> res;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/** Follower follows a followee. If the operation is invalid, it should be a no-op. */</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">follow</span><span class="params">(<span class="keyword">int</span> followerId, <span class="keyword">int</span> followeeId)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (followerId != followeeId) &#123;</span><br><span class="line">                <span class="keyword">if</span> (!follows.containsKey(followerId)) &#123;</span><br><span class="line">                    follows.put(followerId, <span class="keyword">new</span> HashSet&lt;&gt;());</span><br><span class="line">                &#125;</span><br><span class="line">                follows.get(followerId).add(followeeId);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/** Follower unfollows a followee. If the operation is invalid, it should be a no-op. */</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">unfollow</span><span class="params">(<span class="keyword">int</span> followerId, <span class="keyword">int</span> followeeId)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (follows.containsKey(followerId)) &#123;</span><br><span class="line">                follows.get(followerId).remove(followeeId);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Hash-Table/" rel="tag"># Hash Table</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/28/leetcode-00128/" rel="next" title="LeetCode128-最长连续序列">
+                <i class="fa fa-chevron-left"></i> LeetCode128-最长连续序列
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="Jerring" />
+            
+              <p class="site-author-name" itemprop="name">Jerring</p>
+              <p class="site-description motion-element" itemprop="description">Talk is cheap, show me the code.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">332</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目链接"><span class="nav-number">1.</span> <span class="nav-text">题目链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#题目详述"><span class="nav-number">2.</span> <span class="nav-text">题目详述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#题目详解"><span class="nav-number">3.</span> <span class="nav-text">题目详解</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jerring</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
