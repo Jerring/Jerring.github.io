@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Jerring">
 <meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/sum-of-subsequence-widths/ 中文链接：https://leetcode-cn.com/problems/sum-of-subsequence-widths/ 题目详述给定一个整数数组 A ，考虑 A 的所有非空子序列。 对于任意序列 S ，设 S 的宽度是 S 的最大元素和最小元素的差。 返回">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-03T05:18:49.820Z">
+<meta property="og:updated_time" content="2019-07-03T05:28:05.852Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode891-子序列宽度之和">
 <meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/sum-of-subsequence-widths/ 中文链接：https://leetcode-cn.com/problems/sum-of-subsequence-widths/ 题目详述给定一个整数数组 A ，考虑 A 的所有非空子序列。 对于任意序列 S ，设 S 的宽度是 S 的最大元素和最小元素的差。 返回">
@@ -369,7 +369,7 @@
 </li>
 <li><p>X 可以在常量时间内得到，Y 不行，但是可以知道 <code>Y[j + 1] = Y[j] * 2 + a[j]</code>。有了这个递推表达式，每个 Y 也可以在遍历过程中常数时间得到。</p>
 </li>
-<li><p>在计算过程中 res 可能为负，为了保证得到正确的结果，最后进行 <code>(res + MOD) % MOD</code>  一次这个操作，保证结果为正。</p>
+<li><p>在计算过程中 res 可能为负，为了保证得到正确的结果，最后进行一次 <code>(res + MOD) % MOD</code>  这个操作，保证结果为正。</p>
 </li>
 <li><p>算法时间复杂度为 <code>O(nlogn)</code>，主要花费在排序上，排序完成后只需要 <code>O(n)</code> 的扫描。</p>
 </li>
@@ -437,6 +437,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/04/leetcode-00453/" rel="prev" title="LeetCode453-最小移动次数使数组元素相等">
+                LeetCode453-最小移动次数使数组元素相等 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -517,7 +521,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">343</span>
+                  <span class="site-state-item-count">344</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
