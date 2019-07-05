@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Jerring">
 <meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/smallest-good-base/ 中文链接：https://leetcode-cn.com/problems/smallest-good-base/ 题目详述对于给定的整数 n, 如果n的k（k&amp;gt;=2）进制数的所有数位全为1，则称 k（k&amp;gt;=2）是 n 的一个好进制。 以字符串的形式给出 n, 以字符串">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-05T12:48:32.988Z">
+<meta property="og:updated_time" content="2019-07-05T12:52:31.962Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode483-最小好进制">
 <meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/smallest-good-base/ 中文链接：https://leetcode-cn.com/problems/smallest-good-base/ 题目详述对于给定的整数 n, 如果n的k（k&amp;gt;=2）进制数的所有数位全为1，则称 k（k&amp;gt;=2）是 n 的一个好进制。 以字符串的形式给出 n, 以字符串">
@@ -361,7 +361,7 @@
 <h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><ul>
 <li>就是找到一个最小的进制，它的所有位为 1，恰好表示为 n。</li>
 <li>根据题意，n 的取值范围是 [3, 10^18]，这样的进制必然存在，因为存在一个 <code>n - 1</code> 进制它的表示为 <code>11</code>。</li>
-<li>这里有两个变量，一个是进制，一个是对应进制下的长度。可以固定一个变量，然后判断是否满足条件即可。进制的取值范围为 <code>[0, n - 1]</code>，范围太大，所以应该固定长度，判断是否存在满足条件的进制。</li>
+<li>这里有两个变量，一个是进制，一个是对应进制下的长度。可以固定一个变量，然后判断是否满足条件即可。进制的取值范围为 <code>[2, n - 1]</code>，范围太大，所以应该固定长度，判断是否存在满足条件的进制。</li>
 <li>进制越小，长度越长；进制越大，长度越短。我们可以从大到小枚举长度，判断是否存在满足条件的进制，这一步可以运用二分查找。</li>
 <li>枚举长度的时间复杂度为 <code>O(logn)</code>，二分查找的时间复杂度为 <code>O(logn)</code>，辅助计算的时间复杂度为 <code>O(logn)</code>，总的时间复杂度为 <code>O(logn ^ 3)</code>。</li>
 </ul>
