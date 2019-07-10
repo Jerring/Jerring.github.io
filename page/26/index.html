@@ -252,6 +252,160 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/13/algorithms-最长公共子序列/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jerring">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jerring">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/13/algorithms-最长公共子序列/" itemprop="url">最长公共子序列</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-13T19:09:03+08:00">
+                2019-02-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Data-Structures-and-Algorithms/" itemprop="url" rel="index">
+                    <span itemprop="name">Data Structures and Algorithms</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>对于两个子序列 S1 和 S2，找出它们最长的公共子序列。</p>
+<p>定义一个二维数组 dp 用来存储最长公共子序列的长度，其中 dp[i][j] 表示 S1 的前 i 个字符与 S2 的前 j 个字符最长公共子序列的长度。考虑 S1i 与 S2j 值是否相等，分为两种情况：</p>
+<ul>
+<li>当 S1<sub>i</sub>==S2<sub>j</sub> 时，那么就能在 S1 的前 i-1 个字符与 S2 的前 j-1 个字符最长公共子序列的基础上再加上 S1<sub>i</sub> 这个值，最长公共子序列长度加 1，即 <code>dp[i][j] = dp[i-1][j-1] + 1</code>。</li>
+<li>当 S1<sub>i</sub> != S2<sub>j</sub> 时，此时最长公共子序列为 S1 的前 i-1 个字符和 S2 的前 j 个字符最长公共子序列，或者 S1 的前 i 个字符和 S2 的前 j-1 个字符最长公共子序列，取它们的最大者，即 <code>dp[i][j] = max{ dp[i-1][j], dp[i][j-1] }</code>。</li>
+</ul>
+<p>综上，最长公共子序列的状态转移方程为：</p>
+<p><a href="https://camo.githubusercontent.com/eb4c4bf9d6fa7b09ffaae7007c57476424d397b7/68747470733a2f2f6c617465782e636f6465636f67732e636f6d2f6769662e6c617465783f64705b695d5b6a5d3d5c6c6566745c7b5c626567696e7b61727261797d7b72636c7d64705b692d315d5b6a2d315d26267b53315f693d3d53325f6a7d5c5c6d61782864705b692d315d5b6a5d2c64705b695d5b6a2d315d2926267b53315f693c3e53325f6a7d5c656e647b61727261797d5c72696768742e" target="_blank" rel="noopener"><img src="https://camo.githubusercontent.com/eb4c4bf9d6fa7b09ffaae7007c57476424d397b7/68747470733a2f2f6c617465782e636f6465636f67732e636f6d2f6769662e6c617465783f64705b695d5b6a5d3d5c6c6566745c7b5c626567696e7b61727261797d7b72636c7d64705b692d315d5b6a2d315d26267b53315f693d3d53325f6a7d5c5c6d61782864705b692d315d5b6a5d2c64705b695d5b6a2d315d2926267b53315f693c3e53325f6a7d5c656e647b61727261797d5c72696768742e" alt="img"></a></p>
+<p>对于长度为 N 的序列 S1 和长度为 M 的序列 S2，<code>dp[N][M]</code> 就是序列 S1 和序列 S2 的最长公共子序列长度。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/02/13/algorithms-最长公共子序列/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/12/leetcode-00376/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1640,159 +1794,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/29/leetcode-00337/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jerring">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jerring">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/29/leetcode-00337/" itemprop="url">LeetCode337-打家劫舍III</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-29T13:38:47+08:00">
-                2019-01-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
-                    <span itemprop="name">LeetCode</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/house-robber-iii/" target="_blank" rel="noopener">https://leetcode.com/problems/house-robber-iii/</a></p>
-<p>中文链接：<a href="https://leetcode-cn.com/problems/house-robber-iii/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/house-robber-iii/</a></p>
-<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>在上次打劫完一条街道之后和一圈房屋后，小偷又发现了一个新的可行窃的地区。这个地区只有一个入口，我们称之为“根”。 除了“根”之外，每栋房子有且只有一个“父“房子与之相连。一番侦察之后，聪明的小偷意识到“这个地方的所有房屋的排列类似于一棵二叉树”。 如果两个直接相连的房子在同一天晚上被打劫，房屋将自动报警。</p>
-<p>计算在不触动警报的情况下，小偷一晚能够盗取的最高金额。</p>
-<p><strong>示例 1:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">输入: [3,2,3,null,3,null,1]</span><br><span class="line"></span><br><span class="line">     3</span><br><span class="line">    / \</span><br><span class="line">   2   3</span><br><span class="line">    \   \ </span><br><span class="line">     3   1</span><br><span class="line"></span><br><span class="line">输出: 7 </span><br><span class="line">解释: 小偷一晚能够盗取的最高金额 = 3 + 3 + 1 = 7.</span><br></pre></td></tr></table></figure>
-<p><strong>示例 2:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">输入: [3,4,5,1,3,null,1]</span><br><span class="line"></span><br><span class="line">     3</span><br><span class="line">    / \</span><br><span class="line">   4   5</span><br><span class="line">  / \   \ </span><br><span class="line"> 1   3   1</span><br><span class="line"></span><br><span class="line">输出: 9</span><br><span class="line">解释: 小偷一晚能够盗取的最高金额 = 4 + 5 = 9.</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/01/29/leetcode-00337/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1847,7 +1848,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">365</span>
+                  <span class="site-state-item-count">366</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
