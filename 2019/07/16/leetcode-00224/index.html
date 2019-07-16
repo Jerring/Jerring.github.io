@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Jerring">
 <meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/basic-calculator/ 中文链接：https://leetcode-cn.com/problems/basic-calculator/ 题目详述实现一个基本的计算器来计算一个简单的字符串表达式的值。 字符串表达式可以包含左括号 ( ，右括号 )，加号 + ，减号 -，非负整数和空格  。 示例 1: 12输入">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-16T10:45:02.182Z">
+<meta property="og:updated_time" content="2019-07-16T12:33:32.758Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode224-基本计算器">
 <meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/basic-calculator/ 中文链接：https://leetcode-cn.com/problems/basic-calculator/ 题目详述实现一个基本的计算器来计算一个简单的字符串表达式的值。 字符串表达式可以包含左括号 ( ，右括号 )，加号 + ，减号 -，非负整数和空格  。 示例 1: 12输入">
@@ -363,7 +363,7 @@
 <li>运用两个栈，一个用来记录运算符，另一个用来记录数字。然后从前往后遍历整个表达式。</li>
 <li>如果碰到 <code>(</code>、<code>+</code>、<code>-</code>，直接入栈。</li>
 <li>如果碰到 <code>)</code>，保证运算符栈顶一定是 <code>(</code>，将其弹出。然后根据运算符栈顶操作符，对数字栈顶的两个元素进行运算后压栈。</li>
-<li>如果碰到数字，则判断运算符栈的栈顶元素，如果不是 <code>(</code>，则弹出运算符栈的栈顶元素，并对数字栈顶的两个元素进行运算后压栈。从而保证运算符栈的栈顶最多有一个连续的 <code>+</code> 或 <code>-</code>。</li>
+<li>如果碰到数字，求出当前数入栈，并判断运算符栈的栈顶元素，如果不是 <code>(</code>，则弹出运算符栈的栈顶元素，并对数字栈顶的两个元素进行运算后压栈。从而保证运算符栈的栈顶最多有一个连续的 <code>+</code> 或 <code>-</code>。</li>
 <li>延申讨论可查看 <a href="https://oi-wiki.org/basic/expression/" target="_blank" rel="noopener">表达式求值</a>。</li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00224</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">calculate</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">char</span>[] cs = s.toCharArray();</span><br><span class="line">        Deque&lt;Character&gt; op = <span class="keyword">new</span> ArrayDeque&lt;&gt;();</span><br><span class="line">        Deque&lt;Integer&gt; num = <span class="keyword">new</span> ArrayDeque&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; cs.length; ++i) &#123;</span><br><span class="line">            <span class="keyword">if</span> (cs[i] == <span class="string">'('</span> || cs[i] == <span class="string">'+'</span> || cs[i] == <span class="string">'-'</span>) &#123;</span><br><span class="line">                op.push(cs[i]);</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (cs[i] == <span class="string">')'</span>) &#123;</span><br><span class="line">                op.pop();</span><br><span class="line">                <span class="keyword">if</span> (!op.isEmpty() &amp;&amp; op.peek() != <span class="string">'('</span>) &#123;</span><br><span class="line">                    calc(op, num);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (Character.isDigit(cs[i])) &#123;</span><br><span class="line">                <span class="keyword">int</span> j = i;</span><br><span class="line">                <span class="keyword">int</span> k = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">while</span> (j &lt; cs.length &amp;&amp; Character.isDigit(cs[j])) &#123;</span><br><span class="line">                    k = k * <span class="number">10</span> + cs[j] - <span class="string">'0'</span>;</span><br><span class="line">                    ++j;</span><br><span class="line">                &#125;</span><br><span class="line">                num.push(k);</span><br><span class="line">                i = j - <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">if</span> (!op.isEmpty() &amp;&amp; op.peek() != <span class="string">'('</span>) &#123;</span><br><span class="line">                    calc(op, num);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> num.peek();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">calc</span><span class="params">(Deque&lt;Character&gt; op, Deque&lt;Integer&gt; num)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> y = num.pop();</span><br><span class="line">        <span class="keyword">int</span> x = num.pop();</span><br><span class="line">        <span class="keyword">if</span> (op.pop() == <span class="string">'+'</span>) &#123;</span><br><span class="line">            num.push(x + y);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            num.push(x - y);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -406,6 +406,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/16/leetcode-00227/" rel="prev" title="LeetCode227-基本计算器II">
+                LeetCode227-基本计算器II <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -486,7 +490,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">394</span>
+                  <span class="site-state-item-count">395</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
