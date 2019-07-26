@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Jerring">
 <meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/permutation-sequence/ 中文链接：https://leetcode-cn.com/problems/permutation-sequence/ 题目详述给出集合 [1,2,3,…,n]，其所有元素共有 n! 种排列。 按大小顺序列出所有排列情况，并一一标记，当 n = 3 时, 所有排列如下：  “1">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-26T09:17:25.452Z">
+<meta property="og:updated_time" content="2019-07-26T13:32:26.783Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode60-第k个排列">
 <meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/permutation-sequence/ 中文链接：https://leetcode-cn.com/problems/permutation-sequence/ 题目详述给出集合 [1,2,3,…,n]，其所有元素共有 n! 种排列。 按大小顺序列出所有排列情况，并一一标记，当 n = 3 时, 所有排列如下：  “1">
@@ -383,7 +383,7 @@
 <li>每组的排列个数为 <code>3! = 6</code> 个，显然第 14 个排列在第 3 组中，所以第 1 位是 3。接下来确定后面的位，即在 1、2、4 的排列中找第 <code>14 - 6 * 2 = 2</code> 个排列。</li>
 <li>因为 <code>2! = 2</code>，<code>2 / 2 = 1</code>，<code>2 - 2 * 0 = 2</code>，所以确定处于第 1 组中，即这一位为 1。接下来在 2、4 的排列中找第 2 个排列。</li>
 <li>因为 <code>1! = 1</code>，<code>2 / 1 = 2</code>，<code>2 - 1 * 1 = 1</code>，所以确定处于第 2 组中，即这一位为 4。接下来在 2 的排列中找第 1 个排列。</li>
-<li>诸位得出第 14 个排列为 3142。</li>
+<li>逐位得出第 14 个排列为 3142。</li>
 <li>时间复杂度为 <code>O(n^2)</code>。</li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00060</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getPermutation</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        List&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">            list.add(i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span>[] f = <span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line">        f[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; ++i) &#123;</span><br><span class="line">            f[i] = f[i - <span class="number">1</span>] * i;</span><br><span class="line">        &#125;</span><br><span class="line">        --k;</span><br><span class="line">        StringBuilder sb = <span class="keyword">new</span> StringBuilder(n);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = n - <span class="number">1</span>; i &gt;= <span class="number">0</span>; --i) &#123;</span><br><span class="line">            <span class="keyword">int</span> j = k / f[i];</span><br><span class="line">            k %= f[i];</span><br><span class="line">            sb.append(list.remove(j));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -426,6 +426,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/22/leetcode-00071/" rel="prev" title="LeetCode71-简化路径">
+                LeetCode71-简化路径 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -506,7 +510,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">402</span>
+                  <span class="site-state-item-count">403</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
