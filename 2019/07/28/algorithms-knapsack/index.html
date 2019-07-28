@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="DP," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="01 背包有一个容量为 N 的背包，要用这个背包装下物品的价值最大，这些物品有两个属性：体积 w 和价值 v。 定义一个二维数组 dp 存储最大价值，其中 dp[i][j] 表示前 i 件物品体积不超过 j 的情况下能达到的最大价值。设第 i 件物品体积为 w，价值为 v，根据第 i 件物品是否添加到背包中，可以分两种情况讨论：  第 i 件物品没添加到背包，总体积不超过 j 的前 i 件物品的最">
+<meta name="keywords" content="DP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="a">
+<meta property="og:url" content="http://yoursite.com/2019/07/28/algorithms-knapsack/index.html">
+<meta property="og:site_name" content="Jerring">
+<meta property="og:description" content="01 背包有一个容量为 N 的背包，要用这个背包装下物品的价值最大，这些物品有两个属性：体积 w 和价值 v。 定义一个二维数组 dp 存储最大价值，其中 dp[i][j] 表示前 i 件物品体积不超过 j 的情况下能达到的最大价值。设第 i 件物品体积为 w，价值为 v，根据第 i 件物品是否添加到背包中，可以分两种情况讨论：  第 i 件物品没添加到背包，总体积不超过 j 的前 i 件物品的最">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://camo.githubusercontent.com/00df29727a33906f588337c972831c35988a152b/68747470733a2f2f6c617465782e636f6465636f67732e636f6d2f6769662e6c617465783f64705b695d5b6a5d3d6d61782864705b692d315d5b6a5d2c64705b692d315d5b6a2d775d2b7629">
+<meta property="og:image" content="https://camo.githubusercontent.com/854f645dd2443eeaabf715e590cdebc928944626/68747470733a2f2f6c617465782e636f6465636f67732e636f6d2f6769662e6c617465783f64705b6a5d3d6d61782864705b6a5d2c64705b6a2d775d2b7629">
+<meta property="og:updated_time" content="2019-07-28T12:10:22.640Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="a">
+<meta name="twitter:description" content="01 背包有一个容量为 N 的背包，要用这个背包装下物品的价值最大，这些物品有两个属性：体积 w 和价值 v。 定义一个二维数组 dp 存储最大价值，其中 dp[i][j] 表示前 i 件物品体积不超过 j 的情况下能达到的最大价值。设第 i 件物品体积为 w，价值为 v，根据第 i 件物品是否添加到背包中，可以分两种情况讨论：  第 i 件物品没添加到背包，总体积不超过 j 的前 i 件物品的最">
+<meta name="twitter:image" content="https://camo.githubusercontent.com/00df29727a33906f588337c972831c35988a152b/68747470733a2f2f6c617465782e636f6465636f67732e636f6d2f6769662e6c617465783f64705b695d5b6a5d3d6d61782864705b692d315d5b6a5d2c64705b692d315d5b6a2d775d2b7629">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/07/28/algorithms-knapsack/"/>
+
+
+
+
+
+  <title>a | Jerring</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jerring</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/28/algorithms-knapsack/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jerring">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jerring">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">a</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-28T20:09:45+08:00">
+                2019-07-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Data-Structures-and-Algorithms/" itemprop="url" rel="index">
+                    <span itemprop="name">Data Structures and Algorithms</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="01-背包"><a href="#01-背包" class="headerlink" title="01 背包"></a>01 背包</h2><p>有一个容量为 N 的背包，要用这个背包装下物品的价值最大，这些物品有两个属性：体积 w 和价值 v。</p>
+<p>定义一个二维数组 dp 存储最大价值，其中 <code>dp[i][j]</code> 表示前 i 件物品体积不超过 j 的情况下能达到的最大价值。设第 i 件物品体积为 w，价值为 v，根据第 i 件物品是否添加到背包中，可以分两种情况讨论：</p>
+<ul>
+<li>第 i 件物品没添加到背包，总体积不超过 j 的前 i 件物品的最大价值就是总体积不超过 j 的前 i-1 件物品的最大价值，<code>dp[i][j] = dp[i-1][j]</code>。</li>
+<li>第 i 件物品添加到背包中，<code>dp[i][j] = dp[i-1][j-w] + v</code>。</li>
+</ul>
+<p>第 i 件物品可添加也可以不添加，取决于哪种情况下最大价值更大。因此，0-1 背包的状态转移方程为：</p>
+<p><a href="https://camo.githubusercontent.com/00df29727a33906f588337c972831c35988a152b/68747470733a2f2f6c617465782e636f6465636f67732e636f6d2f6769662e6c617465783f64705b695d5b6a5d3d6d61782864705b692d315d5b6a5d2c64705b692d315d5b6a2d775d2b7629" target="_blank" rel="noopener"><img src="https://camo.githubusercontent.com/00df29727a33906f588337c972831c35988a152b/68747470733a2f2f6c617465782e636f6465636f67732e636f6d2f6769662e6c617465783f64705b695d5b6a5d3d6d61782864705b692d315d5b6a5d2c64705b692d315d5b6a2d775d2b7629" alt="img"></a><br><a id="more"></a></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">knapsack</span><span class="params">(<span class="keyword">int</span> W, <span class="keyword">int</span> N, <span class="keyword">int</span>[] weights, <span class="keyword">int</span>[] values)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span>[][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>][W + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> w = weights[i - <span class="number">1</span>], v = values[i - <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= W; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (j &gt;= w) &#123;</span><br><span class="line">                dp[i][j] = Math.max(dp[i - <span class="number">1</span>][j], dp[i - <span class="number">1</span>][j - w] + v);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                dp[i][j] = dp[i - <span class="number">1</span>][j];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[N][W];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在程序实现时可以对 0-1 背包做优化。观察状态转移方程可以知道，前 i 件物品的状态仅与前 i-1 件物品的状态有关，因此可以将 dp 定义为一维数组，其中 dp[j] 既可以表示 <code>dp[i-1][j]</code> 也可以表示 <code>dp[i][j]</code>。此时，</p>
+<p><a href="https://camo.githubusercontent.com/854f645dd2443eeaabf715e590cdebc928944626/68747470733a2f2f6c617465782e636f6465636f67732e636f6d2f6769662e6c617465783f64705b6a5d3d6d61782864705b6a5d2c64705b6a2d775d2b7629" target="_blank" rel="noopener"><img src="https://camo.githubusercontent.com/854f645dd2443eeaabf715e590cdebc928944626/68747470733a2f2f6c617465782e636f6465636f67732e636f6d2f6769662e6c617465783f64705b6a5d3d6d61782864705b6a5d2c64705b6a2d775d2b7629" alt="img"></a></p>
+<p>因为 dp[j-w] 表示 <code>dp[i-1][j-w]</code>，因此不能先求 <code>dp[i][j-w]</code>，以防将 <code>dp[i-1][j-w]</code> 覆盖。也就是说要先计算 <code>dp[i][j]</code> 再计算 <code>dp[i][j-w]</code>，在程序实现时需要按倒序来循环求解。</p>
+<ul>
+<li>第一重循环枚举物品。</li>
+<li>第二重循环枚举容量（倒序枚举）。</li>
+<li>时间复杂度为 O(NW)。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">knapsack</span><span class="params">(<span class="keyword">int</span> W, <span class="keyword">int</span> N, <span class="keyword">int</span>[] weights, <span class="keyword">int</span>[] values)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[W + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> w = weights[i - <span class="number">1</span>], v = values[i - <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = W; j &gt;= w; j--) &#123;</span><br><span class="line">            dp[j] = Math.max(dp[j], dp[j - w] + v);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[W];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意 <code>dp</code> 数组初始化方式（对于其他背包问题也适用）：</p>
+<ul>
+<li>不超过容量时，全都初始化为 0，即<code>dp[i] = 0 (i=0,1,...)</code>，结果为 <code>dp[W]</code>。</li>
+<li>恰好等于容量时，<code>dp[0]</code> 初始化为 0，其余初始化为无穷大（可能是正无穷，也可能是负无穷，视情况而定），即 <code>dp[0] = 0；dp[i] = INF (i=1,...)</code>，结果为 <code>dp[W]</code>。</li>
+</ul>
+<h2 id="完全背包"><a href="#完全背包" class="headerlink" title="完全背包"></a>完全背包</h2><p>01 背包是每个物品要么选 0 次，要么 1 次。而完全背包每个物品可以选择无数多次，只要满足条件即可。</p>
+<ul>
+<li>第一重循环枚举物品。</li>
+<li>第二重循环枚举容量（正序枚举）。</li>
+<li>时间复杂度为 O(NW)。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">knapsack</span><span class="params">(<span class="keyword">int</span> W, <span class="keyword">int</span> N, <span class="keyword">int</span>[] weights, <span class="keyword">int</span>[] values)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[W + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> w = weights[i - <span class="number">1</span>], v = values[i - <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = w; j &lt;= W; ++j) &#123;</span><br><span class="line">            dp[j] = Math.max(dp[j], dp[j - w] + v);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[W];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="多重背包"><a href="#多重背包" class="headerlink" title="多重背包"></a>多重背包</h2><p>每个物品体积为 w，价值为 v，有 s 个。多重背包为每个物品增加了一个数量属性，每个物品可以选。是 01 背包问题的拓展，可以转化为 01 背包问题。状态转移方程为</p>
+<p><code>dp[j] = max{dp[j], dp[j - w] + v, dp[j - 2 * w] + 2 * v, ..., dp[j - s * w] + s * v}</code>。</p>
+<ul>
+<li>第一重循环枚举物品。</li>
+<li>第二重循环枚举容量（倒序枚举）。</li>
+<li>第三重循环枚举数量（决策）。</li>
+<li>时间复杂度为 O(NWS)。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">knapsack</span><span class="params">(<span class="keyword">int</span> W, <span class="keyword">int</span> N, <span class="keyword">int</span>[] weights, <span class="keyword">int</span>[] values, <span class="keyword">int</span>[] ss)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[W + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> w = weights[i - <span class="number">1</span>], v = values[i - <span class="number">1</span>], s = ss[i];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = W; j &gt;= w; j--) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">1</span>; k &lt;= s &amp;&amp; k * w &lt;= j; ++k)</span><br><span class="line">            dp[j] = Math.max(dp[j], dp[j - k * w] + k * v);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[W];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="优化方式一：二进制拆分。"><a href="#优化方式一：二进制拆分。" class="headerlink" title="优化方式一：二进制拆分。"></a>优化方式一：二进制拆分。</h3><ul>
+<li>把数量 s 拆分成 1、2、4、8、…。若 s 不是 2 的幂减一，则最后一个数为 s 与前面所有拆分数之和的差。拆分得到数可以组成 1~s 范围内的所有数。<ul>
+<li>例如 7 拆分成 1、2、4，这三个数可以组成 1~7 范围内的所有数。</li>
+<li>例如 10 拆分成 1、2、4、3，这四个数可以组成 1~10 范围内的所有数。</li>
+</ul>
+</li>
+<li>用拆分的数重新形成物品，这样多重背包就转化为了 01 背包。</li>
+<li>第一重循环枚举物品。</li>
+<li>第二重循环枚举容量（倒序枚举）。</li>
+<li>时间复杂度为 O(NWlogS)。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">knapsack</span><span class="params">(<span class="keyword">int</span> W, <span class="keyword">int</span> N, <span class="keyword">int</span>[] weights, <span class="keyword">int</span>[] values, <span class="keyword">int</span>[] ss)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[W + <span class="number">1</span>];</span><br><span class="line">    List&lt;Data&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> w = weights[i - <span class="number">1</span>], v = values[i - <span class="number">1</span>], s = ss[i];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">1</span>; k &lt;= s; k &lt;&lt;= <span class="number">1</span>) &#123;</span><br><span class="line">            s -= k;</span><br><span class="line">            list.add(<span class="keyword">new</span> Data(k * w, k * v));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (s &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            list.add(<span class="keyword">new</span> Data(s * w, s * v));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (Data data : list) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = W; j &gt;= data.w; --j) &#123;</span><br><span class="line">            dp[j] = Math.max(dp[j], dp[j - data.w] + data.v);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[W];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Data</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> w, v;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Data</span><span class="params">(<span class="keyword">int</span> w, <span class="keyword">int</span> v)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.w = w;</span><br><span class="line">        <span class="keyword">this</span>.v = v;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="优化方式二：单调队列。"><a href="#优化方式二：单调队列。" class="headerlink" title="优化方式二：单调队列。"></a>优化方式二：单调队列。</h3><p>待写。</p>
+<h2 id="混合背包"><a href="#混合背包" class="headerlink" title="混合背包"></a>混合背包</h2><p>物品一共有三类：</p>
+<ul>
+<li>第一类物品只能用1次（01背包）；<code>si = −1</code> 表示第 i 种物品只能用 1 次。</li>
+<li>第二类物品可以用无限次（完全背包）；<code>si = 0</code> 表示第 i 种物品可以用无限次。</li>
+<li>第三类物品最多只能用 si 次（多重背包）；<code>si &gt; 0</code> 表示第 i 种物品可以用 si 次。</li>
+</ul>
+<p>把多重背包按照二进制拆分拆成 01 背包，这样就只有 01 背包和完全背包，分别按照 01 背包和完全背包方式解决即可（一个倒序、一个正序）。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">knapsack</span><span class="params">(<span class="keyword">int</span> W, <span class="keyword">int</span> N, <span class="keyword">int</span>[] weights, <span class="keyword">int</span>[] values, <span class="keyword">int</span>[] ss)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[W + <span class="number">1</span>];</span><br><span class="line">    List&lt;Data&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> w = weights[i - <span class="number">1</span>], v = values[i - <span class="number">1</span>], s = ss[i];</span><br><span class="line">        <span class="keyword">if</span> (s &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">            list.add(<span class="keyword">new</span> Data(w, v, s));</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">// 多重背包进行二进制拆分</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">1</span>; k &lt;= s; k &lt;&lt;= <span class="number">1</span>) &#123;</span><br><span class="line">                s -= k;</span><br><span class="line">                list.add(<span class="keyword">new</span> Data(k * w, k * v, -<span class="number">1</span>));</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (s &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                list.add(<span class="keyword">new</span> Data(s * w, s * v, -<span class="number">1</span>));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (Data data : list) &#123;</span><br><span class="line">        <span class="keyword">if</span> (data.s &lt; <span class="number">0</span>) &#123; <span class="comment">// 01 背包</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = W; j &gt;= data.w; --j) &#123;</span><br><span class="line">                dp[j] = Math.max(dp[j], dp[j - data.w] + data.v);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;		  <span class="comment">// 完全背包</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = data.w; j &lt;= W; ++j) &#123;</span><br><span class="line">                dp[j] = Math.max(dp[j], dp[j - data.w] + data.v);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[W];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Data</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> w, v, s;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Data</span><span class="params">(<span class="keyword">int</span> w, <span class="keyword">int</span> v, <span class="keyword">int</span> s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.w = w;</span><br><span class="line">        <span class="keyword">this</span>.v = v;</span><br><span class="line">        <span class="keyword">this</span>.s = s;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="二维费用背包"><a href="#二维费用背包" class="headerlink" title="二维费用背包"></a>二维费用背包</h2><p>之前讨论的背包问题限制条件只有一个，是一维的。可以有不止一个，即多维费用背包。以二维费用背包为例，还多了一个条件，不能超过总重量 M。</p>
+<ul>
+<li>第一重循环枚举物品。</li>
+<li>第二重循环枚举容量（倒序枚举）。</li>
+<li>第二重循环枚举重量（倒序枚举）。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">knapsack</span><span class="params">(<span class="keyword">int</span> W, <span class="keyword">int</span> N, <span class="keyword">int</span> M, <span class="keyword">int</span>[] weights, <span class="keyword">int</span>[] mm, <span class="keyword">int</span>[] values)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span>[][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[W + <span class="number">1</span>][M + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> w = weights[i - <span class="number">1</span>], v = values[i - <span class="number">1</span>], m = mm[i - <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = W; j &gt;= w; j--) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> k = M; k &gt;= m; --k) &#123;</span><br><span class="line">                dp[j][k] = Math.max(dp[j][k], dp[j - w][k - m]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[W];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="分组背包"><a href="#分组背包" class="headerlink" title="分组背包"></a>分组背包</h2><p>有 N 组物品，每组物品由若干个（假设为 s），同一组内的物品最多只能选一个。状态转移方程为</p>
+<p><code>dp[j] = max{dp[j], dp[j - w[0]] + v[0], dp[j - w[1]] + v[1], ..., dp[j - w[s - 1]] + v[s - 1]}</code>。</p>
+<p>与多重背包进行对比，多重背包选择 1 个、2个、3个…，这些可以构成一组。</p>
+<p>可以看出，多重背包是分组背包的一种特殊形式，所以多重背包可以进行优化。</p>
+<ul>
+<li>第一重循环枚举物品。</li>
+<li>第二重循环枚举容量（倒序枚举）。</li>
+<li>第三重循环枚举当前组（决策）。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">knapsack</span><span class="params">(<span class="keyword">int</span> W, <span class="keyword">int</span> N, <span class="keyword">int</span>[][] w, <span class="keyword">int</span>[][] v)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span>[][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[W + <span class="number">1</span>][M + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> s = weights[i].length;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = W; j &gt;= <span class="number">0</span>; j--) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; s; ++k) &#123;</span><br><span class="line">                <span class="keyword">if</span> (j &gt;= w[k]) &#123;</span><br><span class="line">                    dp[j] = Math.max(dp[j], dp[j - w[k]] + v[k]);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[W];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>背包问题解决方案都是第一重循环物品，第二重循环费用（可能有多重），第三重循环决策（可能没有循环）。</li>
+<li>01 背包第一重循环物品，第二重循环费用，倒序枚举。</li>
+<li>完全背包第一重循环物品，第二重循环费用，正序枚举。</li>
+<li>很多其他背包问题是 01 背包或完全背包的变种，可以转化为 01 背包或完全背包来解决。</li>
+<li><code>dp</code> 数组初始化时，全部初始化为 0 表示不超过总费用，除了 <code>dp[0]</code> 外其余初始化为正无穷或负无穷表示恰好为总费用。</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/DP/" rel="tag"># DP</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/27/leetcode-01048/" rel="next" title="LeetCode1048-最长字符串链">
+                <i class="fa fa-chevron-left"></i> LeetCode1048-最长字符串链
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/28/leetcode-01049/" rel="prev" title="LeetCode1049-最后一块石头的重量II">
+                LeetCode1049-最后一块石头的重量II <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="Jerring" />
+            
+              <p class="site-author-name" itemprop="name">Jerring</p>
+              <p class="site-description motion-element" itemprop="description">Talk is cheap, show me the code.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">410</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#01-背包"><span class="nav-number">1.</span> <span class="nav-text">01 背包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完全背包"><span class="nav-number">2.</span> <span class="nav-text">完全背包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多重背包"><span class="nav-number">3.</span> <span class="nav-text">多重背包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优化方式一：二进制拆分。"><span class="nav-number">3.1.</span> <span class="nav-text">优化方式一：二进制拆分。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#优化方式二：单调队列。"><span class="nav-number">3.2.</span> <span class="nav-text">优化方式二：单调队列。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#混合背包"><span class="nav-number">4.</span> <span class="nav-text">混合背包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二维费用背包"><span class="nav-number">5.</span> <span class="nav-text">二维费用背包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分组背包"><span class="nav-number">6.</span> <span class="nav-text">分组背包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">7.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jerring</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
