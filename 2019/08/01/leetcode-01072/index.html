@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Jerring">
 <meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/flip-columns-for-maximum-number-of-equal-rows/ 中文链接：https://leetcode-cn.com/problems/flip-columns-for-maximum-number-of-equal-rows/ 题目详述给定由若干 0 和 1 组成的矩阵 matrix，">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-01T09:27:39.290Z">
+<meta property="og:updated_time" content="2019-08-01T13:07:52.371Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode1072-按列翻转得到最大值等行数">
 <meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/flip-columns-for-maximum-number-of-equal-rows/ 中文链接：https://leetcode-cn.com/problems/flip-columns-for-maximum-number-of-equal-rows/ 题目详述给定由若干 0 和 1 组成的矩阵 matrix，">
@@ -361,12 +361,13 @@
 </ul>
 <a id="more"></a>
 <h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><ul>
-<li>根据题意，两行可以看作相等存在两种情况：<ul>
+<li>行上所有值都相等，即该行所有元素都为 0 或都为 1。</li>
+<li>根据题意，实际上，要达到要求，只存在两种情况：<ul>
 <li>两行完全相等。</li>
 <li>一行翻转后与另一行相等。</li>
 </ul>
 </li>
-<li>现在要求可以看作相等行数的最大值，需要把这两种情况合并，产生一个统一条件。可以维持每一行的第一个数永远是 0。如果原本为 0，不做处理；如果为 1，翻转整行。</li>
+<li>现在要求可以最大值，需要把这两种情况合并，产生一个统一条件。可以维持每一行的第一个数永远是 0。如果原本为 0，不做处理；如果为 1，翻转整行。</li>
 <li>然后运用哈希表来统计，这需要由一行产生一个 <code>key</code>，可以采用序列化为 <code>String</code> 的方式。</li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_01072</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxEqualRowsAfterFlips</span><span class="params">(<span class="keyword">int</span>[][] matrix)</span> </span>&#123;</span><br><span class="line">        Map&lt;String, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span>[] row : matrix) &#123;</span><br><span class="line">            <span class="keyword">if</span> (row[<span class="number">0</span>] == <span class="number">1</span>) &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; row.length; ++i) &#123;</span><br><span class="line">                    row[i] ^= <span class="number">1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> x : row) &#123;</span><br><span class="line">                sb.append(x);</span><br><span class="line">            &#125;</span><br><span class="line">            String s = sb.toString();</span><br><span class="line">            map.put(s, map.getOrDefault(s, <span class="number">0</span>) + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> map.values().stream().max(Integer::compareTo).get();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -414,6 +415,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/02/leetcode-01017/" rel="prev" title="LeetCode1017-负二进制转换">
+                LeetCode1017-负二进制转换 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -494,7 +499,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">421</span>
+                  <span class="site-state-item-count">422</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
