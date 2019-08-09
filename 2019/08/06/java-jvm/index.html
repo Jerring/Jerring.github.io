@@ -79,12 +79,12 @@
 
 
 
-<meta name="description" content="一、运行时数据区域 程序计数器记录正在执行的虚拟机字节码指令的地址（如果正在执行的是本地方法则为空），不会出现 OutOfMemoryError，它的生命周期为随着线程的创建而创建，随着线程的结束而死亡。 Java 虚拟机栈每个 Java 方法在执行的同时会创建一个栈帧用于存储局部变量表、操作数栈、常量池引用等信息。从方法调用直至执行完成（正常 return 或抛出异常）的过程，对应着一个栈帧在">
+<meta name="description" content="一、运行时数据区域">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JVM">
 <meta property="og:url" content="http://yoursite.com/2019/08/06/java-jvm/index.html">
 <meta property="og:site_name" content="Jerring">
-<meta property="og:description" content="一、运行时数据区域 程序计数器记录正在执行的虚拟机字节码指令的地址（如果正在执行的是本地方法则为空），不会出现 OutOfMemoryError，它的生命周期为随着线程的创建而创建，随着线程的结束而死亡。 Java 虚拟机栈每个 Java 方法在执行的同时会创建一个栈帧用于存储局部变量表、操作数栈、常量池引用等信息。从方法调用直至执行完成（正常 return 或抛出异常）的过程，对应着一个栈帧在">
+<meta property="og:description" content="一、运行时数据区域">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.loli.net/2019/08/06/ZyGd5DEjxVlcoKS.png">
 <meta property="og:image" content="https://i.loli.net/2019/08/06/ki894S1Dpjm3MnR.png">
@@ -93,10 +93,10 @@
 <meta property="og:image" content="https://i.loli.net/2019/08/06/qK1rzkhl8ItmQNy.png">
 <meta property="og:image" content="https://i.loli.net/2019/08/06/IMOr6qdobuZXKx5.png">
 <meta property="og:image" content="https://i.loli.net/2019/08/06/nWgHUuwbeRxkIS2.png">
-<meta property="og:updated_time" content="2019-08-06T00:13:28.000Z">
+<meta property="og:updated_time" content="2019-08-08T02:03:47.302Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JVM">
-<meta name="twitter:description" content="一、运行时数据区域 程序计数器记录正在执行的虚拟机字节码指令的地址（如果正在执行的是本地方法则为空），不会出现 OutOfMemoryError，它的生命周期为随着线程的创建而创建，随着线程的结束而死亡。 Java 虚拟机栈每个 Java 方法在执行的同时会创建一个栈帧用于存储局部变量表、操作数栈、常量池引用等信息。从方法调用直至执行完成（正常 return 或抛出异常）的过程，对应着一个栈帧在">
+<meta name="twitter:description" content="一、运行时数据区域">
 <meta name="twitter:image" content="https://i.loli.net/2019/08/06/ZyGd5DEjxVlcoKS.png">
 
 
@@ -350,6 +350,7 @@
 
       
         <h1 id="一、运行时数据区域"><a href="#一、运行时数据区域" class="headerlink" title="一、运行时数据区域"></a>一、运行时数据区域</h1><p><img src="https://i.loli.net/2019/08/06/ZyGd5DEjxVlcoKS.png" alt="image.png"></p>
+<a id="more"></a>
 <h2 id="程序计数器"><a href="#程序计数器" class="headerlink" title="程序计数器"></a>程序计数器</h2><p>记录正在执行的虚拟机字节码指令的地址（如果正在执行的是本地方法则为空），不会出现 OutOfMemoryError，它的生命周期为随着线程的创建而创建，随着线程的结束而死亡。</p>
 <h2 id="Java-虚拟机栈"><a href="#Java-虚拟机栈" class="headerlink" title="Java 虚拟机栈"></a>Java 虚拟机栈</h2><p>每个 Java 方法在执行的同时会创建一个栈帧用于存储局部变量表、操作数栈、常量池引用等信息。从方法调用直至执行完成（正常 return 或抛出异常）的过程，对应着一个栈帧在 Java 虚拟机栈中入栈和出栈的过程。</p>
 <p>可以通过 -Xss 这个虚拟机参数来指定每个线程的 Java 虚拟机栈内存大小，JDK 1.5+ 默认为 1M：</p>
@@ -678,8 +679,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/04/leetcode-00052/" rel="next" title="LeetCode52-N皇后II">
-                <i class="fa fa-chevron-left"></i> LeetCode52-N皇后II
+              <a href="/2019/08/05/leetcode-00473/" rel="next" title="LeetCode473-火柴拼正方形">
+                <i class="fa fa-chevron-left"></i> LeetCode473-火柴拼正方形
               </a>
             
           </div>
@@ -771,7 +772,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">433</span>
+                  <span class="site-state-item-count">434</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
