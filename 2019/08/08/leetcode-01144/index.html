@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Jerring">
 <meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/decrease-elements-to-make-array-zigzag/ 中文链接：https://leetcode-cn.com/problems/decrease-elements-to-make-array-zigzag/ 题目详述给你一个整数数组 nums，每次 操作 会从中选择一个元素并 将该元素的值减少">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-09T13:43:00.400Z">
+<meta property="og:updated_time" content="2019-08-09T13:55:02.289Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode1144-递减元素使数组呈锯齿状">
 <meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/decrease-elements-to-make-array-zigzag/ 中文链接：https://leetcode-cn.com/problems/decrease-elements-to-make-array-zigzag/ 题目详述给你一个整数数组 nums，每次 操作 会从中选择一个元素并 将该元素的值减少">
@@ -359,10 +359,10 @@
 <a id="more"></a>
 <h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><p>根据题意，只能将元素减小，有两种解决方法：</p>
 <ul>
-<li>减小偶数索引元素，存在一个使他小于相邻元素的最小操作次数。</li>
-<li>减小奇数索引元素，存在一个使他小于相邻元素的最小操作次数。</li>
-<li>二者较小值就是结果。</li>
+<li>减小偶数索引元素，存在一个使他小于相邻元素的最小操作次数，即减少到相邻元素较小值减一。</li>
+<li>减小奇数索引元素，存在一个使他小于相邻元素的最小操作次数，即减少到相邻元素较小值减一。</li>
 </ul>
+<p>二者较小值就是结果。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_01144</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">movesToMakeZigzag</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] res = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>, n = nums.length; i &lt; n; ++i) &#123;</span><br><span class="line">            <span class="keyword">int</span> left = i &gt; <span class="number">0</span> ? nums[i - <span class="number">1</span>] : Integer.MAX_VALUE;</span><br><span class="line">            <span class="keyword">int</span> right = i + <span class="number">1</span> &lt; n ? nums[i + <span class="number">1</span>] : Integer.MAX_VALUE;</span><br><span class="line">            res[i &amp; <span class="number">1</span>] += Math.max(<span class="number">0</span>, nums[i] - (Math.min(left, right) - <span class="number">1</span>));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> Math.min(res[<span class="number">0</span>], res[<span class="number">1</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
@@ -403,6 +403,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/09/leetcode-01147/" rel="prev" title="LeetCode1147-段式回文">
+                LeetCode1147-段式回文 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -483,7 +487,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">437</span>
+                  <span class="site-state-item-count">438</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
