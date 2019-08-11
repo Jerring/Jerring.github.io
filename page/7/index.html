@@ -252,6 +252,170 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/13/leetcode-00814/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jerring">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jerring">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/13/leetcode-00814/" itemprop="url">LeetCode814-二叉树剪枝</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-13T09:23:55+08:00">
+                2019-07-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/binary-tree-pruning/" target="_blank" rel="noopener">https://leetcode.com/problems/binary-tree-pruning/</a></p>
+<p>中文链接：<a href="https://leetcode-cn.com/problems/binary-tree-pruning/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/binary-tree-pruning/</a></p>
+<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>给定二叉树根结点 root ，此外树的每个结点的值要么是 0，要么是 1。</p>
+<p>返回移除了所有不包含 1 的子树的原二叉树。</p>
+<p>( 节点 X 的子树为 X 本身，以及所有 X 的后代。)</p>
+<p>示例1:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入: [1,null,0,0,1]</span><br><span class="line">输出: [1,null,0,null,1]</span><br><span class="line"></span><br><span class="line">解释: </span><br><span class="line">只有红色节点满足条件“所有不包含 1 的子树”。</span><br><span class="line">右图为返回的答案。</span><br></pre></td></tr></table></figure>
+<p><img src="https://s3-lc-upload.s3.amazonaws.com/uploads/2018/04/06/1028_2.png" alt=""></p>
+<p>示例2:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: [1,0,1,0,0,0,1]</span><br><span class="line">输出: [1,null,1,null,1]</span><br></pre></td></tr></table></figure>
+<p><img src="https://s3-lc-upload.s3.amazonaws.com/uploads/2018/04/06/1028_1.png" alt=""></p>
+<p>示例3:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: [1,1,0,1,1,0,1,0]</span><br><span class="line">输出: [1,1,0,1,1,null,1]</span><br></pre></td></tr></table></figure>
+<p><img src="https://s3-lc-upload.s3.amazonaws.com/uploads/2018/04/05/1028.png" alt=""></p>
+<p>说明:</p>
+<ul>
+<li>给定的二叉树最多有 100 个节点。</li>
+<li>每个节点的值只会为 0 或 1 。</li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/07/13/leetcode-00814/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/12/leetcode-00669/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1658,182 +1822,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/11/leetcode-01111/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jerring">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jerring">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/11/leetcode-01111/" itemprop="url">LeetCode1111-有效括号的嵌套深度</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-11T20:53:20+08:00">
-                2019-07-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
-                    <span itemprop="name">LeetCode</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p>英文链接：<a href="https://leetcode.com/problems/maximum-nesting-depth-of-two-valid-parentheses-strings/" target="_blank" rel="noopener">https://leetcode.com/problems/maximum-nesting-depth-of-two-valid-parentheses-strings/</a></p>
-<p>中文链接：<a href="https://leetcode-cn.com/problems/maximum-nesting-depth-of-two-valid-parentheses-strings/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/maximum-nesting-depth-of-two-valid-parentheses-strings/</a></p>
-<h1 id="题目详述"><a href="#题目详述" class="headerlink" title="题目详述"></a>题目详述</h1><p>有效括号字符串 仅由 “(“ 和 “)” 构成，并符合下述几个条件之一：</p>
-<ul>
-<li>空字符串</li>
-<li>连接，可以记作 AB（A 与 B 连接），其中 A 和 B 都是有效括号字符串</li>
-<li>嵌套，可以记作 (A)，其中 A 是有效括号字符串</li>
-</ul>
-<p>类似地，我们可以定义任意有效括号字符串 s 的 嵌套深度 depth(S)：</p>
-<ul>
-<li>s 为空时，depth(“”) = 0</li>
-<li>s 为 A 与 B 连接时，depth(A + B) = max(depth(A), depth(B))，其中 A 和 B 都是有效括号字符串</li>
-<li>s 为嵌套情况，depth(“(“ + A + “)”) = 1 + depth(A)，其中 A 是有效括号字符串</li>
-</ul>
-<p>例如：””，”()()”，和 “()(()())” 都是有效括号字符串，嵌套深度分别为 0，1，2，而 “)(“ 和 “(()” 都不是有效括号字符串。</p>
-<p>给你一个有效括号字符串 seq，将其分成两个不相交的子序列 A 和 B，且 A 和 B 满足有效括号字符串的定义（注意：A.length + B.length = seq.length）。</p>
-<p>现在，你需要从中选出 任意 一组有效括号字符串 A 和 B，使 max(depth(A), depth(B)) 的可能取值最小。</p>
-<p>返回长度为 seq.length 答案数组 answer ，选择 A 还是 B 的编码规则是：如果 seq[i] 是 A 的一部分，那么 answer[i] = 0。否则，answer[i] = 1。即便有多个满足要求的答案存在，你也只需返回 一个。</p>
-<p>示例 1：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：seq = &quot;(()())&quot;</span><br><span class="line">输出：[0,1,1,1,1,0]</span><br></pre></td></tr></table></figure>
-<p>示例 2：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：seq = &quot;()(())()&quot;</span><br><span class="line">输出：[0,0,0,1,1,0,1,1]</span><br></pre></td></tr></table></figure>
-<p>提示：</p>
-<ul>
-<li>1 &lt;= text.size &lt;= 10000</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/07/11/leetcode-01111/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/44/">44</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/45/">45</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1883,7 +1876,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">440</span>
+                  <span class="site-state-item-count">441</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
