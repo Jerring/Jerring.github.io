@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Jerring">
 <meta property="og:description" content="题目链接英文链接：https://leetcode.com/problems/single-number-ii/ 中文链接：https://leetcode-cn.com/problems/single-number-ii/ 题目详述给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现了三次。找出那个只出现了一次的元素。 说明： 你的算法应该具有线性时间复杂度。 你可以不使用额外空">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-03T12:47:44.991Z">
+<meta property="og:updated_time" content="2019-08-18T01:55:03.467Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode137-只出现一次的数字II">
 <meta name="twitter:description" content="题目链接英文链接：https://leetcode.com/problems/single-number-ii/ 中文链接：https://leetcode-cn.com/problems/single-number-ii/ 题目详述给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现了三次。找出那个只出现了一次的元素。 说明： 你的算法应该具有线性时间复杂度。 你可以不使用额外空">
@@ -354,7 +354,7 @@
 <a id="more"></a>
 <h1 id="题目详解"><a href="#题目详解" class="headerlink" title="题目详解"></a>题目详解</h1><ul>
 <li>本题是 <a href="https://jerring.github.io/2019/06/03/leetcode-00136/" target="_blank" rel="noopener">LeetCode136-只出现一次的数字</a> 的进阶版，除了某个元素只出现一次以外，其余每个元素从均出现两次变为了均出现了三次。</li>
-<li>当元素出现次数上升到出现 3 次即 3 次以上时，就无法简单地运用异或来进行解答，但同样都是运用位运算的一些基本操作。</li>
+<li>当元素出现次数上升到出现 3 次及 3 次以上时，就无法简单地运用异或来进行解答，但同样都是运用位运算的一些基本操作。</li>
 <li>下面给出两种解答方法，它们的通解可以解答除了某个元素只出现 m 次以外，其余每个元素均出现 k（k &gt; m）次的问题。</li>
 </ul>
 <p>方法一：统计每一位 1 的个数，并对 3 取模。</p>
@@ -387,7 +387,7 @@
 <p>通解为：</p>
 <ul>
 <li>用 <code>k - 1</code> 个数分别表示状态机的 k 个状态。</li>
-<li><code>最后 bits[m- 1]</code> 就是结果。</li>
+<li><code>最后 bits[m - 1]</code> 就是结果。</li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeetCode_00137</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">singleNumber</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> singleNumber(nums, <span class="number">3</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">singleNumber</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] bits = <span class="keyword">new</span> <span class="keyword">int</span>[--k];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> num : nums) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">                <span class="keyword">int</span> mask = -<span class="number">1</span>;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; k; j++) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (i != j) &#123;</span><br><span class="line">                        mask &amp;= ~bits[j];</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                bits[i] = (bits[i] ^ num) &amp; mask;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> bits[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -513,7 +513,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">448</span>
+                  <span class="site-state-item-count">449</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
